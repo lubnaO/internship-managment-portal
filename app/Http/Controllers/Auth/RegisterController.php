@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
+use App\Student;
+use App\Compny;
+use App\UniversitySupervisor;
 class RegisterController extends Controller
 {
     /*
@@ -63,10 +65,39 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'user_type' => "s"
         ]);
+
+
+        $studet = Student::create([
+            's_firstName' =>$data['name'],
+            's_lastName' => "test",
+            's_email' => $data['email'],
+            's_phone' => "0534156987",
+            's_major' => "major1",
+            'id_user' =>  $user->id,
+        ]);
+
+      /*  $company = company::create([
+            'co_name' =>$data['name'],
+            'co_address' => "test",
+            'co_email' => $data['email'],
+            'co_phone' => "0534156987",
+            'co_description' => "major1",
+            'id_user' =>  $user->id,
+        ]);
+
+        $UniversitySupervisor= UniversitySupervisor::create([
+            'us_firstName' =>$data['name'],
+            'us_lastName' => "test",
+            'us_email' => $data['email'],
+            'id_user' =>  $user->id,
+        ]);
+*/
+        return  $user;
     }
 }
