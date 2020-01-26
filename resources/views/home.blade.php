@@ -13,7 +13,18 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    @if (Auth::user()->user_type == 's')
+                  
+                    {{Auth::user()->student->s_major}}
+                    @endif
 
+                    @if (Auth::user()->user_type == 'c')
+                    company
+                    @endif
+
+                    @if (Auth::user()->user_type == 'u')
+                    uiversty
+                    @endif
                     You are logged in!
                 </div>
             </div>
