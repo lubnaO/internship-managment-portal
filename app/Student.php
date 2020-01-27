@@ -19,4 +19,8 @@ class Student extends Model
     {
         return $this->belongsTo('App\Company','c_id');
     }
+    public function UniversitySupervisor()
+    {
+        return $this->belongsTo('App\UniversitySupervisor','u_id');
+    }
 }
