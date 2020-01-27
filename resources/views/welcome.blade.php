@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel khadija  DB part2 done welcome 
+                    Laravel khadija  DB part2 done welcome
                 </div>
 
                 <div class="links">
