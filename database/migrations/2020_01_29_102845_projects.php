@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddCreatedAtToStudentsTables extends Migration
+class Projects extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class AddCreatedAtToStudentsTables extends Migration
      */
     public function up()
     {
-        Schema::table('students', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('discription');
+            $table->date('sdate'); 
+            $table->date('edate');
+            $table->bigInteger('duration');         
             $table->timestamps();
-
         });
+
     }
 
     /**
@@ -26,8 +32,6 @@ class AddCreatedAtToStudentsTables extends Migration
      */
     public function down()
     {
-        Schema::table('students', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('projects');
     }
 }

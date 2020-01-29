@@ -7,10 +7,10 @@ use App\Company;
 
 class Announcament extends Model
 {
-    protected $fillable = ['A_name','A_description'];
+    protected $fillable = ['name','description'];
 
     public function Company()
     {
-        return $this->belongsTo('App\Company','AC_id');
+        return $this->belongsTo('App\Company');
     }
 }

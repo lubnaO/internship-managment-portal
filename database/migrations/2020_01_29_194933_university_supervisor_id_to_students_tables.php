@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIdUserToUniversityTables extends Migration
+class UniversitySupervisorIdToStudentsTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class AddIdUserToUniversityTables extends Migration
      */
     public function up()
     {
-        Schema::table('university_supervisors', function (Blueprint $table) {
-            $table->string('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
-
+        Schema::table('students', function (Blueprint $table) {
+            $table->integer('UniversitySupervisor_id');
+            $table->foreign('UniversitySupervisor_id')->references('id')->on('university_supervisors');
 
         });
     }
@@ -28,7 +27,7 @@ class AddIdUserToUniversityTables extends Migration
      */
     public function down()
     {
-        Schema::table('university', function (Blueprint $table) {
+        Schema::table('students', function (Blueprint $table) {
             //
         });
     }

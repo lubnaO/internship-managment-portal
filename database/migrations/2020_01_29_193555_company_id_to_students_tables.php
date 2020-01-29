@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddCIdToStudentsTables extends Migration
+class CompanyIdToStudentsTables extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,9 @@ class AddCIdToStudentsTables extends Migration
     public function up()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->integer('c_id');
-            $table->foreign('c_id')->references('company_id')->on('companies');
+            $table->integer('Company_id');
+            $table->foreign('Company_id')->references('id')->on('companies');
+
         });
     }
 
