@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUIdToStudentsTables extends Migration
+class AddCompanyIdToAnnouncamentsTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddUIdToStudentsTables extends Migration
      */
     public function up()
     {
-        Schema::table('students', function (Blueprint $table) {
-            $table->integer('u_id');
-            $table->foreign('u_id')->references('id')->on('students');
+        Schema::table('announcaments', function (Blueprint $table) {
+            $table->integer('Company_id');
+            $table->foreign('Company_id')->references('id')->on('companies');
+
         });
     }
 
@@ -26,7 +27,7 @@ class AddUIdToStudentsTables extends Migration
      */
     public function down()
     {
-        Schema::table('students', function (Blueprint $table) {
+        Schema::table('announcaments', function (Blueprint $table) {
             //
         });
     }

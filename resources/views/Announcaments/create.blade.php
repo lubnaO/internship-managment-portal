@@ -3,7 +3,7 @@
 <form action="{{ route('Announcaments.store') }}"  method="POST" >
 @csrf 
 <div>
-<input type="text" name="A_name" >
+<input type="text" name="name" >
 </div>
 <div>
 <button>Add</button>

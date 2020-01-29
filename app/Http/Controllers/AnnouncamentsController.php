@@ -38,7 +38,7 @@ class AnnouncamentsController extends Controller
     {
         $request->validate([
 
-             "A_name"=>"required|unique:announcaments"
+             "name"=>"required|unique:announcaments"
  ]);
         Announcament::create($request->all());
     }
