@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('annou');
+    return view('dashboard');
 });
+
 Route::resource('/Announcaments','AnnouncamentsController');
+
 
 Auth::routes();
 
