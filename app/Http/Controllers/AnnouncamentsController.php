@@ -39,8 +39,48 @@ class AnnouncamentsController extends Controller
         $request->validate([
 
              "name"=>"required|unique:announcaments"
+              
  ]);
+
+
+ $request->validate([
+
+    "A_start"=>"required|:announcaments"
+     
+]);
+
+$request->validate([
+
+    "A_end"=>"required|:announcaments"
+     
+]);
+
+$request->validate([
+
+    "description"=>"required|:announcaments"
+     
+]);
+
+/**$request->validate([
+
+    "city"=>"required|:announcaments"
+     
+]);**/
+
+/**$request->validate([
+
+    "title"=>"required|:announcaments"
+     
+]);**/
+
+
+
         Announcament::create($request->all());
+
+
+        return (route('Announcaments.index'));
+
+        
     }
 
     /**
