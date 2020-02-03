@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Unearth &mdash; Website Template by Colorlib</title>
+    <title>IMP &mdash; Intern Management Portal  </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,9 +56,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">info@yourdomain.com</span></a>
+            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block"></span></a>
             <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block">1+ (234) 5678 9101</span></a>
+            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block"> </span></a>
             
 
             <div class="float-right">
@@ -83,7 +83,7 @@
           
             
             <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">Unearth</a>
+              <a href="index.html" class="text-black"><span class="text-primary">IMP</a>
             </div>
             
             <div class="col-12">
@@ -109,7 +109,7 @@
           
             </div>
 
-          <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
         </div>
       </div>
@@ -150,7 +150,7 @@
 
     </div>
 
-    <h2> Most visited announcment </h2> 
+    <h2> Most visited announcement </h2> 
     
     <div class="site-section">
       <div class="block__73694 mb-2" id="services-section">
@@ -282,7 +282,7 @@
               <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="block-counter-1">
                   <span class="number"><span data-number="300">0</span>+</span>
-                  <span class="caption">Number of opprtunity </span>
+                  <span class="caption">Number of Opportunities </span>
                 </div>
               </div>
               <div class="col-6 col-md-6 mb-4 col-lg-0 col-lg-3" data-aos="fade-up" data-aos-delay="200">
@@ -309,7 +309,7 @@
           <div class="col-md-7 text-center">
             <div class="block-heading-1" data-aos="fade-up" data-aos-delay="">
               <h2>Our Team</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere at delectus laudantium, deserunt, atque eveniet. Voluptatem, fuga quos rerum inventore.</p>
+              
             </div>
           </div>
         </div>
@@ -320,7 +320,7 @@
                 <img src="images/Arwa.jpeg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Arwa Bintaleb</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Mining Expert</span>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3"> Front end developer </span>
           
             </div>
           </div>
@@ -331,12 +331,8 @@
                 <img src="images/Khadijah.jpeg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Khadijah Al-saggaf </h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Project Manager</span>
-              <div class="block-social-1">
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>
-              </div>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Back end developer </span>
+             
             </div>
           </div>
 
@@ -346,65 +342,16 @@
                 <img src="images/Lubna.jpeg" alt="Image" class="img-fluid rounded-circle">
               </figure>
               <h3 class="font-size-20 text-black">Lubna Al-amoudi </h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Engineer</span>
-              <div class="block-social-1">
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>
-              </div>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Front end developer</span>
+             
             </div>
           </div>
 
-          <!--<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="block-team-member-1 text-center rounded">
-              <figure>
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle">
-              </figure>
-              <h3 class="font-size-20 text-black">Jean Smith</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Mining Expert</span>
-              <div class="block-social-1">
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="block-team-member-1 text-center rounded">
-              <figure>
-                <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle">
-              </figure>
-              <h3 class="font-size-20 text-black">Bob Carry</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Project Manager</span>
-              <div class="block-social-1">
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="block-team-member-1 text-center rounded">
-              <figure>
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle">
-              </figure>
-              <h3 class="font-size-20 text-black">Ricky Fisher</h3>
-              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Engineer</span>
-              <div class="block-social-1">
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>
-                <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+         </div> 
     </div> 
 
 
-    <section class="site-section bg-light" id="pricing-section">
+  <!--  <section class="site-section bg-light" id="pricing-section">
       <div class="container">
         <div class="row mb-5 justify-content-center text-center">
           <div class="col-md-7">

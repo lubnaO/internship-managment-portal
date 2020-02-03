@@ -1,9 +1,7 @@
 <html>
 <head>
 
-
 <link rel="stylesheet" href="css/style.css">
-
 
 <style>
    input, textarea{
@@ -73,12 +71,12 @@ body{
     <label ><b>Company Name</b></label>
     <input type="text" placeholder="Companys Name" name="name" required>
 
-    <!--<label for="psw"><b> Job title</b></label>
-    <input type="text" placeholder="Engineer...,etc" name="title" required>
+  <!-- <label for="psw"><b> Job title</b></label>
+    <input type="text" placeholder="Engineer...,etc" name="title" required>-->
 
 
-    <label for="psw"><b> City</b></label>
-    <input type="text" placeholder="City" name="City" required>
+    <!--<label for="psw"><b> City</b></label>
+    <input type="text" placeholder="City" name="City" required>--> 
 
     <label for="psw"><b> Start duration </b></label>
     <input type="date" placeholder="1/1/2020" name="A_start" required>
@@ -87,7 +85,7 @@ body{
     <input type="date" placeholder="20/2/2020" name="A_end" required> 
 
     <label for="psw"><b> Job description</b></label>
-    <textarea rows="10" cols="50" placeholder="short description " name="description" required> </textarea> --> 
+    <textarea rows="10" cols="50" placeholder="short description " name="description" required> </textarea> 
     <div>
     <button class="button" type="submit" class="btn"> publish </button>
     </div> 
