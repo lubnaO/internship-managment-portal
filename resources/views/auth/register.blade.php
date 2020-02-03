@@ -15,7 +15,7 @@
                             <label for="First Name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="First Name" type="text" class="form-control @error('First Name') is-invalid @enderror" name="First Name" value="{{ old('First Name') }}" required autocomplete="First Name" autofocus>
+                                <input id="First Name" type="text" class="form-control @error('First Name') is-invalid @enderror" name="name" value="{{ old('First Name') }}" required autocomplete="First Name" autofocus>
 
                                 @error('First Name')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                             <label for="Last Name" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Last Name" type="text" class="form-control @error('Last Name') is-invalid @enderror" name="Last Name" value="{{ old('Last Name') }}" required autocomplete="Last Name" autofocus>
+                                <input id="Last Name" type="text" class="form-control @error('Last Name') is-invalid @enderror" name="lastName" value="{{ old('Last Name') }}" required autocomplete="Last Name" autofocus>
 
                                 @error('Last Name')
                                     <span class="invalid-feedback" role="alert">
@@ -79,7 +79,7 @@
                             <label for="PhoneNumber" class="col-md-4 col-form-label text-md-right">{{ __('PhoneNumber') }}</label>
 
                             <div class="col-md-6">
-                                <input id="PhoneNumber" type="password" class="form-control" name="PhoneNumber" required autocomplete="new-password">
+                                <input id="PhoneNumber" type="password" class="form-control" name="Phone" required autocomplete="new-password">
                             </div>
                         </div>
 

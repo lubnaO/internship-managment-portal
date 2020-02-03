@@ -13,16 +13,22 @@ class Announcaments extends Migration
      */
     public function up()
     {
-        Schema::create('announcaments', function (Blueprint $table) {
+        Schema::create('Announcaments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->integer('Company_id');
+            
             $table->date('A_start');
             $table->date('A_end');
-            $table->timestamps();
-        });
+            $table->string('title');
+$table->string('city');
+$table->integer('Company_id');
+            $table->foreign('Company_id')->references('id')->on('companies');
 
+
+            $table->timestamps();
+
+        });
     }
 
     /**
@@ -32,6 +38,7 @@ class Announcaments extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('announcaments');
+        Schema::dropIfExists('Announcaments');
+
     }
 }

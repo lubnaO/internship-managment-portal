@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/annou', function () {
+    return view('annou');
+});
 
 Route::resource('/Announcaments','AnnouncamentsController');
 

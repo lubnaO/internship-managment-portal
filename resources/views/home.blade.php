@@ -15,7 +15,7 @@
                     @endif
                     @if (Auth::user()->user_type == 's')
                   
-                    {{Auth::user()->student->s_major}}
+                    student
                     @endif
 
                     @if (Auth::user()->user_type == 'c')
