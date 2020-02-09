@@ -30,6 +30,7 @@ Route::get('/', function () {
     return view('indexhome');
 });
 
+
 //Route::get('/', function () {
     //return view('indexhome');
 
