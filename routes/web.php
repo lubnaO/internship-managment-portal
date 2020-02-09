@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/annou', function () {
-    return view('annou');
-});
+//Route::get('/annou', function () {
+  //  return view('annou');
+//});
 
 Route::resource('/Announcaments','AnnouncamentsController');
 
@@ -28,5 +28,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
     return view('indexhome');
+});
 
-}); 
+//Route::get('/', function () {
+    //return view('indexhome');
+
