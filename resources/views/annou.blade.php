@@ -7,7 +7,9 @@
   <h5 class="card-header top-bar pl-3 text-white">Annoancment</h5>
   <div class="card-body">
     <h5 class="card-title ">Available annouancment</h5>
+    
     <table class="table table-striped table-hover table-bordered">
+    
   <thead>
     <tr>
       <th scope="col">Job Name</th>
@@ -49,7 +51,10 @@
       <button class="btn btn-primary top-bar px-3">APPLY </button>
       </td>
     </tr>
+    @endforeach
   </tbody>
+  
+ 
 </table>
     </div>
     </div>
@@ -57,4 +62,4 @@
   </div>
 </div>
 
-@endsection 
+@endsection

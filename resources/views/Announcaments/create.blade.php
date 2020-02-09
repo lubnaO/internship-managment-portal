@@ -71,12 +71,12 @@ body{
     <label ><b>Company Name</b></label>
     <input type="text" placeholder="Companys Name" name="name" required>
 
-  <!-- <label for="psw"><b> Job title</b></label>
-    <input type="text" placeholder="Engineer...,etc" name="title" required>-->
+   <label for="psw"><b> Job title</b></label>
+    <input type="text" placeholder="Engineer...,etc" name="title" required>
 
 
-    <!--<label for="psw"><b> City</b></label>
-    <input type="text" placeholder="City" name="City" required>--> 
+    <label for="psw"><b> City</b></label>
+    <input type="text" placeholder="City" name="city" required> 
 
     <label for="psw"><b> Start duration </b></label>
     <input type="date" placeholder="1/1/2020" name="A_start" required>
