@@ -19,6 +19,10 @@ Route::get('/', function () {
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
+Route::resource('/finalreports','finalReportController');
+Route::resource('/medEvalutions','medEvalutionController');
+Route::resource('/finalEvalutions','finalEvalutionController');
+Route::resource('/TrainingRegistrations','TrainingRegistrationController');
 
 
 Auth::routes();

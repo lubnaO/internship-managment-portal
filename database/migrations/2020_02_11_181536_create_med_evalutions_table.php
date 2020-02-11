@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImageToCompanyFormsTables extends Migration
+class CreateMedEvalutionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddImageToCompanyFormsTables extends Migration
      */
     public function up()
     {
-        Schema::table('company_forms', function (Blueprint $table) {
-            $table->string('image');
+        Schema::create('med_evalutions', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('medfile');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +27,6 @@ class AddImageToCompanyFormsTables extends Migration
      */
     public function down()
     {
-        Schema::table('company_forms', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('med_evalutions');
     }
 }
