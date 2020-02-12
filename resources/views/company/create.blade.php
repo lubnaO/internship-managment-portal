@@ -10,6 +10,7 @@
   <div class="card-body">
 
   <form action = "{{route ('company.store')}}"  method ="POST">
+  @csrf
   <div class="form-group">
     <label for="name">Company Name</label>
     <input type="text"  name ="c-name" class= "form-control"> 
@@ -40,6 +41,11 @@
   <div class="form-group">
     <label for="exampleFormControlInput1">Out history</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" name ="history">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">image</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name ="image">
   </div>
 
 

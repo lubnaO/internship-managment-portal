@@ -12,13 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Sdashboard');
+
 });
 //Route::get('/annou', function () {
   //  return view('annou');
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
+Route::resource('/company','CompanyFormController');
+Route::get('upload', 'FrontController@upload');
+Route::get('annou', 'FrontController@annou'); 
+
 
 
 Auth::routes();
@@ -26,9 +31,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/', function () {
-    return view('indexhome');
-});
+//Route::get('/', function () {
+   // return view('indexhome');
+//});
 
 
 //Route::get('/', function () {

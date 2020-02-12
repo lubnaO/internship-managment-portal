@@ -51,7 +51,7 @@
       <button class="btn btn-primary top-bar px-3">APPLY </button>
       </td>
     </tr>
-    @endforeach
+   
   </tbody>
   
  
