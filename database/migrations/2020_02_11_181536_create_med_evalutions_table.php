@@ -15,7 +15,20 @@ class CreateMedEvalutionsTable extends Migration
     {
         Schema::create('med_evalutions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('medfile');
+            $table->string('StudentName');
+            $table->string('StudentID');
+            $table->string('TrainingOrganization');
+            $table->string('DepartmentName');
+            $table->string('Startdate');
+            $table->string('Enddate');
+            $table->string('TrainingSupervisor');
+            $table->text('AccomplishedTasks');
+            $table->text('SkillsAcquired');
+            $table->text('KnowledgeUsed');
+            $table->text('KeyMeetings');
+            $table->text('Issues');
+            $table->text('Feedback');
+           
             $table->timestamps();
         });
     }

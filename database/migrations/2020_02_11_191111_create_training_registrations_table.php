@@ -15,8 +15,17 @@ class CreateTrainingRegistrationsTable extends Migration
     {
         Schema::create('training_registrations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('regfile');
-
+            $table->string('StudentName');
+            $table->string('StudentID');
+            $table->string('SMajor');
+            $table->string('TrainingOrganization');
+            $table->string('SupervisorInfo');
+            $table->string('TraineeTaske');
+            $table->string('TraineHoure');
+            $table->date('TraineDate');
+            $table->string('SupervisorName');
+            $table->string('SupervisorJob');
+           
             $table->timestamps();
         });
     }
