@@ -12,6 +12,7 @@
     
   <thead>
     <tr>
+    <th scope="col">name</th>
       <th scope="col">Job Name</th>
       <th scope="col">Job Descripion</th>
       <th scope="col">City</th>
@@ -24,6 +25,7 @@
   @foreach ($announcaments as $annouancment)
 
     <tr>
+    <th scope="row"><p>"{{Auth::user()->company->name}}"}  </p></th>
       <th scope="row"><p>{{ $annouancment->title }}  </p></th>
       <td>{{ $annouancment->description}} </td>
       <td>{{ $annouancment->city}}</td>

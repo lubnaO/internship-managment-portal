@@ -16,10 +16,10 @@ class Company extends Model
     }
     public function announcaments()
     {
-        return $this->hasMany('App\Announcament','AC_id');
+        return $this->hasMany('App\Announcament');
     }
     public function students()
     {
-        return $this->hasMany('App\Student','c_id');
+        return $this->hasMany('App\Student');
     }
 }
