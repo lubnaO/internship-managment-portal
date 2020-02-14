@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCVSTable extends Migration
+class CreateApplicantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateCVSTable extends Migration
      */
     public function up()
     {
-        Schema::create('c_v_s', function (Blueprint $table) {
+        Schema::create('applicants', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Name');
-            $table->string('address');
-            $table->date('date');
-            $table->string('email');
-            $table->string('formal');
-            $table->string('courses');
-            $table->string('skills');
-        
+            $table->string('annou_id');
+            $table->foreign('annou_id')->references('id')->on('Announcaments');
+            $table->string('stu_id');
+            $table->foreign('stu_id')->references('id')->on('students');
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ class CreateCVSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('c_v_s');
+        Schema::dropIfExists('applicants');
     }
 }

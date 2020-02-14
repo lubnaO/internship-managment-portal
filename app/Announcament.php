@@ -13,4 +13,8 @@ class Announcament extends Model
     {
         return $this->belongsTo('App\Company');
     }
+    public function applicants()
+    {
+        return $this->hasMany('App\applicant');
+    }
 }
