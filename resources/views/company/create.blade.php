@@ -5,7 +5,7 @@
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
-  <div class="card-header top-bar pl-3 text-white">Create Your Profile in 
+  <div class="card-header pl-3 text-white">Create Your Profile in 
   Our Website</div>
   <div class="card-body">
 
@@ -32,10 +32,7 @@
   </div>
 
 
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Creaing & Value</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="create" >
-  </div>
+
 
 
   <div class="form-group">
@@ -49,7 +46,7 @@
   </div>
 
 
-  <button type="submit" class=" button btn btn-primary top-bar  px-5 font-size-15">Puplish</button>
+  <button type="submit" class=" button btn btn-primary  px-5 font-size-15">Puplish</button>
 
   
 </form>

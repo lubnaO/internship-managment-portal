@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImageToCompanyFormsTables extends Migration
+class ApplicantIdToAnnouncamentsTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddImageToCompanyFormsTables extends Migration
      */
     public function up()
     {
-        Schema::table('company_forms', function (Blueprint $table) {
-            $table->string('image');
+        Schema::table('Announcaments', function (Blueprint $table) {
+            $table->string('Applicant_id');
+            $table->foreign('Applicant_id')->references('id')->on('Applicants');
+
         });
     }
 
@@ -25,7 +27,7 @@ class AddImageToCompanyFormsTables extends Migration
      */
     public function down()
     {
-        Schema::table('company_forms', function (Blueprint $table) {
+        Schema::table('Announcaments', function (Blueprint $table) {
             //
         });
     }

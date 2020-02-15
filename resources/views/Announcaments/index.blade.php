@@ -4,7 +4,7 @@
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
-  <h5 class="card-header top-bar pl-3 text-white">Annoancment</h5>
+  <h5 class="card-header pl-3 text-white">Annoancment</h5>
   <div class="card-body">
     <h5 class="card-title ">Available annouancment</h5>
     
@@ -12,6 +12,7 @@
     
   <thead>
     <tr>
+    <th scope="col">name</th>
       <th scope="col">Job Name</th>
       <th scope="col">Job Descripion</th>
       <th scope="col">City</th>
@@ -24,6 +25,7 @@
   @foreach ($announcaments as $annouancment)
 
     <tr>
+    <th scope="row"><p>"{{Auth::user()->company->name}}"}  </p></th>
       <th scope="row"><p>{{ $annouancment->title }}  </p></th>
       <td>{{ $annouancment->description}} </td>
       <td>{{ $annouancment->city}}</td>

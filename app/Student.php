@@ -23,4 +23,12 @@ class Student extends Model
     {
         return $this->belongsTo('App\UniversitySupervisor','u_id');
     }
+    public function Applicant()
+    {
+        return $this->belongsTo('App\Applicant');
+}
+public function cv()
+    {
+        return $this->hasOne('App\CV');
+    }
 }

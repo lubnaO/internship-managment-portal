@@ -80,7 +80,7 @@ body{
 
     <label for="psw"><b> Start duration </b></label>
     <input type="date" placeholder="1/1/2020" name="A_start" required>
-
+    <input type="hidden" value="{{Auth::user()->company->id}}" name="Company_id"/>
     <label for="psw"><b> End duration</b></label>
     <input type="date" placeholder="20/2/2020" name="A_end" required> 
 
@@ -91,6 +91,6 @@ body{
     </div> 
 </form>
 </div>
-
+<p>a</p>
 </body> 
 </html> 
