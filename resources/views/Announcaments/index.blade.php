@@ -25,7 +25,7 @@
   @foreach ($announcaments as $annouancment)
 
     <tr>
-    <th scope="row"><p>"{{Auth::user()->company->name}}"}  </p></th>
+    <th scope="row"><a href="{{$annouancment->Company['id']}}">{{$annouancment->Company['name']}}  </a></th>
       <th scope="row"><p>{{ $annouancment->title }}  </p></th>
       <td>{{ $annouancment->description}} </td>
       <td>{{ $annouancment->city}}</td>

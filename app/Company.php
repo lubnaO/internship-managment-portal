@@ -16,7 +16,7 @@ class Company extends Model
     }
     public function announcaments()
     {
-        return $this->hasOne('App\Announcament');
+        return $this->hasMany('App\Announcament');
     }
     public function students()
     {

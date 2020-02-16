@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Announcament;
+use App\Company;
+use App\User;
 use App\Http\Requests\announcamentsRequest;
 
 

@@ -29,7 +29,8 @@ class announcamentsRequest extends FormRequest
             "A_end"=>"required|:announcaments" ,
             "description"=>"required|:announcaments" ,
             "city"=>"required|:announcaments" , 
-            "title"=>"required|:announcaments"
+            "title"=>"required|:announcaments",
+            "Applicant_id"=>"announcaments"
 
 
 
