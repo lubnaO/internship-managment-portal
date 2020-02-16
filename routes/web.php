@@ -11,8 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/sdashboard', function () {
     return view('dashboardtwo');
+
+});
+
+Route::get('/Cdashboard', function () {
+  return view('Cdashboard');
 
 });
 //Route::get('/annou', function () {
@@ -20,7 +25,11 @@ Route::get('/', function () {
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
+Route::resource('/CV','CVCotroller');
+
 Route::resource('/company','CompanyFormController');
+Route::resource('/applicnt','ApplicntCntroller');
+
 Route::get('upload', 'FrontController@upload');
 Route::get('annou', 'FrontController@annou'); 
 
@@ -37,9 +46,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-//Route::get('/', function () {
-   // return view('indexhome');
-//});
+Route::get('/', function () {
+    return view('indexhome');
+});
 
 
 //Route::get('/', function () {

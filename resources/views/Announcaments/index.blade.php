@@ -32,7 +32,7 @@
       <td>{{ $annouancment->A_start}}</td>
       <td>{{ $annouancment->A_end}}</td>
       <td>
-      <button class="btn btn-primary top-bar px-3">APPLY </button>
+    
       </td>
     </tr>
    <!-- <tr>

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Announcament;
 
 class Student extends Model
 {
@@ -30,5 +31,9 @@ class Student extends Model
 public function cv()
     {
         return $this->hasOne('App\CV');
+    }
+    public function Announcament()
+    {
+        return $this->hasMany('App\Announcament');
     }
 }

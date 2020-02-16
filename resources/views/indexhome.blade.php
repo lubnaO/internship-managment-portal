@@ -134,7 +134,7 @@
 
       </div>
 
-      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back_2.jpg'); " >
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back_4.jpg'); " >
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12 col-lg-8">
@@ -157,7 +157,7 @@
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
 
-            <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/img_1.jpg');" data-aos="fade-right" data-aos-delay="">
+            <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/internship.jpg');" data-aos="fade-right" data-aos-delay="">
             </div>
 
             

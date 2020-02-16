@@ -30,7 +30,10 @@ class announcamentsRequest extends FormRequest
             "description"=>"required|:announcaments" ,
             "city"=>"required|:announcaments" , 
             "title"=>"required|:announcaments",
-            "Applicant_id"=>"announcaments"
+            "Applicant_id"=>"announcaments",
+            "id"=>"announcaments",
+
+
 
 
 

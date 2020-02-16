@@ -58,29 +58,30 @@
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
           
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          STUDENT PROFILE
+        <a href="" class="simple-text logo-normal">
+          {{Auth::user()->company->name}}
+
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
         <li>
         <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <i class="now-ui-icons users_single-02" ></i>
+              <p>My Profile</p>
             </a>
           </li>
           </li>
         <li>
-          <a href="./icons.html">
+          <a href="http://localhost:8000/Announcaments/create">
               <i class="now-ui-icons education_atom "></i>
-              <p>Icons</p>
+              <p>Create Announcament</p>
             </a>
           </li>
           <li>
             <a href="./map.html">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Maps</p>
+              <p>Requests</p>
             </a>
           </li>
           <li>
@@ -89,19 +90,25 @@
               <p>Notifications</p>
             </a>
           </li>
-          <li>
+        <!--  <li>
             <a href="./user.html">
               <i class="now-ui-icons users_single-02"></i>
               <p>User Profile</p>
+            </a>
+          </li>-->
+          <li>
+            <a href="http://localhost:8000/medEvalutions/create">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>MED Evaloution</p>
             </a>
           </li>
           <li>
             <a href="./tables.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
+              <p>Final Evaloution</p>
             </a>
           </li>
-          <li>
+         <!-- <li>
             <a href="./typography.html">
               <i class="now-ui-icons text_caps-small"></i>
               <p>Typography</p>
@@ -112,7 +119,7 @@
               <i class="now-ui-icons arrows-1_cloud-download-93"></i>
               <p>Upgrade to PRO</p>
             </a>
-          </li>
+          </li>-->
           </li>
         </ul>
       </div>

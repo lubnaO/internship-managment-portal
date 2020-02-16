@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\CV;
+use App\Announcament;
+use App\Applicant;
 
-class CVCotroller extends Controller
+class ApplicntCntroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,7 @@ class CVCotroller extends Controller
      */
     public function index()
     {
-        return view ('CV.index');
-
+        //
     }
 
     /**
@@ -25,8 +25,7 @@ class CVCotroller extends Controller
      */
     public function create()
     {
-        return view ('CV.create');
-
+        //
     }
 
     /**
@@ -37,7 +36,17 @@ class CVCotroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+    "annou_id"=>"required|:applicants",
+    "stu_id	"=>"required|:applicants"
+
+     
+]);
+
+Announcament::create($request->all());
+
+
     }
 
     /**
