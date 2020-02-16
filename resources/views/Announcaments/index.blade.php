@@ -4,7 +4,7 @@
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
-  <h5 class="card-header top-bar pl-3 text-white">Annoancment</h5>
+  <h5 class="card-header pl-3 text-white">Annoancment</h5>
   <div class="card-body">
     <h5 class="card-title ">Available annouancment</h5>
     

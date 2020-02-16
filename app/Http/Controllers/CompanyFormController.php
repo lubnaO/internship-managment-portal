@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CompanyForm;
+
 class CompanyFormController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class CompanyFormController extends Controller
      */
     public function index()
     {
-        return view ('company.index')->with('companyprofile', CompanyForm::all());
+        return view ('company.index')->with('CompanyForm', CompanyForm::all());
     }
 
     /**
@@ -34,12 +35,9 @@ class CompanyFormController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "name"=>"required|unique:companyprofile"
-        ]);
-        
         CompanyForm::create ($request->all());
-        return (route('company.index'));
+        return redirect (route('company.index'));
+       
     }
 
     /**

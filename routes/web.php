@@ -12,17 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboardtwo');
+
 });
 //Route::get('/annou', function () {
   //  return view('annou');
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
+Route::resource('/company','CompanyFormController');
+Route::get('upload', 'FrontController@upload');
+Route::get('annou', 'FrontController@annou'); 
+
+
 Route::resource('/finalreports','finalReportController');
 Route::resource('/medEvalutions','medEvalutionController');
 Route::resource('/finalEvalutions','finalEvalutionController');
 Route::resource('/TrainingRegistrations','TrainingRegistrationController');
+
 
 
 Auth::routes();
@@ -30,9 +37,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/', function () {
-    return view('indexhome');
-});
+//Route::get('/', function () {
+   // return view('indexhome');
+//});
 
 
 //Route::get('/', function () {
