@@ -8,7 +8,7 @@ class FrontController extends Controller
 {
     public function upload()
     {
-        return view('uploadfile');    //اسم الصفحة اللي ينتقل عليها  
+        return view('finalreports.create');    //اسم الصفحة اللي ينتقل عليها  
     }
 
     public function annou()
