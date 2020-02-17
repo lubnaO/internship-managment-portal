@@ -14,7 +14,7 @@ class finalReportController extends Controller
      */
     public function index()
     {
-        return view ('finalreports.index');
+        return view ('finalreports.index')->with('finalReport',finalReport::all());
     }
 
     /**
@@ -35,14 +35,12 @@ class finalReportController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        
 
-            "finalre"=>"required" ]);
-        $requestData = $request->all();
-     // $requestData['finalre']=$fileinfo;
-        finalReport::create([
-            'finalre'=>$request->finalre->store('files','public')
-        ]);
+            finalReport::create($request->all());
+            return redirect( route('finalreports.index'));
+            
+        
     }
 
     /**

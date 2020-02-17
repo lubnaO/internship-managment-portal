@@ -64,8 +64,8 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="stepwizard">
+<div class="container"  method ="POST" action="{{ route('finalEvalutions.store ')}}">
+<div class="stepwizard">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -189,7 +189,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Date</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" name="date" />
+                    <input maxlength="200" type="text" required="required" class="form-control" name="SignatureDate" />
                 </div>
 
                 <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>

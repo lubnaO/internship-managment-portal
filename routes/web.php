@@ -15,14 +15,19 @@ Route::get('/', function () {
     return view('dashboardtwo');
 
 });
+//Route::get('/', function () {
+ // return view('finalreports.create');
+
+//});
 //Route::get('/annou', function () {
   //  return view('annou');
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
 Route::resource('/company','CompanyFormController');
-Route::get('upload', 'FrontController@upload');
-Route::get('annou', 'FrontController@annou'); 
+Route::resource('/finalreports','finalReportController');
+Route::resource('/finalEvalutions','finalEvalutionController');
+
 
 
 Route::resource('/finalreports','finalReportController');

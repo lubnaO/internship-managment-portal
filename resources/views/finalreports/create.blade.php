@@ -60,23 +60,37 @@
     line-height: 1.428571429;
     border-radius: 15px;
 }
+.container{
+    border:  dot orange;
+    margin-top:150px;
+   
+}
+body{
+
+background-image: url("/images/in.jpg");
+height:50px;
+
+}
+.btn-primary{
+  background-color: #f26427
+}
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="container" method ="POST" action="{{ route('finalreports.store')}}">
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                <a href="#step-1" type="button" class="btn-primary btn-circle">1</a>
                 <p><small>Trainee Information</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                <a href="#step-2" type="button" class=" btn btn-primary btn-circle" disabled="disabled">2</a>
                 <p><small>Supervisor Information</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                <a href="#step-3" type="button" class="btn btn-primary btn-circle" disabled="disabled">3</a>
                 <p><small>Department Information</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
@@ -189,7 +203,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Date</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" name="date" />
+                    <input maxlength="200" type="text" required="required" class="form-control" name="SignatureDate" />
                 </div>
 
                 <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>

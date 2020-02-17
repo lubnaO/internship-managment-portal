@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+            
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
@@ -64,6 +65,7 @@
     
   </div>
 </div>
+
 @endsection
 
 
