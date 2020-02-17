@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Announcament;
+use App\User;
 
 class Student extends Model
 {
@@ -26,7 +27,7 @@ class Student extends Model
     }
     public function Applicant()
     {
-        return $this->belongsTo('App\Applicant');
+        return $this->belongsTo('App\Applicant','stu_id');
 }
 public function cv()
     {

@@ -32,7 +32,12 @@
       <td>{{ $annouancment->A_start}}</td>
       <td>{{ $annouancment->A_end}}</td>
       <td>
-    
+       <form action="{{ route('applicnt.store') }}" class="container" method="POST" >
+       @csrf
+  <input type="hidden" value="{{Auth::user()->student->id}}" name="stu_id"/>
+      <input type="hidden" value="{{ $annouancment->id }}" name="annou_id"/>
+      <button type="submit" class="btn btn-primary top-bar px-3">APPLY </button>
+      </form> 
       </td>
     </tr>
    <!-- <tr>
@@ -59,10 +64,12 @@
 
   </tbody>
 </table>
+<p></p>
     </div>
     </div>
     
   </div>
+  <p>{{Auth::user()}}</p>
 </div>
 @endsection
 

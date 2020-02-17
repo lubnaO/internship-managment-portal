@@ -63,7 +63,7 @@ body{
 
 <div>
 <form action="{{ route('Announcaments.store') }}" class="container" method="POST" >
-@csrf 
+@csrf
 
 <h1>  Create Announcement </h1>
 

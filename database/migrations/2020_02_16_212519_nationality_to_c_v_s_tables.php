@@ -14,7 +14,8 @@ class NationalityToCVSTables extends Migration
     public function up()
     {
         Schema::table('c_v_s', function (Blueprint $table) {
-            //
+            $table->string('nationality');
+
         });
     }
 

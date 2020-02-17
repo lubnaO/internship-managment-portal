@@ -1,113 +1,227 @@
-<html>
-<head>
 
-<link rel="stylesheet" href="css/style.css">
+
+@extends('layout')
+
+@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 <style>
-   input, textarea{
- 
-   width: 100%;
-   padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
+/*@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');*/
+
+.stepwizard-step p {
+    margin-top: 0px;
+    color:#666;
 }
- 
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-bottom: 100px;
-margin-right: 100px; }
-
-
-  .button[type=Submit] {
-  width: 100%;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  background: #7a5e86;
-  background: -moz-linear-gradient(left, #7a5e86 0%, #a75e67 51%, #f77b2e 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #7a5e86), color-stop(51%, #a75e67), color-stop(100%, #f77b2e));
-  background: -webkit-linear-gradient(left, #7a5e86 0%, #a75e67 51%, #f77b2e 100%);
-  background: -o-linear-gradient(left, #7a5e86 0%, #a75e67 51%, #f77b2e 100%);
-  background: -ms-linear-gradient(left, #7a5e86 0%, #a75e67 51%, #f77b2e 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#7a5e86), color-stop(51%, #a75e67), to(#f77b2e));
-  background: linear-gradient(to right, #7a5e86 0%, #a75e67 51%, #f77b2e 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a5e86', endColorstr='#f77b2e', GradientType=1 ); }
-
+.stepwizard-row {
+    display: table-row;
 }
-
-button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+    margin-top:30px;
 }
-
-body{
-
-  background-image: url("/images/hero_3.jpg");
-
+.stepwizard-step button[disabled] {
+    /*opacity: 1 !important;
+    filter: alpha(opacity=100) !important;*/
 }
-
-
-    </style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+.stepwizard .btn.disabled, .stepwizard .btn[disabled], .stepwizard fieldset[disabled] .btn {
+    opacity:1 !important;
+    color:#bbb;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content:" ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: 0;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+</style>
 </head>
 <body>
 
+<div class="container">
+    <div class="stepwizard">
+        <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                <p><small>Student Information</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                <p><small>Training  Information</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                <p><small>Student evaluation</small></p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <form role="form" action="{{ route('medEvalutions.store') }}" class="container" method="POST">
+    <div class="panel panel-primary setup-content" id="step-1">
+    <div class="panel-heading">
+                
+                </div>
+                <div class="panel-body">
+                <div class="form-group">
+                    <label class="control-label"> Student Name </label>
+                    <input type="text" placeholder="Companys Name" name="StudentName" maxlength="100"  type="text" required="required" class="form-control"required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Student ID</label>
+                    <input type="text" placeholder="16000000" name="StudentID" maxlength="100" type="text" required="required" class="form-control" required>
+                </div>
 
-<div>
-<form action="{{ route('medEvalutions.store') }}" class="container" method="POST" >
-@csrf 
+                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+            </div>
+        </div>
+        <div class="panel panel-primary setup-content" id="step-2">
+        <div class="panel-heading">
+                 
+                 </div>
+            <div class="form-group">
+                    <label class="control-label">Training Organization</label>
+                    <input type="text" placeholder="Training Organization" name="TrainingOrganization" maxlength="100"   type="text" required="required" class="form-control" required> 
+                </div>
 
+                <div class="form-group">
+                    <label class="control-label">Training Supervisor</label>
+                    <input type="text" placeholder="Training Supervisor" name="TrainingSupervisor" maxlength="100"  type="text" required="required" class="form-control" required>
+                </div>
 
-<h2> MIDTERM EVALUATION REPORT</h2>
+                <div class="form-group">
+                    <label class="control-label">Department Name</label>
+                    <input type="date" placeholder="Department Name" name="DepartmentName" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Start date</label>
+                    <input maxlength="100"   required="required" class="form-control"  type="date" placeholder="1\1\2020 " name="Startdate" required> </input>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">End date</label>
+                    <input maxlength="100"   required="required" class="form-control"   type="date" placeholder="1\1\2020 " name="Enddate" required> </input>
+                </div>
 
+            
+            
+                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+            </div>
+        </div>
+        
+        <div class="panel panel-primary setup-content" id="step-3">
+        <div class="panel-heading">
+               
+               </div>
+               <div class="panel-body">
+               
+                    <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="control-label">Accomplished Tasks</label>
+                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Accomplished Tasks " name="AccomplishedTasks" required> </textarea class="form-control"> 
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Skills Acquired</label>
+                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Skills Acquired" name="SkillsAcquired" required> </textarea> 
+                </div>
 
-    <label ><b>Student Name</b></label>
-    <input type="text" placeholder="Companys Name" name="StudentName" required>
+                <div class="form-group">
+                    <label class="control-label">Knowledge Used</label>
+                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Knowledge Used " name="KnowledgeUsed" required> </textarea> 
+                </div>
 
-   <label for="psw"><b> Student ID</b></label>
-    <input type="text" placeholder="16000000" name="StudentID" required>
-    <label for="psw"><b> Training Supervisor</b></label>
-    <input type="text" placeholder="Training Supervisor" name="TrainingSupervisor" required>
+                <div class="form-group">
+                    <label class="control-label">Key Meetings</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Key Meetings" name="KeyMeetings" required> </textarea> 
+                </div>
 
+                <div class="form-group">
+                    <label class="control-label">Issues with Trainee</label>
+                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Issues with Trainee" name="Issues" required> </textarea> 
+                </div>
 
-    <label for="psw"><b> Training Organization</b></label>
-    <input type="text" placeholder="Training Organization" name="TrainingOrganization" required> 
+                <div class="form-group">
+                    <label class="control-label">Supervisor Feedback</label>
+                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Supervisor Feedback" name="Feedback" required> </textarea> 
+                </div>
 
-    <label for="psw"><b> Department Name </b></label>
-    <input type="date" placeholder="Department Name" name="DepartmentName" required>
-
-
-    <label for="psw"><b>#Training Details</b></label>
-    <label for="psw"><b> Start date</b></label>
-    <input rows="10" cols="50"  type="date" placeholder="1\1\2020 " name="Startdate" required> </input>
-    <label for="psw"><b> End date</b></label>
-    <input rows="10" cols="50"   type="date" placeholder="1\1\2020 " name="Enddate" required> </input>
-    <label for="psw"><b> Accomplished Tasks</b></label>
-    <textarea rows="10" cols="50" placeholder="Accomplished Tasks " name="AccomplishedTasks" required> </textarea> 
-    <label for="psw"><b> Skills Acquired</b></label>
-    <textarea rows="10" cols="50" placeholder="Skills Acquired" name="SkillsAcquired" required> </textarea> 
-    <label for="psw"><b> Knowledge Used</b></label>
-    <textarea rows="10" cols="50" placeholder="Knowledge Used " name="KnowledgeUsed" required> </textarea> 
-    <label for="psw"><b> Key Meetings</b></label>
-    <textarea rows="10" cols="50" placeholder="Key Meetings" name="KeyMeetings" required> </textarea> 
-    <label for="psw"><b> Issues with Trainee</b></label>
-    <textarea rows="10" cols="50" placeholder="Issues with Trainee" name="Issues" required> </textarea> 
-    <label for="psw"><b> Supervisor Feedback</b></label>
-    <textarea rows="10" cols="50" placeholder="Supervisor Feedback" name="Feedback" required> </textarea> 
-     
-    <div>
-    <button class="button" type="submit" class="btn"> publish </button>
-    </div> 
-</form>
+          
+                <button class="btn btn-primary pull-right" type="submit">Submit!</button>
+            </div>
+        </div>
+    </form>
 </div>
+    
+<script>
+$(document).ready(function () {
 
-</body> 
-</html> 
+var navListItems = $('div.setup-panel div a'),
+    allWells = $('.setup-content'),
+    allNextBtn = $('.nextBtn');
+
+allWells.hide();
+
+navListItems.click(function (e) {
+    e.preventDefault();
+    var $target = $($(this).attr('href')),
+        $item = $(this);
+
+    if (!$item.hasClass('disabled')) {
+        navListItems.removeClass('btn-success').addClass('btn-default');
+        $item.addClass('btn-success');
+        allWells.hide();
+        $target.show();
+        $target.find('input:eq(0)').focus();
+    }
+});
+
+allNextBtn.click(function () {
+    var curStep = $(this).closest(".setup-content"),
+        curStepBtn = curStep.attr("id"),
+        nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+        curInputs = curStep.find("input[type='text'],input[type='url']"),
+        isValid = true;
+
+    $(".form-group").removeClass("has-error");
+    for (var i = 0; i < curInputs.length; i++) {
+        if (!curInputs[i].validity.valid) {
+            isValid = false;
+            $(curInputs[i]).closest(".form-group").addClass("has-error");
+        }
+    }
+
+    if (isValid) nextStepWizard.removeAttr('disabled').trigger('click');
+});
+
+$('div.setup-panel div a.btn-success').trigger('click');
+});
+</script>   
+</body>
+</html>
+@endsection
