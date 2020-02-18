@@ -21,11 +21,16 @@
   background-color:#193870
 }
 
+
+
+
 </Style>
 
 </head>
 <body>
-
+<div id="hero">
+<div id ="hero-overlay"></div>
+</div>
 <nav class ="navbar navbar-expand-lg navbar-light">
 <a href ="#" class ="navbar-brand text-white"> Internship Managment Portal</a>
 <div class="collapse navbar-collapse">

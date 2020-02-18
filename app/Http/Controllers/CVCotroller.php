@@ -37,7 +37,54 @@ class CVCotroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+    "Name"=>"required|:c_v_s"
+     
+]);
+
+$request->validate([
+
+    "address"=>"required|:c_v_s"
+     
+]);
+
+$request->validate([
+
+    "date"=>"required|:c_v_s"
+     
+]);
+
+$request->validate([
+
+    "email"=>"required|:c_v_s"
+     
+]);
+
+$request->validate([
+
+    "formal"=>"required|:c_v_s"
+     
+]);
+
+
+$request->validate([
+
+    "courses"=>"required|:c_v_s"
+     
+]);
+
+
+$request->validate([
+
+    "skills"=>"required|:c_v_s"
+     
+]);
+
+        CV::create($request->all());
+
+
+        return redirect (route('CV.index'));
     }
 
     /**
