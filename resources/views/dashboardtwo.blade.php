@@ -65,9 +65,9 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
         <li>
-        <a href="./user.html">
+        <a href="/CV/create">
               <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <p>Student CV</p>
             </a>
           </li>
           </li>
@@ -100,7 +100,7 @@
           </li>
 
           <li>
-            <a href="/finalEvalutions/create">
+            <a href="TrainingRegistrations/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>registeration Form</p>
             </a>

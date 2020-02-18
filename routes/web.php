@@ -11,17 +11,21 @@
 |
 */
 
-Route::get('/sdashboard', function () {
-    return view('dashboardtwo');
+Route::get('/', function () {
+    return view('finalreports.create');
 
 });
 
-Route::get('/Cdashboard', function () {
-  return view('Cdashboard');
+//Route::get('/Cdashboard', function () {
+ // return view('Cdashboard');
 
-});
+//});
 //Route::get('/annou', function () {
   //  return view('annou');
+//});
+
+//Route::get('/dashboardtwo', function () {
+  //  return view('dashboardtwo');
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
@@ -46,9 +50,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/', function () {
-    return view('indexhome');
-});
+//Route::get('/', function () {
+   // return view('indexhome');
+//});
 
 
 //Route::get('/', function () {
