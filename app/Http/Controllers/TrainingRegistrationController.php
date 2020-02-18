@@ -38,12 +38,73 @@ class TrainingRegistrationController extends Controller
     {
         $request->validate([
 
-            "regfile"=>"required" ]);
-        $requestData = $request->all();
-     // $requestData['finalre']=$fileinfo;
-     TrainingRegistration::create([
-            'regfile'=>$request->regfile->store('files','public')
+            "StudentName"=>"required|:training_registrations"
+             
         ]);
+        
+        $request->validate([
+
+            "StudentID"=>"required|:training_registrations"
+             
+        ]);
+        $request->validate([
+
+            "SMajor"=>"required|:training_registrations"
+             
+        ]);
+
+        $request->validate([
+
+            "TrainingOrganization"=>"required|:training_registrations"
+             
+        ]);
+
+        $request->validate([
+
+            "SupervisorInfo"=>"required|:training_registrations"
+             
+        ]);
+
+        $request->validate([
+
+            "TraineeTaske"=>"required|:training_registrations"
+             
+        ]);
+
+        $request->validate([
+
+            "TraineHoure"=>"required|:training_registrations"
+             
+        ]);
+
+        $request->validate([
+
+            "TraineDate"=>"required|:training_registrations"
+             
+        ]);
+
+        $request->validate([
+
+            "SupervisorName"=>"required|:training_registrations"
+             
+        ]);
+        
+
+        $request->validate([
+
+            "SupervisorJob"=>"required|:training_registrations"
+             
+        ]);
+
+        TrainingRegistration::create($request->all());
+
+
+        return redirect (route('TrainingRegistrations.index'));
+        
+        
+        
+        
+
     }
 
     /**
@@ -54,7 +115,7 @@ class TrainingRegistrationController extends Controller
      */
     public function show($id)
     {
-        return view ('TrainingRegistrations.show')->with('TrainingRegistrations',TrainingRegistration::all());
+      
 
     }
 

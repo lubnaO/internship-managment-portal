@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TrainingRegistration extends Model
 {
-    protected $fillable = ['StudentName','StudentID','TrainingOrganization','DepartmentName','Startdate',
-'Enddate','AccomplishedTasks','SkillsAcquired','KnowledgeUsed','KeyMeetings','Issues','Feedback'];
+    protected $fillable = ['id','StudentName','StudentID','SMajor',
+    'TrainingOrganization','SupervisorInfo','SupervisorName','SupervisorJob','TraineeTaske','TraineHoure','TraineDate'];
     
 }
+
