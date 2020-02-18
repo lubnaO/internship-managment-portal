@@ -72,7 +72,7 @@
           </li>
           </li>
         <li>
-          <a href="/annou">
+          <a href="/Announcaments/indexs">
               <i class="now-ui-icons education_atom "></i>
               <p>Annoucaments</p>
             </a>
@@ -93,14 +93,14 @@
          
           
           <li>
-            <a href="/upload">
+            <a href="/finalreports/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Final Report</p>
             </a>
           </li>
 
           <li>
-            <a href="./upload">
+            <a href="/finalEvalutions/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>registeration Form</p>
             </a>

@@ -14,7 +14,7 @@ class finalEvalutionController extends Controller
      */
     public function index()
     {
-        return view ('finalEvalutions.index');
+        return view ('finalEvalutions.index')->with('finalEvalution',finalEvalution::all());
 
     }
 
@@ -36,14 +36,8 @@ class finalEvalutionController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-
-            "finalev"=>"required" ]);
-        $requestData = $request->all();
-     // $requestData['finalre']=$fileinfo;
-     finalEvalution::create([
-            'finalev'=>$request->finalev->store('files','public')
-        ]);
+        finalEvalution::create($request->all());
+            return redirect( route('finalEvalutions.index'));
     }
 
     /**

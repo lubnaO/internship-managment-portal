@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+
+
+:root{
+
+  --color:#e40046; 
+}
+
+
+body{
+
+  background: #ffffff;
+  overflow-x: hidden;
+  padding-top:90px;
+  font-family: "poppins",sans-serif;
+  margin: 0 100px;
+
+}
+
+.profile-img{
+
+  float: left;
+  width: 340px;
+  height: 200px;
+}
+
+.profile-header{
+
+  background: #fff;
+  width: 100%;
+  display: flex;
+  height: 190px;
+  position: relative;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, .2);
+
+}
+.profile-img img {
+
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  border: 4px solid #ffffff;
+  box-shadow: 0px 5px rgba(0, 0, 0, 2);
+  position: absolute;
+  left: 90px;
+  top: 230px;
+  z-index: 5;
+  background: #fff;
+
+}
+
+.profile-nav-info {
+float: left;
+flex-direction: column;
+justify-content: center;
+padding-top: 60px;
+
+}
+
+.profile-nav-info h3{
+
+  font-variant: small-caps;
+  font-size: 2rem;
+  font-family:  sans-serif;
+
+}
+
+.profile-nav-info .location .country .state {
+
+  display: flex;
+  font-weight: 5px;
+  padding-left: 500px;
+  }
+
+  .profile-nav-info .state  {
+
+   margin-left: 30px;
+   padding-left: 500px;
+  }
+
+  .profile-nav-info .country  {
+
+    margin-left: 30px;
+    padding-left: 500px;
+   }
+
+  .profile-option {
+    width: 40px;
+    height: 40px;
+    background:  #e40046;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    outline: none;
+    }
+
+     .profile-option .notification i {
+
+      color: #fff;
+      font-size: 1.2rem;
+      transition: all .5s ease-in-out;
+  
+    }
+    
+    .profile-option:hover {
+
+      background: #fff;
+      border: 1px solid #e40046;
+    } 
+
+    .main-bd{
+
+      width: 100%;
+      display: flex;
+      padding-right: 15px;
+    }
+
+    .profile-side {
+
+      width: 300px;
+      background: #fff;
+      box-shadow: 0px 3px 5px  rgba(0, 0, 0, .2);
+      padding: 90px 30px 20px ;
+      font-family: sans-serif;
+      margin-left: 10px;
+      z-index: 99;
+      top: 10px;
+
+    }
+
+    .profile-side p {
+
+      margin-bottom: 7px;
+      color: #333333;
+      font-size: 14px;
+    }
+
+    .profile-side p i {
+      color: var(--color);
+      margin-right: 10px;
+
+    }
+
+    .nav {
+
+      width: 100%;
+      z-index: -1;
+    }
+
+    .nav ul {
+
+      display: flex;
+      justify-content: center;
+    }
+
+
+

@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+            
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
@@ -71,6 +72,7 @@
   </div>
   <p>{{Auth::user()}}</p>
 </div>
+
 @endsection
 
 
