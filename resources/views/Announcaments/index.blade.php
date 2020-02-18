@@ -13,7 +13,7 @@
   <thead>
     <tr>
     <th scope="col">name</th>
-      <th scope="col">Job Name</th>
+      <th scope="col">Jobb Name</th>
       <th scope="col">Job Descripion</th>
       <th scope="col">City</th>
       <th scope="col">Start</th>

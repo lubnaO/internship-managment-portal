@@ -78,7 +78,7 @@ body{
     <label for="psw"><b> City</b></label>
     <input type="text" placeholder="City" name="city" required> 
 
-    <label for="psw"><b> Start duration </b></label>
+    <label for="psw"><b> Start durationn </b></label>
     <input type="date" placeholder="1/1/2020" name="A_start" required>
     <input type="hidden" value="{{Auth::user()->company->id}}" name="Company_id"/>
     <label for="psw"><b> End duration</b></label>

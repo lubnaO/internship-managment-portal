@@ -93,7 +93,7 @@
                 <div class="panel-body">
                 <div class="form-group">
                     <label class="control-label"> Student Name </label>
-                    <input type="text" placeholder="Companys Name" name="StudentName" maxlength="100"  type="text" required="required" class="form-control"required>
+                    <input type="text" placeholder="Student Name" name="StudentName" maxlength="100"  type="text" required="required" class="form-control"required>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Student ID</label>
