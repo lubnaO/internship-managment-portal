@@ -52,7 +52,7 @@ class AnnouncamentsController extends Controller
         Announcament::create($request->all());
 
 
-        return redirect (route('Announcaments.index'));
+        return redirect (route('home'));
 
         
     }

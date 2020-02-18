@@ -86,10 +86,13 @@
     </div>
     
     <form role="form" action="{{ route('medEvalutions.store') }}" class="container" method="POST">
+    @csrf
     <div class="panel panel-primary setup-content" id="step-1">
     <div class="panel-heading">
                 
                 </div>
+                <form role="form" action="{{ route('medEvalutions.store') }}" class="container" method="POST">
+    @csrf
                 <div class="panel-body">
                 <div class="form-group">
                     <label class="control-label"> Student Name </label>
