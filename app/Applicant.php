@@ -17,5 +17,5 @@ class Applicant extends Model
     }
     public function student()
     {
-        return $this->hasMany('App\Student','stu_id');
+        return $this->belongsTo('App\Student','stu_id');
 }}

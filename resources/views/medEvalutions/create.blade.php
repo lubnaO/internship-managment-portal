@@ -122,7 +122,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Department Name</label>
-                    <input type="date" placeholder="Department Name" name="DepartmentName" required>
+                    <input type="text" placeholder="Department Name" name="DepartmentName"  maxlength="100" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Start date</label>

@@ -37,12 +37,48 @@ class medEvalutionController extends Controller
     {
         $request->validate([
 
-            "medfile"=>"required" ]);
-        $requestData = $request->all();
-     // $requestData['finalre']=$fileinfo;
-     medEvalution::create([
-            'medfile'=>$request->medfile->store('files','public')
-        ]);
+            "StudentName"=>"required" ]);
+            $request->validate([
+
+                "StudentID"=>"required" ]);
+                $request->validate([
+
+                    "TrainingOrganization"=>"required" ]);
+                    $request->validate([
+
+                        "DepartmentName"=>"required" ]);
+                        $request->validate([
+
+                            "Startdate"=>"required" ]);
+                            $request->validate([
+
+                                "Enddate"=>"required" ]);
+                                $request->validate([
+
+                                    "AccomplishedTasks"=>"required" ]);
+                                    $request->validate([
+
+                                        "SkillsAcquired"=>"required" ]);
+                                        $request->validate([
+
+                                            "KnowledgeUsed"=>"required" ]);
+                                            $request->validate([
+
+                                                "KeyMeetings"=>"required" ]);
+
+                                                $request->validate([
+
+                                                    "Issues"=>"required" ]);
+                                                    $request->validate([
+
+                                                        "Feedback"=>"required" ]);
+                                                        $request->validate([
+
+                                                            "TrainingSupervisor"=>"required" ]);
+                                                        
+      
+        medEvalution::create($request->all());
+        return redirect (route('home'));
     }
 
     /**
