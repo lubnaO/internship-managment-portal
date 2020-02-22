@@ -65,19 +65,13 @@
     margin-top:150px;
    
 }
-body{
 
-background-image: url("/images/in.jpg");
-height:50px;
-
-}
 .btn-primary{
   background-color: #f26427
 }
 </style>
 </head>
 <body>
-
 <div class="container" method ="POST" action="{{ route('finalreports.store')}}">
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
