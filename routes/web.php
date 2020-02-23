@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('finalreports.create');
 
-});
 
 //Route::get('/Cdashboard', function () {
  // return view('Cdashboard');
@@ -50,9 +47,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-//Route::get('/', function () {
-   // return view('indexhome');
-//});
+Route::get('/', function () {
+    return view('indexhome');
+});
 
 
 //Route::get('/', function () {

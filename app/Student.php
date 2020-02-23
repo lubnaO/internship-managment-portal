@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Announcament;
 use App\User;
 use App\Applicant;
+use App\CV;
 
 class Student extends Model
 {
@@ -30,9 +31,9 @@ class Student extends Model
     {
         return $this->hasMany('App\Applicant','stu_id');
 }
-public function cv()
+    public function cv()
     {
-        return $this->hasOne('App\CV');
+        return $this->hasOne('App\CV','student_id');
     }
     public function Announcament()
     {
