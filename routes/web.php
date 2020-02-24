@@ -13,17 +13,17 @@
 
 
 
-//Route::get('/Cdashboard', function () {
- // return view('Cdashboard');
+Route::get('/Cdashboard', function () {
+  return view('Cdashboard');
 
-//});
+});
 //Route::get('/annou', function () {
   //  return view('annou');
 //});
 
-//Route::get('/dashboardtwo', function () {
-  //  return view('dashboardtwo');
-//});
+Route::get('/dashboardtwo', function () {
+    return view('dashboardtwo');
+});
 
 Route::resource('/Announcaments','AnnouncamentsController');
 Route::resource('/CV','CVCotroller');

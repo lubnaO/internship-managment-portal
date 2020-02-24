@@ -14,7 +14,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 -->
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 <!DOCTYPE html>
@@ -44,17 +44,95 @@
 .sidebar-wrapper{
   background-color: #193870
 }
+.myDIV {
+  data-color: #6495ED; /* Blue text color */
+}
 
   </Style>
 </head>
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar ">
+  
+    <div class="sidebar"  >
+    
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-      <div class="logo">
+    @if (Auth::user()->user_type == 's')
+    <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          STUDENT PROFILE
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+        <li>
+        <a href="/CV/create">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Student CV</p>
+            </a>
+          </li>
+          </li>
+        <li>
+          <a href="/Announcaments/indexs">
+              <i class="now-ui-icons education_atom "></i>
+              <p>Annoucaments</p>
+            </a>
+          </li>
+          <li>
+            <a href="./tables.html">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Acceptance</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="./tables.html">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Pass & Fail</p>
+            </a>
+          </li>
+         
+          
+          <li>
+            <a href="/finalreports/create">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Final Report</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="TrainingRegistrations/create">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>registeration Form</p>
+            </a>
+          </li>
+          <li>
+            <a href="./notifications.html">
+              <i class="now-ui-icons ui-1_bell-53"></i>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li class="active-pro">
+            <a href="./upgrade.html">
+              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+              <p>Upgrade to PRO</p>
+            </a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+                  
+                  @endif
+
+                  @if (Auth::user()->user_type == 'c')
+                  <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
           
         </a>
@@ -79,7 +157,7 @@
             </a>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="http://localhost:8000/Announcaments/show">
               <i class="now-ui-icons location_map-big"></i>
               <p>Requests</p>
             </a>
@@ -103,7 +181,7 @@
             </a>
           </li>
           <li>
-            <a href="./tables.html">
+            <a href="http://localhost:8000/finalreports/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Final Evaloution</p>
             </a>
@@ -124,6 +202,74 @@
         </ul>
       </div>
     </div>
+                  @endif
+
+                  @if (Auth::user()->user_type == 'u')
+                  <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          STUDENT PROFILE
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+        <li>
+        <a href="./user.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>User Profile</p>
+            </a>
+          </li>
+          </li>
+        <li>
+          <a href="./icons.html">
+              <i class="now-ui-icons education_atom "></i>
+              <p>Icons</p>
+            </a>
+          </li>
+          <li>
+            <a href="./map.html">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Maps</p>
+            </a>
+          </li>
+          <li>
+            <a href="./notifications.html">
+              <i class="now-ui-icons ui-1_bell-53"></i>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="./tables.html">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Table List</p>
+            </a>
+          </li>
+          <li>
+            <a href="./typography.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Typography</p>
+            </a>
+          </li>
+          <li class="active-pro">
+            <a href="./upgrade.html">
+              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+              <p>Upgrade to PRO</p>
+            </a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+                  @endif
+    
 
       <!-- Navbar -->
   
