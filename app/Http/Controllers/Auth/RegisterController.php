@@ -69,35 +69,35 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'user_type' => "s"
+            'user_type' => "u"
         ]);
 
 
-        $studet = Student::create([
+        /*$studet = Student::create([
             'firstName' =>$data['name'],
             'lastName' => "test",
             'email' => $data['email'],
             'phone' => "0534156987",
             'major' => "major1",
             'id_user' =>  $user->id,
-        ]);
+        ]);*/
 
-      /* $company = company::create([
+       $company = company::create([
             'name' =>$data['name'],
             'address' => "test",
             'email' => $data['email'],
             'phone' => "0534156987",
             'description' => "major1",
             'id_user' =>  $user->id,
+        ]);
+
+     /* $UniversitySupervisor= UniversitySupervisor::create([
+            'firstName' =>$data['name'],
+            'lastName' => "test",
+            'email' => $data['email'],
+            'id_user' =>  $user->id,
         ]);*/
 
-     /*   $UniversitySupervisor= UniversitySupervisor::create([
-            'us_firstName' =>$data['name'],
-            'us_lastName' => "test",
-            'us_email' => $data['email'],
-            'id_user' =>  $user->id,
-        ]);
-*/
         return  $user;
     }
 }

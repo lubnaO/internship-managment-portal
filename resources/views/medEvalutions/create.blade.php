@@ -147,7 +147,7 @@
                
                     <div class="form-group">
                     <label for="exampleFormControlTextarea1" class="control-label">Accomplished Tasks</label>
-                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Accomplished Tasks " name="AccomplishedTasks" required> </textarea class="form-control"> 
+                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Accomplished Tasks " name="AccomplishedTasks" required> </textarea > 
                 </div>
                 <div class="form-group">
                     <label class="control-label">Skills Acquired</label>

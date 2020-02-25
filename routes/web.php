@@ -11,19 +11,47 @@
 |
 */
 
+<<<<<<< HEAD
 
+=======
+//Route::get('/', function () {
+  // return view('finalEvalutions.create');
+
+//});
+>>>>>>> db25e64df92998d053ffc8e4e6d013616931a0eb
 
 Route::get('/Cdashboard', function () {
   return view('Cdashboard');
 
+<<<<<<< HEAD
 });
+=======
+//});
+
+Route::get('/', function () {
+  return view('indexhome');
+
+
+
+});
+
+Route::get('finalEvalutions/index','finalEvalutionController@index');
+
+
+>>>>>>> db25e64df92998d053ffc8e4e6d013616931a0eb
 //Route::get('/annou', function () {
   //  return view('annou');
 //});
 
+<<<<<<< HEAD
 Route::get('/dashboardtwo', function () {
     return view('dashboardtwo');
 });
+=======
+//Route::get('/dashboardtwo', function () {
+   //return view('dashboardtwo');
+//});
+>>>>>>> db25e64df92998d053ffc8e4e6d013616931a0eb
 
 Route::resource('/Announcaments','AnnouncamentsController');
 Route::resource('/CV','CVCotroller');
@@ -31,8 +59,8 @@ Route::resource('/CV','CVCotroller');
 Route::resource('/company','CompanyFormController');
 Route::resource('/applicnt','ApplicntCntroller');
 
-Route::get('upload', 'FrontController@upload');
-Route::get('annou', 'FrontController@annou'); 
+
+
 
 
 Route::resource('/finalreports','finalReportController');
@@ -47,9 +75,17 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('indexhome');
 });
+=======
+
+
+//Route::get('/', function () {
+   // return view('indexhome');
+//});
+>>>>>>> db25e64df92998d053ffc8e4e6d013616931a0eb
 
 
 //Route::get('/', function () {

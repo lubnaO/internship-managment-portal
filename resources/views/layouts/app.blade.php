@@ -21,6 +21,12 @@
 .card-header{
   background-color:#193870
 }
+.logo {
+  background-color: #193870
+}
+.sidebar-wrapper{
+  background-color: #193870
+}
 
 
 

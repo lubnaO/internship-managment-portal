@@ -2,6 +2,18 @@
 
 @section('content')
 
+<style>
+body{
+
+background-image: url("/images/back10.jpg");
+height:50px;
+
+}
+.btn-primary{
+  background-color: #f26427
+}
+</style>
+
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
@@ -29,6 +41,11 @@
   <div class="form-group">
     <label for="exampleFormControlInput1">Contact with us</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" name="contact">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Value</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="create">
   </div>
 
 
