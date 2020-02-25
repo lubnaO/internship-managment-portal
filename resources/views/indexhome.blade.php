@@ -23,11 +23,24 @@
     <style>
 
 
-.button3 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid orange;
+.btn btn-primary btn-block" {
+  background-color: orange; 
+  color: white; 
+  width:100%;
+  
 }
+
+
+  .site-section   , p {
+    
+   color: #fff; 
+   text-align: center; }
+
+ h2 {
+    color: #f77b2e;
+    text-align: center; 
+
+   }
     </style> 
     
   </head>
@@ -52,20 +65,21 @@
     </div>
    
 
+  
     <div class="top-bar">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block"></span></a>
             <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block"> </span></a>
+            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block"> Intern Management System </span></a>
             
 
             <div class="float-right">
 
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
+            <a href="{{ route('company.create') }}" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
             <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-instagram"></span> <span class="d-none d-md-inline-block">Login</span></a>
+            <a href="/login" class="text-white"><span class="mr-2 text-white icon-instagram"></span> <span class="d-none d-md-inline-block">Login</span></a>
 
             </div>
 
@@ -85,6 +99,8 @@
             <div class="site-logo">
               <a href="index.html" class="text-black"><span class="text-primary">IMP</a>
             </div>
+
+            
             
             <div class="col-12">
               <nav class="site-navigation text-right ml-auto " role="navigation">
@@ -92,15 +108,8 @@
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
 
-                <li class="has-children">
-                <a href="#announcments-section" class="nav-link">Announcments</a>
-                <ul class="dropdown arrow-top">
-                    <li><a href="#team-section" class="nav-link">IT</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Markting</a></li>
-                    <li><a href="#faq-section" class="nav-link">Financial</a></li>
-                    <li class="has-children">
-                    </ul>
-                    </li>
+                <li><a href="#announcments-section" class="nav-link">Announcments</a></li> 
+                
                 <li><a href="#about-section" class="nav-link">About Us</a></li>
                 
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
@@ -121,26 +130,26 @@
 
       
 
-      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back_1.jpg'); " >
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back4.jpg'); " >
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12 col-lg-7">
               <h1 data-aos="fade-up" data-aos-delay="">Welcome to IMP</h1>  
               <p class="mb-5" data-aos="fade-up" data-aos-delay="100">We have helped many students and companies in summer training issues .... What are you waiting for? Register with us</p>
-              <p data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-outline-white border-w-2 btn-md">Sign up</a></p>
+              <p data-aos="fade-up" data-aos-delay="200"><a href="{{ route('company.create') }}" class="btn btn-outline-white border-w-2 btn-md">Sign up</a></p>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back_4.jpg'); " >
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back5.jpg'); " >
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12 col-lg-8">
               <h1 data-aos="fade-up" data-aos-delay="">Bulid your future with us </h1>      
               <p class="mb-5" data-aos="fade-up" data-aos-delay="100"> </p>
-              <p data-aos="fade-up" data-aos-delay="200"><a href="#" class="btn btn-outline-white border-w-2 btn-md">Get in touch</a></p>
+              <p data-aos="fade-up" data-aos-delay="200"><a href="#contact-section" class="btn btn-outline-white border-w-2 btn-md">Get in touch</a></p>
             </div>
           </div>
         </div>
@@ -152,8 +161,8 @@
 
     <h2> Most visited announcement </h2> 
     
-    <div class="site-section">
-      <div class="block__73694 mb-2" id="services-section">
+    <!--<div class="site-section">
+      <div class="block__73694 mb-2" id="announcments-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
 
@@ -163,12 +172,12 @@
             
            
             <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
-             <h3 class="mb-3 text-black"> company A </h3>
-              <p> Frist announcment </p> 
+          
+             <h3 class="mb-3 text-black"> Company A  </h3>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Aliquam assumenda eum blanditiis perferendis. </p> 
               
-              <button  class="button3" type="submit"> more  </button> 
-              
-            </div>
+    
 
           </div>
         </div>      
@@ -186,14 +195,15 @@
 
             <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
               <h2 class="mb-3 text-black">Company B </h2>
-              <p> Second announcment </p> 
-              <button  class="button3" type="submit"> more  </button> 
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis. </p> 
+             
             </div>
-
-          </div>
+           
+          </div> --> 
+          <p><a href="/Announcaments" class="btn btn-primary btn-block"> more </a></p>
         </div>      
       </div>
-    </div>
+    
 
     <!--<div class="site-section bg-light">
       <div class="container">
@@ -262,12 +272,8 @@
       <div class="container">
         <div class="row justify-content-center mb-4 block-img-video-1-wrap">
           <div class="col-md-12 mb-5">
-            <figure class="block-img-video-1" data-aos="fade">
-              <a href="https://vimeo.com/45830194" data-fancybox data-ratio="2">
-                <span class="icon"><span class="icon-play"></span></span>
-                <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
-              </a>
-            </figure>
+           <h2> Our Story  </h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
           </div>
         </div>
         <div class="row">

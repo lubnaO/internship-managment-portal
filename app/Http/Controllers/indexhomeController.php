@@ -4,12 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Announcament;
-use App\Company;
-use App\User;
-use App\Http\Requests\announcamentsRequest;
-
-
-class AnnouncamentsController extends Controller
+class indexhomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +13,7 @@ class AnnouncamentsController extends Controller
      */
     public function index()
     {
-        return view('Announcaments.index')->with('announcaments',Announcament::all());
-        return view('indexhome')->with('announcaments',Announcament::all());
-        
+        return view('indexhome.index')->with('announcaments',Announcament::all());
     }
 
     /**
@@ -30,7 +23,7 @@ class AnnouncamentsController extends Controller
      */
     public function create()
     {
-        return view('Announcaments.create');
+        //
     }
 
     /**
@@ -39,23 +32,9 @@ class AnnouncamentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(announcamentsRequest $request)
+    public function store(Request $request)
     {
-    
-
-
-/**$request->validate([
-
-    "city"=>"required|:announcaments"
-     
-]);**/
-
-        Announcament::create($request->all());
-
-
-        return redirect (route('Announcaments.index'));
-
-        
+        //
     }
 
     /**
