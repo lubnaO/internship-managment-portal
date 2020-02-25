@@ -13,7 +13,7 @@
   @csrf
   <div class="form-group">
     <label for="name">Company Name</label>
-    <input type="text"  name ="c-name" class= "form-control"> 
+    <input type="text"  name ="name" class= "form-control"> 
   </div>
 
   <div class="form-group">
@@ -40,10 +40,10 @@
     <input type="text" class="form-control" id="exampleFormControlInput1" name ="history">
   </div>
 
-  <div class="form-group">
+ <!-- <div class="form-group">
     <label for="exampleFormControlInput1">image</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" name ="image">
-  </div>
+  </div>--> 
 
 
   <button type="submit" class=" button btn btn-primary  px-5 font-size-15">Puplish</button>

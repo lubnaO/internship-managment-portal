@@ -14,15 +14,17 @@
             
                     </div>
                     </div>
+
+                    @foreach ($CompanyForm as $companyform)
                     <div class="col-md-6">
                     <div class="profile-head">
                                  <h5>
-                              Company
+                                 {{ $companyform->name }} 
                                  </h5>
                                     <h6>
                                     Field of Company
                                     </h6>
-                                    <p class="Location"> Jeddah <span>KSA</span></p>
+                                    <p class="Location">  {{ $companyform->city}} </span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link " id="home-tab" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true">Our History</a>

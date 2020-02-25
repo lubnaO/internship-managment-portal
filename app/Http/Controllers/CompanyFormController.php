@@ -14,7 +14,7 @@ class CompanyFormController extends Controller
      */
     public function index()
     {
-        return view ('company.index')->with('CompanyForm', CompanyForm::all());
+        return view ('company.profile2')->with('CompanyForm', CompanyForm::all());
     }
 
     /**
