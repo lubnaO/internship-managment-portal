@@ -14,7 +14,7 @@ class finalReportController extends Controller
      */
     public function index()
     {
-        return view ('finalreports.index')->with('finalReport',finalReport::all());
+        return view ('finalreports.index')->with ('finalreports', finalReport::all());
     }
 
     /**

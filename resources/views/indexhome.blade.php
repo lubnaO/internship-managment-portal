@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,6 +29,12 @@
   color: black; 
   border: 2px solid orange;
 }
+. text-right ml-auto {
+  background-color:#193870
+}
+
+
+
     </style> 
     
   </head>
@@ -52,29 +59,6 @@
     </div>
    
 
-    <div class="top-bar">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-envelope-open-o"></span> <span class="d-none d-md-inline-block"></span></a>
-            <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-phone"></span> <span class="d-none d-md-inline-block"> </span></a>
-            
-
-            <div class="float-right">
-
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
-            <span class="mx-md-2 d-inline-block"></span>
-            <a href="#" class="text-white"><span class="mr-2 text-white icon-instagram"></span> <span class="d-none d-md-inline-block">Login</span></a>
-
-            </div>
-
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
       
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
@@ -83,7 +67,7 @@
           
             
             <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">IMP</a>
+              <a href="index.html" class="text-black"><span class="text-primary">Intern Managment Portal </a>
             </div>
             
             <div class="col-12">
@@ -121,7 +105,7 @@
 
       
 
-      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back_1.jpg'); " >
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back3.jpg'); " >
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12 col-lg-7">
@@ -134,7 +118,7 @@
 
       </div>
 
-      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back_4.jpg'); " >
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back2.jpg'); " >
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12 col-lg-8">

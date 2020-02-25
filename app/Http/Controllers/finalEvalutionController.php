@@ -15,6 +15,7 @@ class finalEvalutionController extends Controller
     public function index()
     {
         return view ('finalEvalutions.index')->with('finalEvalution',finalEvalution::all());
+    
 
     }
 
@@ -27,6 +28,7 @@ class finalEvalutionController extends Controller
     {
         return view('finalEvalutions.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -48,7 +50,7 @@ class finalEvalutionController extends Controller
      */
     public function show($id)
     {
-        return view ('finalEvalutions.show')->with('finalEvalutions',finalEvalution::all());
+        return view ('finalEvalutions.show')->with('finalEvalution',finalEvalution::all());
 
     }
 
