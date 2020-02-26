@@ -77,7 +77,7 @@
 
             <div class="float-right">
 
-            <a href="{{ route('company.create') }}" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
+            <a href="\register" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
             <span class="mx-md-2 d-inline-block"></span>
             <a href="/login" class="text-white"><span class="mr-2 text-white icon-instagram"></span> <span class="d-none d-md-inline-block">Login</span></a>
 
@@ -136,7 +136,7 @@
             <div class="col-md-12 col-lg-7">
               <h1 data-aos="fade-up" data-aos-delay="">Welcome to IMP</h1>  
               <p class="mb-5" data-aos="fade-up" data-aos-delay="100">We have helped many students and companies in summer training issues .... What are you waiting for? Register with us</p>
-              <p data-aos="fade-up" data-aos-delay="200"><a href="{{ route('company.create') }}" class="btn btn-outline-white border-w-2 btn-md">Sign up</a></p>
+              <p data-aos="fade-up" data-aos-delay="200"><a href="\register" class="btn btn-outline-white border-w-2 btn-md">Sign up</a></p>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@
 
     <h2> Most visited announcement </h2> 
     
-    <!--<div class="site-section">
+    <div class="site-section">
       <div class="block__73694 mb-2" id="announcments-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">

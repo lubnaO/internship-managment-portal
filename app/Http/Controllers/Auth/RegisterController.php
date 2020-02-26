@@ -79,7 +79,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'phone' => "0534156987",
             'major' => "major1",
-            'user' =>  $user->id,
+            'id_user' =>  $user->id,
         ]);*/
 
        $company = company::create([
