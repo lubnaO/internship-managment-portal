@@ -65,7 +65,7 @@
           
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          STUDENT PROFILE
+        {{Auth::user()->student->firstName}} 
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -78,9 +78,9 @@
           </li>
           </li>
         <li>
-          <a href="/Announcaments/indexs">
+          <a href="http://localhost:8000/Announcaments">
               <i class="now-ui-icons education_atom "></i>
-              <p>Annoucaments</p>
+              <p>Annoucaments </p>
             </a>
           </li>
           <li>
@@ -144,7 +144,7 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
         <li>
-        <a href="./user.html">
+        <a href="http://localhost:8000/company/create">
               <i class="now-ui-icons users_single-02" ></i>
               <p>My Profile</p>
             </a>

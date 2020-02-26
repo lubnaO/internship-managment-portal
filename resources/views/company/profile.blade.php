@@ -57,7 +57,8 @@
         </div>
         <div class="profile-body">
           <div class="profile-annou tab">
-           <p>The Moon is a barren, rocky world without air and water. It has dark lava plain on its surface. The Moon is filled wit craters. It has no light of its own. It gets its light from the Sun. The Moo keeps changing its shape as it moves round the Earth. It spins on its axis in 27.3 days stars were named after the Edwin Aldrin were the first ones to set their foot on the Moon on 21 July 1969 They reached the Moon in their space craft named Apollo II.</p>
+           <p>The Moon is a barren, rocky world without air and water. It has dark lava plain on its surface. 
+           The Moon is filled wit craters. It has no light of its own. It gets its light from the Sun. The Moo keeps changing its shape as it moves round the Earth. It spins on its axis in 27.3 days stars were named after the Edwin Aldrin were the first ones to set their foot on the Moon on 21 July 1969 They reached the Moon in their space craft named Apollo II.</p>
           </div>
         </div>
         <div class="profile-history tab">

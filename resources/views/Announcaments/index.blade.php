@@ -70,7 +70,7 @@
     </div>
     
   </div>
-  <p>{{Auth::user()}}</p>
+  <p>/p>
 </div>
 
 @endsection
