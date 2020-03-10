@@ -32,6 +32,8 @@ Route::get('/', function () {
 });
 
 Route::get('finalEvalutions/index','finalEvalutionController@index');
+Route::get('finalEvalutions/{id}','finalEvalutionController@show');
+
 
 
 //Route::get('/annou', function () {
@@ -47,6 +49,8 @@ Route::get('/dashboardtwo', function () {
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
+Route::resource('/record','recordController');
+
 Route::resource('/CV','CVCotroller');
 
 Route::resource('/company','CompanyFormController');

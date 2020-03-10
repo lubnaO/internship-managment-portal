@@ -84,16 +84,16 @@
             </a>
           </li>
           <li>
-            <a href="./tables.html">
+            <a href="http://localhost:8000/record">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Acceptance</p>
+              <p>My Requests</p>
             </a>
           </li>
 
           <li>
             <a href="./tables.html">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Pass & Fail</p>
+              <p>grade</p>
             </a>
           </li>
          
@@ -212,7 +212,7 @@
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
           SEU
         </a>
-      </div>
+        </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
         <li>
@@ -229,9 +229,9 @@
             </a>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="/finalEvalutions/index">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Maps</p>
+              <p>Reports</p>
             </a>
           </li>
           <li>

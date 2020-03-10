@@ -8,6 +8,7 @@ use App\User;
 use App\Applicant;
 use App\CV;
 use App\UniversitySupervisor;
+use App\record;
 
 
 class Student extends Model
@@ -15,6 +16,7 @@ class Student extends Model
     protected $fillable = [
         'firstName', 'lastName', 'email', 'phone','major','id_user','Company_id','applicant_id'
     ];
+    
 
 
     public function user()
@@ -41,4 +43,8 @@ class Student extends Model
     {
         return $this->hasMany('App\Announcament');
     }
+    public function records()
+    {
+        return $this->hasMany('App\record','student_id');
+}
 }

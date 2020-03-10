@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\finalEvalution;
+use App\record;
 
-class finalEvalutionController extends Controller
+class recordController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class finalEvalutionController extends Controller
      */
     public function index()
     {
-        return view ('finalEvalutions.index')->with('finalEvalution',finalEvalution::all());
-    
-
+        return view('record.index')->with('records',record::all());
     }
 
     /**
@@ -26,9 +24,8 @@ class finalEvalutionController extends Controller
      */
     public function create()
     {
-        return view('finalEvalutions.create');
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -38,8 +35,15 @@ class finalEvalutionController extends Controller
      */
     public function store(Request $request)
     {
-        finalEvalution::create($request->all());
-            return redirect( route('finalEvalutions.index'));
+        $request->validate([
+
+            "massege"=>"required|:records",
+            "tasks"=>"required|:records"
+            
+        ]);
+        
+                record::create($request->all());
+                return redirect (route('record.create'));
     }
 
     /**
@@ -50,9 +54,7 @@ class finalEvalutionController extends Controller
      */
     public function show($id)
     {
-      // return $id;
-        return view ('finalEvalutions.show')->with('finalEvalution',finalEvalution::find($id));
-
+        //
     }
 
     /**

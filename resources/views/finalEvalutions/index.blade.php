@@ -23,7 +23,7 @@
   
     <tr>
     <td scope="row"><p>{{ $finalEvalution->TraineeName }}  </p></td>
-    <td><input class="btn btn-primary" type="submit" value="Show Report"></td>  
+    <td><a class="btn btn-primary" href="/finalEvalutions/{{$finalEvalution->id}}">Show Report</a></td>  
     </tr>
     @endforeach
   </tbody>
