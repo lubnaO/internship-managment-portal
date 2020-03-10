@@ -14,10 +14,11 @@ class finalEvalutionController extends Controller
      */
     public function index()
     {
-        return view ('finalEvalutions.index')->with('finalEvalution',finalEvalution::all());
+        return view ('finalEvalutions.index')->with('finalEvalutions',finalEvalution::all());
     
 
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -39,8 +40,10 @@ class finalEvalutionController extends Controller
     public function store(Request $request)
     {
         finalEvalution::create($request->all());
-            return redirect( route('finalEvalutions.index'));
+            return redirect( route('home'));
     }
+
+    
 
     /**
      * Display the specified resource.
@@ -48,10 +51,13 @@ class finalEvalutionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($finalEvalution)
     {
-        return view ('finalEvalutions.show')->with('finalEvalution',finalEvalution::all());
-
+       
+       // $finalEvalution = finalEvalution::find($finalEvalution);
+        //return $finalEvalution; 
+      return view('finalEvalutions.show')->with('finalEvalution',finalEvalution::find($finalEvalution));
+    
     }
 
     /**
@@ -60,9 +66,9 @@ class finalEvalutionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+       //
     }
 
     /**

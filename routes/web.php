@@ -22,13 +22,19 @@
 //});
 
 Route::get('/', function () {
-  return view('indexhome');
-
-
+  return view('Sdashboard');
 
 });
 
-Route::get('finalEvalutions/index','finalEvalutionController@index');
+Route::get('finalEvalutions/index','finalEvalutionController@index');   //route to convert from Sdashbaord final evalution o index in final evalution 
+Route::get('medEvalutions/index','medEvalutionController@index');
+Route::get('finalreports/index','finalReportController@index');
+
+
+Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
+
+Route::get('/finalreports/{finalReport}','finalReportController@show');
+
 
 
 //Route::get('/annou', function () {
