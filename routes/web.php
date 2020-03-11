@@ -11,13 +11,16 @@
 |
 */
 
+
+
 //Route::get('/', function () {
   // return view('finalEvalutions.create');
 
 //});
 
-//Route::get('/Cdashboard', function () {
- // return view('Cdashboard');
+Route::get('/Cdashboard', function () {
+  return view('Cdashboard');
+});
 
 //});
 
@@ -31,9 +34,14 @@ Route::get('medEvalutions/index','medEvalutionController@index');
 Route::get('finalreports/index','finalReportController@index');
 
 
+<<<<<<< HEAD
 Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
 
 Route::get('/finalreports/{finalReport}','finalReportController@show');
+=======
+Route::get('finalEvalutions/index','finalEvalutionController@index');
+Route::get('finalEvalutions/{id}','finalEvalutionController@show');
+>>>>>>> e8c1bdb27cf5f81128a851c3b1f0c197d914c630
 
 
 
@@ -41,11 +49,17 @@ Route::get('/finalreports/{finalReport}','finalReportController@show');
   //  return view('annou');
 //});
 
+Route::get('/dashboardtwo', function () {
+    return view('dashboardtwo');
+});
+
 //Route::get('/dashboardtwo', function () {
    //return view('dashboardtwo');
 //});
 
 Route::resource('/Announcaments','AnnouncamentsController');
+Route::resource('/record','recordController');
+
 Route::resource('/CV','CVCotroller');
 
 Route::resource('/company','CompanyFormController');
@@ -67,6 +81,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('/', function () {
+    return view('indexhome');
+});
 
 
 //Route::get('/', function () {

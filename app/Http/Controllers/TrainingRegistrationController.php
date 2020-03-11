@@ -35,66 +35,45 @@ class TrainingRegistrationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $request->validate([
+    {$request->validate([
 
-            "StudentName"=>"required|:training_registrations"
-             
-        ]);
+            "StudentName"=>"required|:training_registrations"]);
         
         $request->validate([
 
-            "StudentID"=>"required|:training_registrations"
-             
-        ]);
+            "StudentID"=>"required|:training_registrations"]);
         $request->validate([
 
-            "SMajor"=>"required|:training_registrations"
-             
-        ]);
+            "SMajor"=>"required|:training_registrations"]);
 
         $request->validate([
 
-            "TrainingOrganization"=>"required|:training_registrations"
-             
-        ]);
+            "TrainingOrganization"=>"required|:training_registrations"]);
 
         $request->validate([
 
-            "SupervisorInfo"=>"required|:training_registrations"
-             
-        ]);
+            "SupervisorInfo"=>"required|:training_registrations"]);
 
         $request->validate([
 
-            "TraineeTaske"=>"required|:training_registrations"
-             
-        ]);
+            "TraineeTaske 	"=>"required|:training_registrations"]);
 
         $request->validate([
 
-            "TraineHoure"=>"required|:training_registrations"
-             
-        ]);
+            "TraineHoure"=>"required|:training_registrations"]);
 
         $request->validate([
 
-            "TraineDate"=>"required|:training_registrations"
-             
-        ]);
+            "TraineDate"=>"required|:training_registrations"]);
 
         $request->validate([
 
-            "SupervisorName"=>"required|:training_registrations"
-             
-        ]);
+            "SupervisorName"=>"required|:training_registrations"]);
         
 
         $request->validate([
 
-            "SupervisorJob"=>"required|:training_registrations"
-             
-        ]);
+            "SupervisorJob"=>"required|:training_registrations"]);
 
         TrainingRegistration::create($request->all());
 

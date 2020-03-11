@@ -78,7 +78,7 @@ height:50px;
 </head>
 <body>
 
-<form action="{{ route('TrainingRegistrations.store') }}" method="POST">
+<form  action="{{ route('TrainingRegistrations.store') }}" method="POST">
 @csrf
             <div class="stepwizard">
         <div class="stepwizard-row setup-panel">

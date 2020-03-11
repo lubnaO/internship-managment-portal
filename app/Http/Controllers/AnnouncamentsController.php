@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Announcament;
 use App\Company;
 use App\User;
+use App\Applicant;
 use App\Http\Requests\announcamentsRequest;
 
 
@@ -65,7 +66,8 @@ class AnnouncamentsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Announcaments.show')->with('announcaments',Announcament::all());
+
     }
 
     /**
@@ -76,8 +78,10 @@ class AnnouncamentsController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
+    
+
 
     /**
      * Update the specified resource in storage.

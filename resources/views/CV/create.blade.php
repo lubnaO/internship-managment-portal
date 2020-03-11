@@ -125,6 +125,10 @@ height:50px;
                     <label class="control-label">Email</label>
                     <input maxlength="100" name="email" type="text" required="required" class="form-control"  />
                 </div>
+                <div class="form-group">
+                    <label class="control-label">Nationality</label>
+                    <input maxlength="100" name="nationality" type="text" required="required" class="form-control"  />
+                </div>
 
                 <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
             </div>
@@ -150,6 +154,8 @@ height:50px;
                     <label class="control-label">Skills</label>
                     <textarea   name="skills"  required="required" row="3" class="form-control" ></textarea>
                 </div>
+                <input type="hidden" value="{{Auth::user()->student->id}}" name="student_id"/>
+
 
             
         

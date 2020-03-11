@@ -122,7 +122,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Department Name</label>
-                    <input type="date" placeholder="Department Name" name="DepartmentName" required>
+                    <input type="text" placeholder="Department Name" name="DepartmentName"  maxlength="100" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Start date</label>
@@ -147,7 +147,7 @@
                
                     <div class="form-group">
                     <label for="exampleFormControlTextarea1" class="control-label">Accomplished Tasks</label>
-                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Accomplished Tasks " name="AccomplishedTasks" required> </textarea class="form-control"> 
+                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Accomplished Tasks " name="AccomplishedTasks" required> </textarea > 
                 </div>
                 <div class="form-group">
                     <label class="control-label">Skills Acquired</label>

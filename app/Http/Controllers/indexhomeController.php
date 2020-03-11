@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\CompanyForm;
-
-class CompanyFormController extends Controller
+use App\Announcament;
+class indexhomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class CompanyFormController extends Controller
      */
     public function index()
     {
-        return view ('company.profile2')->with('CompanyForm', CompanyForm::all());
+      //  return view('indexhome.index')->with('announcaments',Announcament::all());
     }
 
     /**
@@ -24,7 +23,7 @@ class CompanyFormController extends Controller
      */
     public function create()
     {
-        return view('company.create');
+        //
     }
 
     /**
@@ -35,9 +34,7 @@ class CompanyFormController extends Controller
      */
     public function store(Request $request)
     {
-        CompanyForm::create ($request->all());
-        return redirect (route('company.index'));
-       
+        //
     }
 
     /**

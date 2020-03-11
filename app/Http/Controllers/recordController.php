@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\CompanyForm;
+use App\record;
 
-class CompanyFormController extends Controller
+class recordController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class CompanyFormController extends Controller
      */
     public function index()
     {
-        return view ('company.profile2')->with('CompanyForm', CompanyForm::all());
+        return view('record.index')->with('records',record::all());
     }
 
     /**
@@ -24,7 +24,7 @@ class CompanyFormController extends Controller
      */
     public function create()
     {
-        return view('company.create');
+        //
     }
 
     /**
@@ -35,9 +35,15 @@ class CompanyFormController extends Controller
      */
     public function store(Request $request)
     {
-        CompanyForm::create ($request->all());
-        return redirect (route('company.index'));
-       
+        $request->validate([
+
+            "massege"=>"required|:records",
+            "tasks"=>"required|:records"
+            
+        ]);
+        
+                record::create($request->all());
+                return redirect (route('record.create'));
     }
 
     /**
