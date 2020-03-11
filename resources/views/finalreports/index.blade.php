@@ -2,9 +2,43 @@
 
 @section('content')
 
-<h1>Thank you too fill the form</h1>.
-<a href="finalreports/create" class="btn btn-success">add profile</a>
+<div class ="container">
+<div class="jumbotron">
 
-            @endsection
+<div class="card">
+  <h5 class="card-header text-white">Final Training Reports</h5>
+  <div class="card-body">
+  
+    <table class="table table-striped table-hover table-bordered px-3">
+  <thead>
+    <tr>
+      <th scope="col">Trainee Name</th>
+      <th scope="col">Action</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+
+    
+  
+    <tr>
+    @foreach ($finalreports as $finalReport)
+    <td scope="row"><p>{{ $finalReport->TraineeName }}  </p></td>
+    <td> <a href ="/finalreports/{{$finalReport->id}}" class="btn btn-success">Show Report</td> 
+    </tr>
+ 
+    @endforeach
+  
+  </tbody>
+  
+</table>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+@endsection
           
           

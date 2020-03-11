@@ -249,7 +249,7 @@
             </div>
 
             <div class="form-group">
-            <label class="control-label">Conduct nd discipline</label>
+            <label class="control-label">Conduct and discipline</label>
     <input type="text" class="form-control" name="Score9" id="inputAddress" placeholder="out of 5">
   </div>
   <div class="form-group">
@@ -284,9 +284,9 @@
   </div>
     
  
-
-
-                <button class="btn btn-primary pull-right" type="submit">Submit!</button>
+  
+  <button class ="btn btn-primary pull-right"  type="submit">Submit!</button>
+   
             </div>
         </div>
     </form>

@@ -14,7 +14,7 @@ class medEvalutionController extends Controller
      */
     public function index()
     {
-        return view ('medEvalutions.index');
+        return view ('medEvalutions.index')->with('medEvalutions',medEvalution::all());
     }
 
     /**
@@ -35,6 +35,10 @@ class medEvalutionController extends Controller
      */
     public function store(Request $request)
     {
+
+        medEvalution::create($request->all());
+            return redirect( route('medEvalutions.index'));
+
         $request->validate([
 
             "StudentName"=>"required" ]);
@@ -87,9 +91,11 @@ class medEvalutionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($medEvalution)
     {
-        return view ('medEvalutions.show')->with('medEvalutions',medEvalution::all());
+        // $finalEvalution = finalEvalution::find($finalEvalution);
+        //return $finalEvalution; 
+      return view('medEvalutions.show')->with('medEvalution',medEvalution::find($medEvalution));
     }
 
     /**

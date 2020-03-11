@@ -38,7 +38,7 @@ class finalReportController extends Controller
         
 
             finalReport::create($request->all());
-            return redirect( route('finalreports.index'));
+            return redirect( route('home'));
             
         
     }
@@ -49,9 +49,9 @@ class finalReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($finalReport)
     {
-        return view ('finalreports.show')->with('finalReports',finalReport::all());
+        return view('finalreports.show')->with('finalReport',finalReport::find($finalReport));
 
     }
 
