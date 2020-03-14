@@ -235,15 +235,15 @@
             </a>
           </li>
           <li>
-<<<<<<< HEAD
+
             <a href="./map.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Midterm reports</p>
-=======
+
             <a href="/finalEvalutions/index">
               <i class="now-ui-icons location_map-big"></i>
               <p>Reports</p>
->>>>>>> 07d52bb2eb26baec0139d6cad330bdb8f3f5d9ab
+
             </a>
           </li>
           <li>
