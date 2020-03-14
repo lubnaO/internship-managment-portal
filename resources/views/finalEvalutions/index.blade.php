@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class ="container">
-<div class="jumbotron">
+<div class ="container mt-5">
+
 
 <div class="card">
   <h5 class="card-header text-white">Final Evalution Reports</h5>
@@ -28,6 +28,13 @@
 
     <td><a class="btn btn-primary" href="/finalEvalutions/{{$finalEvalution->id}}">Show Report</a></td>  
 
+
+    <td> <a href ="/finalEvalutions/{{$finalEvalution->id}}" class="btn btn-success">Show Report</td> 
+
+
+    <td> <a href ="/finalEvalutions/{{$finalEvalution->id}}" class="btn btn-success">Show Report</td> 
+
+    
 
     </tr>
  

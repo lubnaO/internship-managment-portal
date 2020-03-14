@@ -68,6 +68,7 @@
 </head>
 <body>
 
+
 <div class="container">
 <div class="stepwizard">
 <div id="myAlert" class="alert alert-success collapse">
@@ -98,7 +99,7 @@
     
    
    
-        <div class="panel panel-primary setup-content" id="step-1">
+        <div class="panel panel-primary setup-content " id="step-1">
             <div class="panel-heading">
                 
             </div>
@@ -299,6 +300,7 @@
    
 >>>>>>> 07d52bb2eb26baec0139d6cad330bdb8f3f5d9ab
             </div>
+            <
         </div>
     </form>
 </div>

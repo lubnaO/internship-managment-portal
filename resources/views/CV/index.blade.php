@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container mt-5">
   
   <div class="alert alert-success">
     <strong>Success!</strong> Your CV is sent to the company.

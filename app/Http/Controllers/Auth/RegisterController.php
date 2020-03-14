@@ -91,13 +91,12 @@ class RegisterController extends Controller
             'id_user' =>  $user->id,
         ]); 
 
-     /* $UniversitySupervisor= UniversitySupervisor::create([
+      $UniversitySupervisor= UniversitySupervisor::create([
             'firstName' =>$data['name'],
             'lastName' => "test",
             'email' => $data['email'],
             'id_user' =>  $user->id,
-        ]);*/ 
-
+        ]);*/
         return  $user;
     }
 }

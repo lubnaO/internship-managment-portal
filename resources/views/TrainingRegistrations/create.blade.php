@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Training Registration </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -85,8 +85,8 @@ height:50px;
     <strong>Success!</strong> report successfully.
   </div>
         <div class="stepwizard-row setup-panel">
-            <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-1" type="button" class="btn-primary btn-circle">1</a>
+        <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-1" type="button" class=" btn btn-primary btn-circle" disabled="disabled">1</a>
                 <p><small>Student Information</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 

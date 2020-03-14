@@ -53,14 +53,16 @@ class finalEvalutionController extends Controller
      */
     public function show($id)
     {
+
 ;
     
 
 
-
-      // return $id;
+      
         return view ('finalEvalutions.show')->with('finalEvalution',finalEvalution::find($id));
 
+
+       
     }
 
     /**

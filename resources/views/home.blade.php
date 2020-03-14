@@ -226,14 +226,9 @@
             <a href="http://localhost:8000/finalreports">
               <i class="now-ui-icons location_map-big"></i>
               <p> Final Reports</p>
-          </li>
-        
       
-          <li>
-            <a href="http://localhost:8000/medEvalutions">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Midterm reports</p>
           </li>
+           
        
           <li>
             <a href="http://localhost:8000/tregis">
