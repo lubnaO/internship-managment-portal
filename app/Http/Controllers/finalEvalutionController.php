@@ -51,16 +51,15 @@ class finalEvalutionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($finalEvalution)
+    public function show($id)
     {
+;
+    
+
+
+
       // return $id;
         return view ('finalEvalutions.show')->with('finalEvalution',finalEvalution::find($id));
-
-       
-       // $finalEvalution = finalEvalution::find($finalEvalution);
-        //return $finalEvalution; 
-      return view('finalEvalutions.show')->with('finalEvalution',finalEvalution::find($finalEvalution));
-    
 
     }
 

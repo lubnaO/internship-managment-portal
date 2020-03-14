@@ -35,7 +35,7 @@ class finalReportController extends Controller
      */
     public function store(Request $request)
     {
-        
+       
 
             finalReport::create($request->all());
             return redirect( route('home'));

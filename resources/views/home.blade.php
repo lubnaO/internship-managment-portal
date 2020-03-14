@@ -215,23 +215,24 @@
         </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-        <li>
-        <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
-            </a>
-          </li>
-          </li>
-        <li>
-          <a href="./icons.html">
-              <i class="now-ui-icons education_atom "></i>
-              <p>Icons</p>
-            </a>
-          </li>
+     
           <li>
             <a href="/finalEvalutions/index">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Reports</p>
+              <p>Final Evalution Reports</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="/medEvalutions/index">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Med Evalution Reports</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://localhost:8000/finalreports">
+              <i class="now-ui-icons location_map-big"></i>
+              <p> Final Reports</p>
             </a>
           </li>
           <li>

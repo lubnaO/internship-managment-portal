@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Announcament;
+use App\Http\Requests\announcamentsRequest;
+
 class indexhomeController extends Controller
 {
     /**
@@ -13,7 +15,9 @@ class indexhomeController extends Controller
      */
     public function index()
     {
-      //  return view('indexhome.index')->with('announcaments',Announcament::all());
+        
+    
+        return view('indexhome')->with('announcaments',Announcament::all());
     }
 
     /**

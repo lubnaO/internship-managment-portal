@@ -173,30 +173,28 @@
 
     <h2> Most visited announcement </h2> 
     
-    
-    <div class="site-section">
+    <!--<div class="site-section">
       <div class="block__73694 mb-2" id="announcments-section">
-      
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
 
             <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/internship.jpg');" data-aos="fade-right" data-aos-delay="">
             </div>
 
+            
            
             <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
-            @foreach ($announcaments as $annouancment)
-
-             <h3 class="mb-3 text-black"> {{$annouancment->Company['name']}}  </h3>
-              <p> {{ $annouancment->description}} </p> 
+          
+             <h3 class="mb-3 text-black"> Company A  </h3>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Aliquam assumenda eum blanditiis perferendis. </p> 
               
     
 
           </div>
-          @endforeach
         </div>      
       </div>
-     
+
 
       <div class="block__73694">
         <div class="container">
@@ -207,14 +205,17 @@
 
             
 
-            
+            <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
+              <h2 class="mb-3 text-black">Company B </h2>
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis. </p> 
+             
+            </div>
            
-          </div> 
+          </div> --> 
           <p><a href="/Announcaments" class="btn btn-primary btn-block"> more </a></p>
         </div>      
       </div>
-      
-
+    
 
     <!--<div class="site-section bg-light">
       <div class="container">

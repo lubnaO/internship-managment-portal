@@ -25,9 +25,9 @@
     @foreach ($finalEvalutions as $finalEvalution)
     <td scope="row"><p>{{ $finalEvalution->TraineeName }}  </p></td>
 
+
     <td><a class="btn btn-primary" href="/finalEvalutions/{{$finalEvalution->id}}">Show Report</a></td>  
 
-    <td> <a href ="/finalEvalutions/{{$finalEvalution->id}}" class="btn btn-success">Show Report</td> 
 
     </tr>
  

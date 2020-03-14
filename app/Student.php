@@ -39,6 +39,10 @@ class Student extends Model
     {
         return $this->hasOne('App\CV','student_id');
     }
+    public function TrainingRegistration()
+    {
+        return $this->hasOne('App\TrainingRegistration','s_id');
+    }
     public function Announcament()
     {
         return $this->hasMany('App\Announcament');

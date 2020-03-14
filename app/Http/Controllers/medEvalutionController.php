@@ -37,7 +37,7 @@ class medEvalutionController extends Controller
     {
 
         medEvalution::create($request->all());
-            return redirect( route('medEvalutions.index'));
+            return redirect( route('home'));
 
         $request->validate([
 

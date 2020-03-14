@@ -24,10 +24,10 @@ Route::get('/Cdashboard', function () {
 
 //});
 
-Route::get('/', function () {
-  return view('Sdashboard');
+//Route::get('/', function () {
+ // return view('Sdashboard');
 
-});
+//});
 
 Route::get('finalEvalutions/index','finalEvalutionController@index');   //route to convert from Sdashbaord final evalution o index in final evalution 
 Route::get('medEvalutions/index','medEvalutionController@index');
@@ -36,9 +36,8 @@ Route::get('finalreports/index','finalReportController@index');
 Route::get('finalEvalutions/index','finalEvalutionController@index');
 Route::get('finalEvalutions/{id}','finalEvalutionController@show');
 
-Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
 
-Route::get('/finalreports/{finalReport}','finalReportController@show');
+
 
 
 
@@ -51,9 +50,7 @@ Route::get('/dashboardtwo', function () {
     return view('dashboardtwo');
 });
 
-//Route::get('/dashboardtwo', function () {
-   //return view('dashboardtwo');
-//});
+
 
 Route::resource('/Announcaments','AnnouncamentsController');
 Route::resource('/record','recordController');
@@ -79,9 +76,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/', function () {
-    return view('indexhome');
-});
+Route::get('/', 'indexhomeController@index');
+
 
 
 //Route::get('/', function () {
