@@ -70,6 +70,11 @@
 
 <div class="container">
 <div class="stepwizard">
+<div id="myAlert" class="alert alert-success collapse">
+ <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> report sent successfully.
+  </div>
+
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -284,9 +289,15 @@
   </div>
     
  
+<<<<<<< HEAD
+
+
+                <button class="btn btn-primary pull-right" type="submit"id="btnsubmit">Submit!</button>
+=======
   
   <button class ="btn btn-primary pull-right"  type="submit">Submit!</button>
    
+>>>>>>> 07d52bb2eb26baec0139d6cad330bdb8f3f5d9ab
             </div>
         </div>
     </form>
@@ -336,6 +347,14 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script>   
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#btnsubmit').click(function(){
+           $('#myAlert').show('fade');
+    }); 
+});
+
+</script>
 </body>
 </html>
 @endsection

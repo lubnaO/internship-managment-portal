@@ -14,5 +14,6 @@
   <div class="alert alert-success">
     <strong>Success!</strong> Your CV is sent to the company.
   </div>
+ 
   </body> 
   </html> 

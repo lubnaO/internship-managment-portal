@@ -35,6 +35,8 @@ Route::get('finalreports/index','finalReportController@index');
 
 Route::get('finalEvalutions/index','finalEvalutionController@index');
 Route::get('finalEvalutions/{id}','finalEvalutionController@show');
+Route::get('TrainingRegistrations/{id}','TrainingRegistrationController@show');
+
 
 
 
@@ -59,6 +61,8 @@ Route::resource('/CV','CVCotroller');
 
 Route::resource('/company','CompanyFormController');
 Route::resource('/applicnt','ApplicntCntroller');
+Route::resource('/status','statusController');
+
 
 
 
@@ -74,10 +78,20 @@ Route::resource('/TrainingRegistrations','TrainingRegistrationController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/company/{id}','CompanyFormController@show');
 
 
 Route::get('/', 'indexhomeController@index');
+Route::get('/tregis', 'TrainingRegistrationController@indo');
+Route::get('/studentlist', 'statusController@studentlist');
+Route::get('/studentlist', 'statusController@studentlist');
+Route::resource('/garde','gradeController');
 
+
+
+
+
+ 
 
 
 //Route::get('/', function () {

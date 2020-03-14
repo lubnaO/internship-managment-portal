@@ -78,9 +78,12 @@ height:50px;
 </head>
 <body>
 
-<form  action="{{ route('TrainingRegistrations.store') }}" method="POST">
-@csrf
+
             <div class="stepwizard">
+            <div id="myAlert" class="alert alert-success collapse">
+ <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> report successfully.
+  </div>
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-1" type="button" class="btn-primary btn-circle">1</a>
@@ -98,24 +101,26 @@ height:50px;
         </div>
     </div>
     
-    <form role="form">
-        <div class="panel panel-primary setup-content" id="step-1">
+    <div class="panel panel-primary setup-content" id="step-1">
             <div class="panel-heading">
-                
+           
             </div>
+          
             <div class="panel-body">
-                <div class="form-group">
-                    <label class="control-label">Student Name</label>
-                    <input maxlength="100"  name="StudentName" type="text" required="required" class="form-control"  />
+                <div class="form-group ">
+                <form role="form"  action="{{route('TrainingRegistrations.store')}}" method="POST">
+                   @csrf
+                    <label class="control-label col-3">Student Name</label>
+                    <input maxlength="100"  name="StudentName" type="text" required="required" class="form-control"  placeholder="Your name"/>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">ID</label>
-                    <input maxlength="100" name ="StudentID" type="text" required="required" class="form-control"  />
+                    <label class="control-label col-3">ID</label>
+                    <input maxlength="100" name ="StudentID" type="text" required="required" class="form-control" placeholder="e.g 150000"/>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Major</label>
-                    <input maxlength="100" name="SMajor " type="text" required="required" class="form-control" />
+                    <label class="control-label col-3">Majorrr</label>
+                    <input maxlength="100" name="SMajor" type="text" required="required" class="form-control" placeholder="e.g Accounting" />
                 </div>
 
             
@@ -131,22 +136,22 @@ height:50px;
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label class="control-label">Training organization Name</label>
-                    <input maxlength="200" name="TrainingOrganization" type="text" required="required" class="form-control"  />
+                    <label class="control-label col-3">Training organization Name</label>
+                    <input maxlength="200" name="TrainingOrganization" type="text" required="required" class="form-control" placeholder="Company name" />
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Supervisor Name </label>
-                    <input maxlength="200" name="SupervisorName " type="text" required="required" class="form-control" />
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label">Designation: </label>
-                    <input maxlength="200"  name="SupervisorJob" type="text" required="required" class="form-control"/>
+                    <label class="control-label col-3">Supervisor Name </label>
+                    <input maxlength="200" name="SupervisorName" type="text" required="required" class="form-control" placeholder="Supervisor name" />
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Email</label>
-                    <input maxlength="200"   name="SupervisorInfo" type="text" required="required" class="form-control" />
+                    <label class="control-label col-3">Designation: </label>
+                    <input maxlength="200"  name="SupervisorJob" type="text" required="required" class="form-control" placeholder="Designation"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-3">Email</label>
+                    <input maxlength="200"   name="SupervisorInfo" type="text" required="required" class="form-control" placeholder="example@example.com"/>
                 </div>
 
                 <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
@@ -159,21 +164,22 @@ height:50px;
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label class="control-label">Work Hours:</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" name="TraineHoure" />
+                    <label class="control-label col-3">Work Hours:</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" name="TraineHoure" placeholder="e.g 280 hours" />
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Joining date:</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" name ="TraineDate" />
+                    <label class="control-label col-3">Joining date:</label>
+                    <input maxlength="200" type="date" required="required" class="form-control" name ="TraineDate" />
                 </div>
                 
 		<div class="form=group ">
-        <label > Trainee Responsibilities:    </label>
-		<textarea class="form-control" rows="5" id="respon" name="TraineeTaske"></textarea>
+        <label class="control-label col-3" > Trainee Responsibilities:    </label>
+		<textarea class="form-control" rows="5" id="respon" name="TraineeTaske" placeholder="Trainee Responsibilities"></textarea>
+        <input type="hidden" value="{{Auth::user()->student->id}}" name="s_id"/>
 
         </div>
 
-                <button class="btn btn-primary float-right" type="submit">Submit!</button>
+                <button class="btn btn-primary float-right" type="submit" id="btnsubmit">Submit!</button>
             </div>
         </div>
     </form>
@@ -223,6 +229,14 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script>   
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#btnsubmit').click(function(){
+           $('#myAlert').show('fade');
+    }); 
+});
+
+</script>
 </body>
 </html>
            

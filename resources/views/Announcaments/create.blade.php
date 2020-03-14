@@ -79,23 +79,15 @@ height:50px;
 </head>
 <body>
 
-<div >
-    <div class="stepwizard">
-        <div class="stepwizard-row setup-panel">
-            <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-1" type="button" class="btn-primary btn-circle">1</a>
-                <p><small>Create Announcaments</small></p>
-            </div>
-           
-           
-           
-        </div>
-    </div>
-    
-   
-        <div class="panel panel-primary setup-content" id="step-1">
-            <div class="panel-heading">
-                
+<div class="container pt-5">
+<div class="jumbotorn">
+<div class="card">
+<div id="myAlert" class="alert alert-success collapse">
+ <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> profile created successfully.
+  </div>
+  <div class="card-header pl-3 text-white">Create Announcement </div>
+  <div class="card-body">
             </div>
             <form role="form" action="{{ route('Announcaments.store') }}" class="container" method="POST">
     @csrf
@@ -103,16 +95,16 @@ height:50px;
         
                 <div class="form-group">
                     <label class="control-label"> Company Name </label>
-                    <input maxlength="100"  name="name" type="text" required="required" class="form-control"  />
+                    <input maxlength="100"  name="name" type="text" required="required" class="form-control" placeholder="Compane name" />
                 </div>
                 <div class="form-group">
                     <label class="control-label">Job title</label>
-                    <input maxlength="100" name ="title" type="text" required="required" class="form-control"  />
+                    <input maxlength="100" name ="title" type="text" required="required" class="form-control" placeholder="e.g Software Engineering"/>
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">City</label>
-                    <input maxlength="100" name="city" type="text" required="required" class="form-control" />
+                    <input maxlength="100" name="city" type="text" required="required" class="form-control" placeholder="e.g Riyadh" />
                 </div>
                 <input type="hidden" value="{{Auth::user()->company->id}}" name="Company_id"/>
 
@@ -128,63 +120,28 @@ height:50px;
 
                 <div class="form-group">
                     <label class="control-label">Job description</label>
-                    <textarea maxlength="100" name="description" type="text" required="required" class="form-control"></textarea>  
+                    <textarea maxlength="100" name="description" type="text" required="required" class="form-control" placeholder="Job description"></textarea>  
                 </div>
 
             </div>
         </div>
         
 
-                <button class="btn btn-primary pull-right" type="submit">Submit!</button>
+                <button class="btn btn-primary pull-right" type="submit" id="btnsubmit">Submit!</button>
             </div>
         </div>
     </form>
 </div>
     
-<script>
-$(document).ready(function () {
 
-var navListItems = $('div.setup-panel div a'),
-    allWells = $('.setup-content'),
-    allNextBtn = $('.nextBtn');
-
-allWells.hide();
-
-navListItems.click(function (e) {
-    e.preventDefault();
-    var $target = $($(this).attr('href')),
-        $item = $(this);
-
-    if (!$item.hasClass('disabled')) {
-        navListItems.removeClass('btn-success').addClass('btn-default');
-        $item.addClass('btn-success');
-        allWells.hide();
-        $target.show();
-        $target.find('input:eq(0)').focus();
-    }
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#btnsubmit').click(function(){
+           $('#myAlert').show('fade');
+    }); 
 });
 
-allNextBtn.click(function () {
-    var curStep = $(this).closest(".setup-content"),
-        curStepBtn = curStep.attr("id"),
-        nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-        curInputs = curStep.find("input[type='text'],input[type='url']"),
-        isValid = true;
-
-    $(".form-group").removeClass("has-error");
-    for (var i = 0; i < curInputs.length; i++) {
-        if (!curInputs[i].validity.valid) {
-            isValid = false;
-            $(curInputs[i]).closest(".form-group").addClass("has-error");
-        }
-    }
-
-    if (isValid) nextStepWizard.removeAttr('disabled').trigger('click');
-});
-
-$('div.setup-panel div a.btn-success').trigger('click');
-});
-</script>   
+</script>  
 </body>
 </html>
 @endsection

@@ -9,9 +9,9 @@ class CV extends Model
 
 {   
 
-    protected $fillable = ['id','Name','address','date', 'email', 'formal','courses','skills','student_id'];
+    protected $fillable = ['id','Name','address','date', 'email', 'formal','courses','skills','student_id','nationality'];
 
-    public function student()
+   public function student()
     {
         return $this->belongsTo('App\Student','student_id');
 }

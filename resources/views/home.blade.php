@@ -91,7 +91,7 @@
           </li>
 
           <li>
-            <a href="./tables.html">
+            <a href="http://localhost:8000/garde">
               <i class="now-ui-icons location_map-big"></i>
               <p>grade</p>
             </a>
@@ -106,7 +106,7 @@
           </li>
 
           <li>
-            <a href="TrainingRegistrations/create">
+            <a href="/TrainingRegistrations">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>registeration Form</p>
             </a>
@@ -217,54 +217,37 @@
         <ul class="nav">
      
           <li>
-            <a href="/finalEvalutions/index">
-              <i class="now-ui-icons location_map-big"></i>
-              <p>Final Evalution Reports</p>
-            </a>
-          </li>
-
-          <li>
             <a href="/medEvalutions/index">
               <i class="now-ui-icons location_map-big"></i>
               <p>Med Evalution Reports</p>
-            </a>
+          
           </li>
           <li>
             <a href="http://localhost:8000/finalreports">
               <i class="now-ui-icons location_map-big"></i>
               <p> Final Reports</p>
-            </a>
           </li>
+        
+      
           <li>
-            <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          <li>
-            <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
-            </a>
-          </li>
-          <li>
-            <a href="./tables.html">
+            <a href="http://localhost:8000/medEvalutions">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
+              <p>Midterm reports</p>
+          </li>
+       
+          <li>
+            <a href="http://localhost:8000/tregis">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p> Registration  </p>
             </a>
           </li>
           <li>
-            <a href="./typography.html">
-              <i class="now-ui-icons text_caps-small"></i>
-              <p>Typography</p>
+            <a href="http://localhost:8000/studentlist">
+              <i class="fas fa-graduation-cap"></i>
+              <p>Students grades</p>
             </a>
           </li>
-          <li class="active-pro">
-            <a href="./upgrade.html">
-              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
+         
           </li>
         </ul>
       </div>

@@ -3,14 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Announcament;
-use App\Company;
-use App\User;
-use App\Applicant;
-use App\Http\Requests\announcamentsRequest;
+use App\status;
 
-
-class AnnouncamentsController extends Controller
+class statusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,10 +14,16 @@ class AnnouncamentsController extends Controller
      */
     public function index()
     {
-        return view('Announcaments.index')->with('announcaments',Announcament::all());
-        
-       
+        return view('status.index')->with('status',status::all());
+
     }
+
+    public function studentlist()
+    {
+        return view('studentlist')->with('status',status::all());
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -31,7 +32,7 @@ class AnnouncamentsController extends Controller
      */
     public function create()
     {
-        return view('Announcaments.create');
+        //
     }
 
     /**
@@ -40,23 +41,10 @@ class AnnouncamentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(announcamentsRequest $request)
+    public function store(Request $request)
     {
-    
+        status::create($request->all());
 
-
-/**$request->validate([
-
-    "city"=>"required|:announcaments"
-     
-]);**/
-
-        Announcament::create($request->all());
-
-
-        return redirect (route('home'));
-
-        
     }
 
     /**
@@ -67,8 +55,7 @@ class AnnouncamentsController extends Controller
      */
     public function show($id)
     {
-        return view('Announcaments.show')->with('announcaments',Announcament::all());
-       
+        //
     }
 
     /**
@@ -79,11 +66,8 @@ class AnnouncamentsController extends Controller
      */
     public function edit($id)
     {
-      
-
+        //
     }
-    
-
 
     /**
      * Update the specified resource in storage.

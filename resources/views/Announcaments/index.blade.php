@@ -42,7 +42,7 @@
       </td>
     </tr>
    <!-- <tr>
-      <th scope="row">{{ $annouancment->title}}</th>
+      <th scope="row">{{ $annouancment->title}}</th>                                           
       <td>{{ $annouancment->description}}</td>
       <td>{{ $annouancment->city}}</td>
       <td>{{ $annouancment->A_start}}</td>

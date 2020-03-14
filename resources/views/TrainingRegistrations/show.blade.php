@@ -6,95 +6,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Training Registration Report</title>
 
 </head>
 <body>
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
-  <div class="card-header pl-3 text-white">Med Evalutions Reports</div>
+  <div class="card-header pl-3 text-white">Training Registration Reports</div>
   <div class="card-body">
 
-  <h1 class="display-4"><small>Trainee Information</small></h1>
+  <h3 class="display-4"><small>Trainee Information</small></h3>
 
   <dl class="row">
   <dt class="col-sm-3">Trainee Name</dt>
-  <h5 class="">{{$medEvalution->StudentName}}</h5>
+  <h5 class="">{{$tregis->StudentName}}</h5>
 </dl>
 
 <dl class="row">
   <dt class="col-sm-3">Trainee ID</dt>
-  <h5 class="">{{$medEvalution->StudentID}}</h5>
+  <h5 class="">{{$tregis->StudentID}}</h5>
 </dl>
 
 
-<h1 class="display-4"><small>Supervisor Information</small></h1>
 
+
+<dl class="row">
+<dt class="col-sm-3">Training Major</dt>
+<h5 class="">{{$tregis->SMajor}}</h5>
+</dl>
+<h3 class="display-4"><small>Training Information</small></h3>
 <dl class="row">
 <dt class="col-sm-3">Training Organization</dt>
-<h5 class="">{{$medEvalution->TrainingOrganization}}</h5>
-</dl>
-
-<dl class="row">
-<dt class="col-sm-3">Training Supervisor</dt>
-<h5 class="">{{$medEvalution->TrainingSupervisor}}</h5>
+<h5 class="">{{$tregis->TrainingOrganization}}</h5>
 </dl>
 
 <dl class="row">
 <dt class="col-sm-3">Department Name</dt>
-<h5 class=" ">{{$medEvalution->DepartmentName}}</h5>
+<h5 class=" ">{{$tregis->DepartmentName}}</h5>
 </dl>
 
 <dl class="row">
-<dt class="col-sm-3">Start date</dt>
-<h5 class=" ">{{$medEvalution->Startdate}}</h5>
+<dt class="col-sm-3">Supervisor Info</dt>
+<h5 class=" ">{{$tregis->SupervisorInfo}}</h5>
 </dl>
 
 <dl class="row">
-<dt class="col-sm-3">End date</dt>
-<h5 class=" ">{{$medEvalution->Enddate}}</h5>
+<dt class="col-sm-3">Trainee Taske</dt>
+<h5 class=" ">{{$tregis->TraineeTaske}}</h5>
 </dl>
 
 
-<h1 class="display-4"><small>Student evaluation </small></h1>
 
   <dl class="row">
-  <dt class="col-sm-3">Accomplished Tasks</dt>
-  <h5 class="">{{$medEvalution->AccomplishedTasks}}</h5>
+  <dt class="col-sm-3">Traine Houre</dt>
+  <h5 class="">{{$tregis->TraineHoure}}</h5>
 </dl>
 
 <dl class="row">
-  <dt class="col-sm-3">Skills Acquired</dt>
-  <h5 class="">{{$medEvalution->SkillsAcquired}}</h5>
+  <dt class="col-sm-3">Traine Start Date</dt>
+  <h5 class="">{{$tregis->TraineDate}}</h5>
 </dl>
 
 <dl class="row">
-  <dt class="col-sm-3">Knowledge Used</dt>
-  <h5 class=" ">{{$medEvalution->KnowledgeUsed}}</h5>
+  <dt class="col-sm-3">Supervisor Name</dt>
+  <h5 class=" ">{{$tregis->SupervisorName}}</h5>
 </dl>
 
 <dl class="row">
-  <dt class="col-sm-3">Key Meetings</dt>
-  <h5 class=" ">{{$medEvalution->KeyMeetings}}</h5>
-</dl>
-
-<dl class="row">
-  <dt class="col-sm-3">Issues with Trainee</dt>
-  <h5 class=" ">{{$medEvalution->Issues}}</h5>
-</dl>
-
-<dl class="row">
-  <dt class="col-sm-3">Supervisor Feedback</dt>
-  <h5 class=" ">{{$medEvalution->Feedback}}</h5>
+  <dt class="col-sm-3">Supervisor Job</dt>
+  <h5 class=" ">{{$tregis->SupervisorJob}}</h5>
 </dl>
 
 
 
-  </div>
-  </div>
-</div>
-</body>
-</html>
-
-@endsection
+        
+        
+        @endsection

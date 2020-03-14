@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CompanyForm;
+use App\Announcament;
+use App\Http\Requests\CompanyformRequest;
 
 
 class CompanyFormController extends Controller
@@ -15,7 +17,7 @@ class CompanyFormController extends Controller
      */
     public function index()
     {
-        return view ('company.profile2')->with('CompanyForm', CompanyForm::all());
+        return view ('company.index')->with('profiles',CompanyForm::all()); 
     }
 
     /**
@@ -34,10 +36,21 @@ class CompanyFormController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyformRequest $request)
     {
-        CompanyForm::create ($request->all());
-        return redirect (route('company.index'));
+        CompanyForm::create([
+            'name'=>$request->name,
+            'city'=>$request->city,
+            'description'=>$request->description,
+            'contact'=>$request->contact, 
+            'history'=>$request->history,
+            'phone'=>$request->phone, 
+            'create'=>$request->create, 
+            'img'=>$request->img->store('images','public')]);
+         
+            session()->flash('success', 'post created successfully');
+       
+         return redirect (route('company.index'));
        
     }
 
@@ -49,7 +62,8 @@ class CompanyFormController extends Controller
      */
     public function show($id)
     {
-        //
+      
+     
     }
 
     /**

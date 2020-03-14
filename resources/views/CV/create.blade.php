@@ -80,7 +80,11 @@ height:50px;
 <form  action="{{ route('CV.store')}}" method ="POST"> 
 @csrf
 <div class="container" >
-
+<div id="myAlert" class="alert alert-success collapse">
+ <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> Your CV is created.
+  </div>
+ 
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
@@ -103,16 +107,16 @@ height:50px;
             <div class="panel-body">
                 <div class="form-group">
                     <label class="control-label"> Name</label>
-                    <input maxlength="100"  name="Name" type="text" required="required" class="form-control"  />
+                    <input maxlength="100"  name="Name" type="text" required="required" class="form-control" placeholder="Your name"/>
                 </div>
-                <!--<div class="form-group">
+                <div class="form-group">
                     <label class="control-label">Nationality</label>
-                    <input maxlength="100" name ="Nationality" type="text" required="required" class="form-control"  />
-                </div>--> 
+                    <input maxlength="100" name ="nationality" type="text" required="required" class="form-control" placeholder="e.g Saudi"/>
+                </div> 
 
                 <div class="form-group">
                     <label class="control-label">Address</label>
-                    <input maxlength="100" name="address" type="text" required="required" class="form-control" />
+                    <input maxlength="100" name="address" type="text" required="required" class="form-control" placeholder="e.g Jeddah" />
                 </div>
 
                 <div class="form-group">
@@ -123,14 +127,11 @@ height:50px;
             
                 <div class="form-group">
                     <label class="control-label">Email</label>
-                    <input maxlength="100" name="email" type="text" required="required" class="form-control"  />
+                    <input maxlength="100" name="email" type="text" required="required" class="form-control" placeholder="example@example.com" />
                 </div>
-                <div class="form-group">
-                    <label class="control-label">Nationality</label>
-                    <input maxlength="100" name="nationality" type="text" required="required" class="form-control"  />
-                </div>
+              
 
-                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
             </div>
         </div>
         
@@ -141,25 +142,22 @@ height:50px;
             <div class="panel-body">
                 <div class="form-group">
                     <label class="control-label">Formal education </label>
-                    <input maxlength="200" name="formal" type="text" required="required" class="form-control"  />
+                    <input maxlength="200" name="formal" type="text" required="required" class="form-control" placeholder=" e.g IT bachelor "/>
                 </div>
                 
 
                 <div class="form-group">
                     <label class="control-label">Courses</label>
-                    <textarea   name="courses" type="text" required="required" class="form-control"></textarea> 
+                    <textarea   name="courses" type="text" required="required" class="form-control" placeholder="Courses" ></textarea> 
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">Skills</label>
-                    <textarea   name="skills"  required="required" row="3" class="form-control" ></textarea>
+                    <textarea   name="skills"  required="required" row="3" class="form-control" placeholder="Skills" ></textarea>
                 </div>
                 <input type="hidden" value="{{Auth::user()->student->id}}" name="student_id"/>
 
-
-            
-        
-                <button class="btn btn-primary pull-right" type="submit">Submit!</button>
+                <button class="btn btn-primary float-right" id="btnsubmit"  >Submit!</button>
             </div>
         </div>
 </div>
@@ -208,7 +206,17 @@ allNextBtn.click(function () {
 
 $('div.setup-panel div a.btn-success').trigger('click');
 });
-</script>   
-</body>
+
+</script> 
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#btnsubmit').click(function(){
+           $('#myAlert').show('fade');
+    }); 
+});
+
+</script>
+
 </html>
 @endsection

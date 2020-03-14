@@ -51,4 +51,14 @@ class Student extends Model
     {
         return $this->hasMany('App\record','student_id');
 }
+
+public function status()
+{
+    return $this->hasMany('App\status','stu_id');
+}
+public function garde()
+{
+    return $this->hasMany('App\garde','stu_id');
+}
+
 }
