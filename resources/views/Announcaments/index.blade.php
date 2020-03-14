@@ -14,7 +14,7 @@
   <thead>
     <tr>
     <th scope="col">name</th>
-      <th scope="col">Job Name</th>
+      <th scope="col">Jobb Name</th>
       <th scope="col">Job Descripion</th>
       <th scope="col">City</th>
       <th scope="col">Start</th>
@@ -33,11 +33,16 @@
       <td>{{ $annouancment->A_start}}</td>
       <td>{{ $annouancment->A_end}}</td>
       <td>
-    
+       <form action="{{ route('applicnt.store') }}" class="container" method="POST" >
+       @csrf
+  <input type="hidden" value="{{Auth::user()->student->id}}" name="stu_id"/>
+      <input type="hidden" value="{{ $annouancment->id }}" name="annou_id"/>
+      <button type="submit" class="btn btn-primary top-bar px-3">APPLY </button>
+      </form> 
       </td>
     </tr>
    <!-- <tr>
-      <th scope="row">{{ $annouancment->title}}</th>
+      <th scope="row">{{ $annouancment->title}}</th>                                           
       <td>{{ $annouancment->description}}</td>
       <td>{{ $annouancment->city}}</td>
       <td>{{ $annouancment->A_start}}</td>
@@ -60,10 +65,12 @@
 
   </tbody>
 </table>
+<p></p>
     </div>
     </div>
     
   </div>
+  <p>/p>
 </div>
 
 @endsection

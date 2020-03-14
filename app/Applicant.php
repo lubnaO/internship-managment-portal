@@ -1,19 +1,21 @@
 <?php
 
 namespace App;
+use App\Announcament;
+use App\Student;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Applicant extends Model
 {
     protected $fillable = [
-        'stu_id	', 'annou_id'
+        'annou_id', 'stu_id'
     ];
     public function Announcaments()
     {
-        return $this->belongsTo('App\Announcament');
+        return $this->belongsTo('App\Announcament','annou_id');
     }
     public function student()
     {
-        return $this->hasOne('App\Student','stu_id');
+        return $this->belongsTo('App\Student','stu_id');
 }}

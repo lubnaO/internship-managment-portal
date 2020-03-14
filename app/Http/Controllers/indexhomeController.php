@@ -13,7 +13,7 @@ class indexhomeController extends Controller
      */
     public function index()
     {
-        return view('indexhome.index')->with('announcaments',Announcament::all());
+      //  return view('indexhome.index')->with('announcaments',Announcament::all());
     }
 
     /**

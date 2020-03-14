@@ -60,12 +60,21 @@
     line-height: 1.428571429;
     border-radius: 15px;
 }
+.btn-primary{
+  background-color: #f26427
+}
+
 </style>
 </head>
 <body>
 
-<div class="container"  method ="POST" action="{{ route('finalEvalutions.store ')}}">
+<div class="container">
 <div class="stepwizard">
+<div id="myAlert" class="alert alert-success collapse">
+ <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> report sent successfully.
+  </div>
+
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -85,16 +94,21 @@
             </div>
         </div>
     </div>
+ 
     
-    <form role="form">
+   
+   
         <div class="panel panel-primary setup-content" id="step-1">
             <div class="panel-heading">
                 
             </div>
+            <form action ="{{route('finalEvalutions.store')}}" method="POST">
+  @csrf 
+      
             <div class="panel-body">
                 <div class="form-group">
                     <label class="control-label"> Name</label>
-                    <input maxlength="100"  name="TrineeName" type="text" required="required" class="form-control"  />
+                    <input maxlength="100"  name="TraineeName" type="text" required="required" class="form-control"  />
                 </div>
                 <div class="form-group">
                     <label class="control-label">ID</label>
@@ -103,7 +117,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Department</label>
-                    <input maxlength="100" name="TraineeDeprtment " type="text" required="required" class="form-control" />
+                    <input maxlength="100" name="TraineeDepartment" type="text" required="required" class="form-control" />
                 </div>
 
                 <div class="form-group">
@@ -136,7 +150,7 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label">Department</label>
-                    <input maxlength="200" name="SupervisorDepartment " type="text" required="required" class="form-control" />
+                    <input maxlength="200" name="SupervisorDepartment" type="text" required="required" class="form-control" />
                 </div>
 
                 <div class="form-group">
@@ -188,9 +202,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Date</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" name="SignatureDate" />
+                    <label class="control-label"> date</label>
+                    <input maxlength="100"   required="required" class="form-control"  type="date" placeholder="1\1\2020 " name="SignatureDate" required> </input>
                 </div>
+
 
                 <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
             </div>
@@ -263,22 +278,20 @@
     <input type="text" class="form-control"  name="Score14" id="inputAddress" placeholder="out of 5">
   </div>
   <div class="form-group">
+  <label class="control-label">Cooperation with colleagues</label>
     <input type="text" class="form-control"  name="Score15" id="inputAddress" placeholder="out of 5">
   </div>
   <div class="form-group">
   <label class="control-label">Communication Skills</label>
     <input type="text" class="form-control"  name="Score16" id="inputAddress" placeholder="out of 5">
   </div>
-  <div class="form-group">
-  <label class="control-label">Totla Score</label>
-    <input type="text" class="form-control"  name="Score17" id="inputAddress" placeholder="Total score">
-  </div>
+  
   </div>
     
  
 
 
-                <button class="btn btn-primary pull-right" type="submit">Submit!</button>
+                <button class="btn btn-primary pull-right" type="submit"id="btnsubmit">Submit!</button>
             </div>
         </div>
     </form>
@@ -328,6 +341,14 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script>   
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#btnsubmit').click(function(){
+           $('#myAlert').show('fade');
+    }); 
+});
+
+</script>
 </body>
 </html>
 @endsection

@@ -1,3 +1,5 @@
+
+
 @extends('layout')
 
 @section('content')
@@ -60,64 +62,68 @@
     line-height: 1.428571429;
     border-radius: 15px;
 }
-.container{
-    border:  dot orange;
-    margin-top:150px;
-   
-}
-body{
 
-background-image: url("/images/in.jpg");
-height:50px;
-
-}
 .btn-primary{
   background-color: #f26427
 }
+
+.btn-success{
+  background-color: #f26427
+}
+
 </style>
 </head>
 <body>
 
-<div class="container" method ="POST" action="{{ route('finalreports.store')}}">
+<div class="container">
     <div class="stepwizard">
+    <div id="myAlert" class="alert alert-success collapse">
+ <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success!</strong> report sent successfully.
+  </div>
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-1" type="button" class="btn-primary btn-circle">1</a>
+                <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
                 <p><small>Trainee Information</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-2" type="button" class=" btn btn-primary btn-circle" disabled="disabled">2</a>
-                <p><small>Supervisor Information</small></p>
+                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                <p><small>Supervisor  Information</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-3" type="button" class="btn btn-primary btn-circle" disabled="disabled">3</a>
-                <p><small>Department Information</small></p>
+                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                <p><small>Department Informtion</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
                 <p><small>Fill Parts</small></p>
             </div>
+            
         </div>
     </div>
     
-    <form role="form">
-        <div class="panel panel-primary setup-content" id="step-1">
-            <div class="panel-heading">
-                
-            </div>
-            <div class="panel-body">
-                <div class="form-group">
+    
+    <div class="panel panel-primary setup-content" id="step-1">
+    <div class="panel-heading">
+    </div>
+  <form action ="{{route('finalreports.store')}}" method="POST">
+  @csrf 
+      
+             
+         <div class="panel-body">
+         <div class="form-group">
                     <label class="control-label"> Name</label>
-                    <input maxlength="100"  name="TrineeName" type="text" required="required" class="form-control"  />
-                </div>
-                <div class="form-group">
-                    <label class="control-label">ID</label>
-                    <input maxlength="100" name ="TraineeID" type="text" required="required" class="form-control"  />
+                    <input maxlength="100"  name="TraineeName" type="text" required="required" class="form-control"  />
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">Department</label>
-                    <input maxlength="100" name="TraineeDeprtment " type="text" required="required" class="form-control" />
+                    <input maxlength="100" name="TraineeDepartment" type="text" required="required" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">ID</label>
+                    <input maxlength="100" name ="TraineeID" type="text" required="required" class="form-control"  />
                 </div>
 
                 <div class="form-group">
@@ -138,19 +144,19 @@ height:50px;
                 <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
             </div>
         </div>
-        
+
         <div class="panel panel-primary setup-content" id="step-2">
-            <div class="panel-heading">
+        <div class="panel-heading">
                  
-            </div>
-            <div class="panel-body">
+                 </div>
+                 <div class="panel-body">
                 <div class="form-group">
                     <label class="control-label">Name</label>
                     <input maxlength="200" name="SupervisorName" type="text" required="required" class="form-control"  />
                 </div>
                 <div class="form-group">
                     <label class="control-label">Department</label>
-                    <input maxlength="200" name="SupervisorDepartment " type="text" required="required" class="form-control" />
+                    <input maxlength="200" name="SupervisorDepartment" type="text" required="required" class="form-control" />
                 </div>
 
                 <div class="form-group">
@@ -166,13 +172,15 @@ height:50px;
                 <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
             </div>
         </div>
+
         
         <div class="panel panel-primary setup-content" id="step-3">
-            <div class="panel-heading">
-                
-            </div>
-            <div class="panel-body">
-                <div class="form-group">
+        <div class="panel-heading">
+               
+               </div>
+               <div class="panel-body">
+               
+               <div class="form-group">
                     <label class="control-label">Orgnization Name</label>
                     <input maxlength="200" type="text" required="required" class="form-control" name="OrganizationName" />
                 </div>
@@ -202,8 +210,8 @@ height:50px;
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Date</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" name="SignatureDate" />
+                    <label class="control-label"> date</label>
+                    <input maxlength="100"   required="required" class="form-control"  type="date" placeholder="1\1\2020 " name="SignatureDate" required> </input>
                 </div>
 
                 <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
@@ -240,9 +248,10 @@ height:50px;
     <textarea class="form-control" name="q5" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 
-                <button class="btn btn-primary pull-right" type="submit">Submit!</button>
+                <button class="btn btn-primary pull-right" type="submit" id="btnsubmit">Submit!</button>
             </div>
         </div>
+
     </form>
 </div>
     
@@ -289,7 +298,15 @@ allNextBtn.click(function () {
 
 $('div.setup-panel div a.btn-success').trigger('click');
 });
-</script>   
+</script>  
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#btnsubmit').click(function(){
+           $('#myAlert').show('fade');
+    }); 
+});
+
+</script> 
 </body>
 </html>
 @endsection

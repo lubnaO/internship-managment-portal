@@ -17,10 +17,10 @@ class Announcament extends Model
     }
     public function applicants()
     {
-        return $this->hasMany('App\applicant');
+        return $this->hasMany('App\applicant','annou_id');
     }
     public function student()
     {
-        return $this->hasMany('App\Student');
+        return $this->hasMany('App\Student','stu_id');
     }
 }

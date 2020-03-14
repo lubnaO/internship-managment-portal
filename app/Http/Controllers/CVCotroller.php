@@ -81,10 +81,16 @@ $request->validate([
      
 ]);
 
+$request->validate([
+
+    "nationality"=>"required|:c_v_s"
+     
+]);
+
         CV::create($request->all());
 
 
-        return redirect (route('CV.index'));
+        return redirect (route('home'));
     }
 
     /**

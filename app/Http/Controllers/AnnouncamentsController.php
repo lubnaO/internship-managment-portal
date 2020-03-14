@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Announcament;
 use App\Company;
 use App\User;
+use App\Applicant;
 use App\Http\Requests\announcamentsRequest;
 
 
@@ -19,8 +20,8 @@ class AnnouncamentsController extends Controller
     public function index()
     {
         return view('Announcaments.index')->with('announcaments',Announcament::all());
-        return view('indexhome')->with('announcaments',Announcament::all());
         
+       
     }
 
     /**
@@ -53,7 +54,7 @@ class AnnouncamentsController extends Controller
         Announcament::create($request->all());
 
 
-        return redirect (route('Announcaments.index'));
+        return redirect (route('home'));
 
         
     }
@@ -66,7 +67,8 @@ class AnnouncamentsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Announcaments.show')->with('announcaments',Announcament::all());
+       
     }
 
     /**
@@ -77,8 +79,11 @@ class AnnouncamentsController extends Controller
      */
     public function edit($id)
     {
-        //
+      
+
     }
+    
+
 
     /**
      * Update the specified resource in storage.

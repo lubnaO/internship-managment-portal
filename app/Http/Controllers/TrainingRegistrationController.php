@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TrainingRegistration;
+//use App\Http\Requests\trainingRequest;
 
 class TrainingRegistrationController extends Controller
 {
@@ -35,56 +36,17 @@ class TrainingRegistrationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {$request->validate([
+    {
+         $request->validate([
+        "StudentName"=>"required:training_registrations"
 
-            "StudentName"=>"required|:training_registrations"]);
-        
-        $request->validate([
+         ]);   
+         
+         TrainingRegistration::create($request->all());
+         return redirect (route('home'));
+        }
 
-            "StudentID"=>"required|:training_registrations"]);
-        $request->validate([
-
-            "SMajor"=>"required|:training_registrations"]);
-
-        $request->validate([
-
-            "TrainingOrganization"=>"required|:training_registrations"]);
-
-        $request->validate([
-
-            "SupervisorInfo"=>"required|:training_registrations"]);
-
-        $request->validate([
-
-            "TraineeTaske 	"=>"required|:training_registrations"]);
-
-        $request->validate([
-
-            "TraineHoure"=>"required|:training_registrations"]);
-
-        $request->validate([
-
-            "TraineDate"=>"required|:training_registrations"]);
-
-        $request->validate([
-
-            "SupervisorName"=>"required|:training_registrations"]);
-        
-
-        $request->validate([
-
-            "SupervisorJob"=>"required|:training_registrations"]);
-
-        TrainingRegistration::create($request->all());
-
-
-        return redirect (route('TrainingRegistrations.index'));
-        
-        
-        
-        
-
-    }
+   
 
     /**
      * Display the specified resource.
@@ -94,7 +56,7 @@ class TrainingRegistrationController extends Controller
      */
     public function show($id)
     {
-      
+        return view ('TrainingRegistrations.show');
 
     }
 

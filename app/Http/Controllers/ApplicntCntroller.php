@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Announcament;
+use App\Student;
 use App\Applicant;
 
 class ApplicntCntroller extends Controller
@@ -15,7 +16,8 @@ class ApplicntCntroller extends Controller
      */
     public function index()
     {
-        //
+        return view ('applicnt.index');
+
     }
 
     /**
@@ -36,15 +38,15 @@ class ApplicntCntroller extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+   /*    $request->validate([
 
     "annou_id"=>"required|:applicants",
     "stu_id	"=>"required|:applicants"
+]);*/
 
-     
-]);
+        Applicant::create($request->all());
+        return redirect (route('applicnt.index'));
 
-Announcament::create($request->all());
 
 
     }

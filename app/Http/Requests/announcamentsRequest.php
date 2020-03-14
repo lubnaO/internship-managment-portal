@@ -24,7 +24,7 @@ class announcamentsRequest extends FormRequest
     public function rules()
     {
         return [
-            "name"=>"required|unique:announcaments" ,
+            "name"=>"required|:announcaments" ,
             "A_start"=>"required|:announcaments" ,
             "A_end"=>"required|:announcaments" ,
             "description"=>"required|:announcaments" ,

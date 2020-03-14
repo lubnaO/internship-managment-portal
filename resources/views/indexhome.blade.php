@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,6 +30,12 @@
   width:100%;
   
 }
+. text-right ml-auto {
+  background-color:#193870
+}
+
+
+
 
 
   .site-section   , p {
@@ -65,6 +72,7 @@
     </div>
    
 
+
   
     <div class="top-bar">
       <div class="container">
@@ -76,8 +84,7 @@
             
 
             <div class="float-right">
-
-            <a href="\register" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
+          <a href="\register" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
             <span class="mx-md-2 d-inline-block"></span>
             <a href="/login" class="text-white"><span class="mr-2 text-white icon-instagram"></span> <span class="d-none d-md-inline-block">Login</span></a>
 
@@ -97,7 +104,7 @@
           
             
             <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">IMP</a>
+              <a href="index.html" class="text-black"><span class="text-primary"> </a>
             </div>
 
             
@@ -130,18 +137,25 @@
 
       
 
-      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back4.jpg'); " >
+      <div class="site-section-cover overlay img-bg-section" style="background-image:url('images/back5.jpg');" >
+      
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12 col-lg-7">
               <h1 data-aos="fade-up" data-aos-delay="">Welcome to IMP</h1>  
               <p class="mb-5" data-aos="fade-up" data-aos-delay="100">We have helped many students and companies in summer training issues .... What are you waiting for? Register with us</p>
+
               <p data-aos="fade-up" data-aos-delay="200"><a href="\register" class="btn btn-outline-white border-w-2 btn-md">Sign up</a></p>
+
+             
+
             </div>
           </div>
         </div>
 
       </div>
+
+    
 
       <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back5.jpg'); " >
         <div class="container">
@@ -199,7 +213,7 @@
              
             </div>
            
-          </div> --> 
+          </div> 
           <p><a href="/Announcaments" class="btn btn-primary btn-block"> more </a></p>
         </div>      
       </div>

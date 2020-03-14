@@ -1,12 +1,10 @@
+@extends('layout')
 
+@section('content')
 
+<h1>Thank you too fill the form</h1>.
+<a href="finalreports/create" class="btn btn-success">add profile</a>
 
-        <li>
-            <a href="finalreports/create">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Final Report</p>
-            </a>
-
-            
+            @endsection
           
           
