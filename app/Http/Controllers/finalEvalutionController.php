@@ -53,17 +53,17 @@ class finalEvalutionController extends Controller
      */
     public function show($finalEvalution)
     {
-<<<<<<< HEAD
+
        
        // $finalEvalution = finalEvalution::find($finalEvalution);
         //return $finalEvalution; 
       return view('finalEvalutions.show')->with('finalEvalution',finalEvalution::find($finalEvalution));
     
-=======
+
       // return $id;
         return view ('finalEvalutions.show')->with('finalEvalution',finalEvalution::find($id));
 
->>>>>>> e8c1bdb27cf5f81128a851c3b1f0c197d914c630
+
     }
 
     /**

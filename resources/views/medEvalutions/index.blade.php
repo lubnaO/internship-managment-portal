@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class ="container">
-<div class="jumbotron">
+<div class ="container mt-5">
+
 
 <div class="card">
   <h5 class="card-header text-white">Med Evalution Reports</h5>

@@ -68,6 +68,7 @@
 </head>
 <body>
 
+
 <div class="container">
 <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
@@ -93,7 +94,7 @@
     
    
    
-        <div class="panel panel-primary setup-content" id="step-1">
+        <div class="panel panel-primary setup-content " id="step-1">
             <div class="panel-heading">
                 
             </div>
@@ -288,6 +289,7 @@
   <button class ="btn btn-primary pull-right"  type="submit">Submit!</button>
    
             </div>
+            <
         </div>
     </form>
 </div>

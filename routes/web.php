@@ -13,19 +13,19 @@
 
 
 
-//Route::get('/', function () {
-  // return view('finalEvalutions.create');
+Route::get('/', function () {
+   return view('Cdashboard');
 
-//});
-
-Route::get('/Cdashboard', function () {
-  return view('Cdashboard');
 });
 
-//});
+Route::get('', function () {
+  return view('dashboardtwo');
+});
 
-Route::get('/', function () {
-  return view('Sdashboard');
+
+
+Route::get('', function () {
+return view('Sdashboard');
 
 });
 
@@ -33,15 +33,12 @@ Route::get('finalEvalutions/index','finalEvalutionController@index');   //route 
 Route::get('medEvalutions/index','medEvalutionController@index');
 Route::get('finalreports/index','finalReportController@index');
 
+//Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
+//Route::get('/finalreports/{finalReport}','finalReportController@show');
 
-<<<<<<< HEAD
-Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
+//Route::get('finalEvalutions/index','finalEvalutionController@index');
+//Route::get('finalEvalutions/{id}','finalEvalutionController@show');
 
-Route::get('/finalreports/{finalReport}','finalReportController@show');
-=======
-Route::get('finalEvalutions/index','finalEvalutionController@index');
-Route::get('finalEvalutions/{id}','finalEvalutionController@show');
->>>>>>> e8c1bdb27cf5f81128a851c3b1f0c197d914c630
 
 
 

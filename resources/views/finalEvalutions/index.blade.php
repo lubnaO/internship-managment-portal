@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class ="container">
-<div class="jumbotron">
+<div class ="container mt-5">
+
 
 <div class="card">
   <h5 class="card-header text-white">Final Evalution Reports</h5>
@@ -24,11 +24,11 @@
     <tr>
     @foreach ($finalEvalutions as $finalEvalution)
     <td scope="row"><p>{{ $finalEvalution->TraineeName }}  </p></td>
-<<<<<<< HEAD
+
     <td> <a href ="/finalEvalutions/{{$finalEvalution->id}}" class="btn btn-success">Show Report</td> 
-=======
-    <td><a class="btn btn-primary" href="/finalEvalutions/{{$finalEvalution->id}}">Show Report</a></td>  
->>>>>>> e8c1bdb27cf5f81128a851c3b1f0c197d914c630
+
+    
+
     </tr>
  
     @endforeach
