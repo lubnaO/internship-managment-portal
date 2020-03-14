@@ -80,9 +80,24 @@
           <li>
             <a href="/finalEvalutions/index">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Reports</p>
+              <p>Final Evalution Reports</p>
             </a>
           </li>
+
+          <li>
+            <a href="/medEvalutions/index">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Med Evalution Reports</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="/finalreports/index">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Final reports </p>
+            </a>
+          </li>
+
           <li>
             <a href="./notifications.html">
               <i class="now-ui-icons ui-1_bell-53"></i>

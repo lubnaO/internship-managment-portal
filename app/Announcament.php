@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Company;
 use App\Student;
 use App\Applicant;
+use App\record;
 
 class Announcament extends Model
 {
@@ -23,4 +24,8 @@ class Announcament extends Model
     {
         return $this->hasMany('App\Student','stu_id');
     }
+    public function records()
+    {
+        return $this->hasMany('App\record','announ_id');
+}
 }

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\finalReport;
+use App\record;
 
-class finalReportController extends Controller
+class recordController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class finalReportController extends Controller
      */
     public function index()
     {
-        return view ('finalreports.index')->with ('finalreports', finalReport::all());
+        return view('record.index')->with('records',record::all());
     }
 
     /**
@@ -24,7 +24,7 @@ class finalReportController extends Controller
      */
     public function create()
     {
-        return view('finalreports.create');
+        //
     }
 
     /**
@@ -35,12 +35,15 @@ class finalReportController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $request->validate([
 
-            finalReport::create($request->all());
-            return redirect( route('home'));
+            "massege"=>"required|:records",
+            "tasks"=>"required|:records"
             
+        ]);
         
+                record::create($request->all());
+                return redirect (route('record.create'));
     }
 
     /**
@@ -49,10 +52,9 @@ class finalReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($finalReport)
+    public function show($id)
     {
-        return view('finalreports.show')->with('finalReport',finalReport::find($finalReport));
-
+        //
     }
 
     /**

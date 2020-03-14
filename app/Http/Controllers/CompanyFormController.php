@@ -17,7 +17,6 @@ class CompanyFormController extends Controller
     public function index()
     {
         return view ('company.index')->with('profiles',CompanyForm::all()); 
-        return view('company.index')->with('announcaments',Announcament::all());
     }
 
     /**
@@ -63,7 +62,7 @@ class CompanyFormController extends Controller
     public function show($id)
     {
       
-        return view ('company.index')->with('profiles',CompanyForm::all()); 
+     
     }
 
     /**
