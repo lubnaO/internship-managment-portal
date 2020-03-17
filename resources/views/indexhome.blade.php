@@ -171,9 +171,9 @@
 
     </div>
 
-    <h2> Most visited announcement </h2> 
+  <!--  <h2> Most visited announcement </h2> 
     
-    <!--<div class="site-section">
+    <div class="site-section">
       <div class="block__73694 mb-2" id="announcments-section">
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
@@ -210,14 +210,13 @@
               <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis. </p> 
              
             </div>
-           
-          </div> --> 
+         </div> -->
           <p><a href="/Announcaments" class="btn btn-primary btn-block"> more </a></p>
         </div>      
       </div>
     
 
-    <!--<div class="site-section bg-light">
+    <div class="site-section bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
@@ -277,7 +276,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div> 
 
 
     <div class="site-section bg-dark" id="about-section">
@@ -369,7 +368,7 @@
     </div> 
 
 
-  <!--  <section class="site-section bg-light" id="pricing-section">
+  <section class="site-section bg-light" id="pricing-section">
       <div class="container">
         <div class="row mb-5 justify-content-center text-center">
           <div class="col-md-7">
@@ -439,7 +438,7 @@
               </p>
             </div>
           </div>
-        </div> -->
+        </div> 
         
         <div class="row site-section" id="faq-section">
           <div class="col-12 text-center" data-aos="fade">
@@ -496,7 +495,7 @@
     </section>
 
     
-    <!--<div class="site-section" id="press-section">
+    <div class="site-section" id="press-section">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-5 mb-lg-0">
@@ -641,7 +640,7 @@
 
         </div>
       </div>
-    </div> -->
+    </div> 
 
 
     <div class="site-section bg-light" id="contact-section">

@@ -111,7 +111,7 @@ height:50px;
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">City</label>
+                <label class="control-label">City</label>
                     <input maxlength="100" name="city" type="text" required="required" class="form-control" />
                 </div>
                 <input type="hidden" value="{{Auth::user()->company->id}}" name="Company_id"/>

@@ -94,7 +94,8 @@
           <li>
             <a href="/finalreports/index">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Final reports </p>
+              <span class="glyphicon glyphicon-globe"></span>final reports <span class="badge">{{count(auth()->user()->unreadNotification)}}}</span>
+              
             </a>
           </li>
 

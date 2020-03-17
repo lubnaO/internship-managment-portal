@@ -37,6 +37,7 @@
   <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+
   <Style>
   .logo {
   background-color: #193870
@@ -49,6 +50,7 @@
 }
 
   </Style>
+
 </head>
 
 <body class="">
@@ -65,7 +67,7 @@
           
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-        {{Auth::user()->student->firstName}} 
+       
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -137,7 +139,7 @@
           
         </a>
         <a href="" class="simple-text logo-normal">
-          {{Auth::user()->company->name}}
+         
 
         </a>
       </div>
@@ -228,10 +230,14 @@
               <p>Icons</p>
             </a>
           </li>
+
+        
+
           <li>
-            <a href="/finalEvalutions/index">
+            <a href="/finalreports/index">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Reports</p>
+              
+              <p>Final reports </p>
             </a>
           </li>
           <li>

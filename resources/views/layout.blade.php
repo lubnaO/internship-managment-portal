@@ -54,10 +54,10 @@ width:100%;
 <ul class ="navbar-nav ml-auto">
 <li class="nav-item">
 <a href="#" class="nav-link text-white"> Register</a>
+ 
 </li>
 </ul>
 <img id="logo" src="'/images/impback1.jpg'" width="30" height="30" class="d-inline-block align-top " alt="">
-
 </div>
 
 </nav>
@@ -65,6 +65,34 @@ width:100%;
     @yield('content') 
       
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-   
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script type="text/javascript">
+   $('#search').on('keyup', function(){
+    var value = $(this).val();
+
+    $.ajax({
+      type : 'get',
+      url : "{{ URL::to('search') }}",
+      data:{
+        search: value,
+      },
+
+      sucess:function( data ){
+        $('#initial_table').hide();
+        $('#ajax').html( data );
+      },
+
+      error:function(jqXHR, textStatus, errorThrown){
+       console.log("AJAZ error:" + textStatus + ':' + errorThrown);
+      },
+    });
+   });
+</script>
+
+     <script type="text/javascript">
+     $.ajaxSetup({ headers:{ 'csrftoken' : '{{csrf_token() }}'}});  
+    </script> 
+
 </body>
 </html>
