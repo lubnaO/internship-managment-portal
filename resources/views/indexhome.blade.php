@@ -30,25 +30,25 @@
   width:100%;
   
 }
-<<<<<<< HEAD
+
 . text-right ml-auto {
   background-color:#193870
 }
-
-
-
-
 
   .site-section   , p {
     
    color: #fff; 
    text-align: center; }
 
- h2 {
+ .h2 {
     color: #f77b2e;
     text-align: center; 
 
    }
+   .color{
+    color: #ff8b00
+   }
+
     </style> 
     
   </head>
@@ -440,7 +440,7 @@
           </div>
         </div> 
         
-        <div class="row site-section" id="faq-section">
+        <div class="row site-section " id="faq-section">
           <div class="col-12 text-center" data-aos="fade">
             <h2 class="section-title text-primary">Frequently Ask Questions</h2>
           </div>
@@ -449,8 +449,8 @@
           <div class="col-lg-6">
             
             <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
+            <h3 class="text-black h4 mb-4 color">Who we are?</h3>
+            <p>Our website help university student to research about their training in the last semester</p>
             </div>
             
             <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
@@ -480,15 +480,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
             </div>
 
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-            
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
+  
           </div>
         </div>
       </div>

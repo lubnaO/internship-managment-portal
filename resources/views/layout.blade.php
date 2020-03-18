@@ -66,33 +66,5 @@ width:100%;
       
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   <script type="text/javascript">
-   $('#search').on('keyup', function(){
-    var value = $(this).val();
-
-    $.ajax({
-      type : 'get',
-      url : "{{ URL::to('search') }}",
-      data:{
-        search: value,
-      },
-
-      sucess:function( data ){
-        $('#initial_table').hide();
-        $('#ajax').html( data );
-      },
-
-      error:function(jqXHR, textStatus, errorThrown){
-       console.log("AJAZ error:" + textStatus + ':' + errorThrown);
-      },
-    });
-   });
-</script>
-
-     <script type="text/javascript">
-     $.ajaxSetup({ headers:{ 'csrftoken' : '{{csrf_token() }}'}});  
-    </script> 
-
 </body>
 </html>

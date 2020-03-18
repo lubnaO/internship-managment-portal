@@ -67,7 +67,7 @@
           
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-       
+        Student Profile 
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -139,7 +139,7 @@
           
         </a>
         <a href="" class="simple-text logo-normal">
-         
+          Company Profile
 
         </a>
       </div>
