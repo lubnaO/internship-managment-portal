@@ -54,10 +54,10 @@ width:100%;
 <ul class ="navbar-nav ml-auto">
 <li class="nav-item">
 <a href="#" class="nav-link text-white"> Register</a>
+ 
 </li>
 </ul>
 <img id="logo" src="'/images/impback1.jpg'" width="30" height="30" class="d-inline-block align-top " alt="">
-
 </div>
 
 </nav>
@@ -65,6 +65,10 @@ width:100%;
     @yield('content') 
       
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> c22a5658935b47e1528ae0cf5a2bcba14f70b76f
 </body>
 </html>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\finalReport;
 
+
 class finalReportController extends Controller
 {
     /**
@@ -39,7 +40,8 @@ class finalReportController extends Controller
 
             finalReport::create($request->all());
             return redirect( route('home'));
-            
+
+          /*auth()->TraineeName()->notify(new Reply($request)); */  
         
     }
 
@@ -52,6 +54,7 @@ class finalReportController extends Controller
     public function show($finalReport)
     {
         return view('finalreports.show')->with('finalReport',finalReport::find($finalReport));
+       
 
     }
 
@@ -88,4 +91,6 @@ class finalReportController extends Controller
     {
         //
     }
+
 }
+

@@ -33,7 +33,7 @@
       <td>{{ $annouancment->A_start}}</td>
       <td>{{ $annouancment->A_end}}</td>
       <td>
-       <form action="{{ route('applicnt.store') }}" class="container" method="POST" >
+      <form action="{{ route('applicnt.store') }}" class="container" method="POST" >
        @csrf
   <input type="hidden" value="{{Auth::user()->student->id}}" name="stu_id"/>
       <input type="hidden" value="{{ $annouancment->id }}" name="annou_id"/>

@@ -14,23 +14,20 @@
     <tr>
       <th scope="col">Trainee Name</th>
       <th scope="col">Action</th>
-      
-    </tr>
+      </tr>
   </thead>
-  <tbody>
-
-    
   
     <tr>
     @foreach ($finalreports as $finalReport)
     <td scope="row"><p>{{ $finalReport->TraineeName }}  </p></td>
     <td> <a href ="/finalreports/{{$finalReport->id}}" class="btn btn-success">Show Report</td> 
     </tr>
- 
-    @endforeach
+  @endforeach
+  </thead>
+  <tbody>
+
   
   </tbody>
-  
 </table>
   </div>
 </div>

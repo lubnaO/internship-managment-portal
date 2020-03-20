@@ -30,24 +30,28 @@
   width:100%;
   
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c22a5658935b47e1528ae0cf5a2bcba14f70b76f
 . text-right ml-auto {
   background-color:#193870
 }
-
-
-
-
 
   .site-section   , p {
     
    color: #fff; 
    text-align: center; }
 
- h2 {
+ .h2 {
     color: #f77b2e;
     text-align: center; 
 
    }
+   .color{
+    color: #ff8b00
+   }
+
     </style> 
     
   </head>
@@ -173,7 +177,7 @@
 
     </div>
 
-    <h2> Most visited announcement </h2> 
+  <!--  <h2> Most visited announcement </h2> 
     
     <div class="site-section">
       <div class="block__73694 mb-2" id="announcments-section">
@@ -211,14 +215,18 @@
               eum blanditiis perferendis. </p> 
              
             </div>
+<<<<<<< HEAD
            
           </div> 
+=======
+         </div> -->
+>>>>>>> c22a5658935b47e1528ae0cf5a2bcba14f70b76f
           <p><a href="/Announcaments" class="btn btn-primary btn-block"> more </a></p>
         </div>      
       </div>
     
 
-    <!--<div class="site-section bg-light">
+    <div class="site-section bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
@@ -278,7 +286,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div> 
 
 
     <div class="site-section bg-dark" id="about-section">
@@ -370,7 +378,7 @@
     </div> 
 
 
-  <!--  <section class="site-section bg-light" id="pricing-section">
+  <section class="site-section bg-light" id="pricing-section">
       <div class="container">
         <div class="row mb-5 justify-content-center text-center">
           <div class="col-md-7">
@@ -440,9 +448,9 @@
               </p>
             </div>
           </div>
-        </div> -->
+        </div> 
         
-        <div class="row site-section" id="faq-section">
+        <div class="row site-section " id="faq-section">
           <div class="col-12 text-center" data-aos="fade">
             <h2 class="section-title text-primary">Frequently Ask Questions</h2>
           </div>
@@ -451,8 +459,8 @@
           <div class="col-lg-6">
             
             <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
+            <h3 class="text-black h4 mb-4 color">Who we are?</h3>
+            <p>Our website help university student to research about their training in the last semester</p>
             </div>
             
             <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
@@ -482,22 +490,14 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
             </div>
 
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
-            
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
-            </div>
+  
           </div>
         </div>
       </div>
     </section>
 
     
-    <!--<div class="site-section" id="press-section">
+    <div class="site-section" id="press-section">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-5 mb-lg-0">
@@ -642,7 +642,7 @@
 
         </div>
       </div>
-    </div> -->
+    </div> 
 
 
     <div class="site-section bg-light" id="contact-section">
