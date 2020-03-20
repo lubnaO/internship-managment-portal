@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\TrainingRegistration;
 //use App\Http\Requests\trainingRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TrainingRegistrationController extends Controller
 {
@@ -15,6 +16,7 @@ class TrainingRegistrationController extends Controller
      */
     public function index()
     {
+      
         return view ('TrainingRegistrations.index');
 
     }
@@ -25,7 +27,12 @@ class TrainingRegistrationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    
+    
+    {   
+        
+        Alert::success('success!',' report sent successfully');
+      
         return view ('TrainingRegistrations.create');
     }
 

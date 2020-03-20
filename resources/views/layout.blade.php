@@ -61,10 +61,10 @@ width:100%;
 </div>
 
 </nav>
-
+     @include('sweetalert::alert')
     @yield('content') 
       
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-   
+ 
 </body>
 </html>

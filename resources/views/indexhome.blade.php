@@ -180,15 +180,13 @@
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
 
-            <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/internship.jpg');" data-aos="fade-right" data-aos-delay="">
+            <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/img_2.jpg');" data-aos="fade-right" data-aos-delay="">
             </div>
 
-            
-           
             <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
           
              <h3 class="mb-3 text-black"> Company A  </h3>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <p class="mb-3 text-black"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Aliquam assumenda eum blanditiis perferendis. </p> 
               
     
@@ -209,7 +207,8 @@
 
             <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
               <h2 class="mb-3 text-black">Company B </h2>
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis. </p> 
+              <p class="mb-3 text-black"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda 
+              eum blanditiis perferendis. </p> 
              
             </div>
            

@@ -69,20 +69,20 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'user_type' => "s"
+            'user_type' => "c"
         ]);
 
 
-       $studet = Student::create([
+      /* $studet = Student::create([
             'firstName' =>$data['name'],
             'lastName' => "test",
             'email' => $data['email'],
             'phone' => "0534156987",
             'major' => "major1",
             'id_user' =>  $user->id,
-        ]);
+        ]);*/
 
-      /* $company = company::create([
+       $company = company::create([
             'name' =>$data['name'],
             'address' => "test",
             'email' => $data['email'],
@@ -91,7 +91,7 @@ class RegisterController extends Controller
             'id_user' =>  $user->id,
         ]); 
 
-      $UniversitySupervisor= UniversitySupervisor::create([
+     /* $UniversitySupervisor= UniversitySupervisor::create([
             'firstName' =>$data['name'],
             'lastName' => "test",
             'email' => $data['email'],
