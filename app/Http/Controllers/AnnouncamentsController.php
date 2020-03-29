@@ -7,6 +7,7 @@ use App\Announcament;
 use App\Company;
 use App\User;
 use App\Applicant;
+use App\CompanyForm;
 use App\Http\Requests\announcamentsRequest;
 
 
@@ -19,7 +20,8 @@ class AnnouncamentsController extends Controller
      */
     public function index()
     {
-        return view('Announcaments.index')->with('announcaments',Announcament::all());
+        return view('Announcaments.index')->with('announcaments',Announcament::all(),CompanyForm::all());
+
         
        
     }
@@ -67,10 +69,10 @@ class AnnouncamentsController extends Controller
      */
     public function show($id)
     {
-        return view('Announcaments.show')->with('announcaments',Announcament::all());
+        return view('request')->with('announcaments',Announcament::all());
        
     }
-
+   
     /**
      * Show the form for editing the specified resource.
      *

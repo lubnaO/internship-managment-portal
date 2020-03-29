@@ -98,7 +98,7 @@ cancel the training registration.: </p>
             </form> 
         </div>
         </html> 
-        @endsection
+        
 
 <!-- Link to js file in folder app and CDN used for the signature pad :  Jquery, ajax, signature pad -->
       <script src="{{ url('js/app.js') }} " charset="utf-8"></script>
@@ -155,7 +155,7 @@ cancel the training registration.: </p>
     </body>
 
 </html>
-<<<<<<< HEAD
+
            
         
         @endsection

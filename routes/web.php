@@ -39,14 +39,6 @@ Route::get('finalreports/index','finalReportController@index');
 
 
 Route::get('finalEvalutions/index','finalEvalutionController@index');
-Route::get('finalEvalutions/{id}','finalEvalutionController@show');
-Route::get('TrainingRegistrations/{id}','TrainingRegistrationController@show');
-
-
-
-Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
-
-Route::get('/finalreports/{finalReport}','finalReportController@show');
 
 
 //Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
@@ -65,6 +57,9 @@ Route::get('/finalreports/{finalReport}','finalReportController@show');
 Route::get('/dashboardtwo', function () {
     return view('dashboardtwo');
 });
+Route::get('/request', function () {
+  return view('request');
+});
 
 
 
@@ -82,6 +77,8 @@ Route::resource('/status','statusController');
 
 
 
+
+
 Route::resource('/finalreports','finalReportController');
 Route::resource('/medEvalutions','medEvalutionController');
 Route::resource('/finalEvalutions','finalEvalutionController');
@@ -92,7 +89,7 @@ Route::resource('/TrainingRegistrations','TrainingRegistrationController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/company/{id}','CompanyFormController@show');
+Route::get('/profiles/{id}','CompanyFormController@show');
 
 
 Route::get('/', 'indexhomeController@index');
@@ -101,11 +98,19 @@ Route::get('/studentlist', 'statusController@studentlist');
 Route::get('/studentlist', 'statusController@studentlist');
 Route::resource('/garde','gradeController');
 
+Route::get('TrainingRegistrations/{id}','TrainingRegistrationController@show');
 
 
 
 
  
+Route::get('finalEvalutions/{id}','finalEvalutionController@show');
+
+
+
+Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
+
+Route::get('/finalreports/{finalReport}','finalReportController@show');
 
 
 //Route::get('/', function () {

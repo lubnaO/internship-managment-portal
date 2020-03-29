@@ -106,7 +106,7 @@
           </li>
 
           <li>
-            <a href="/TrainingRegistrations">
+            <a href="/TrainingRegistrations/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>registeration Form</p>
             </a>
@@ -157,7 +157,7 @@
             </a>
           </li>
           <li>
-            <a href="http://localhost:8000/Announcaments/show">
+            <a href="http://localhost:8000/request">
               <i class="now-ui-icons location_map-big"></i>
               <p>Requests</p>
             </a>
@@ -215,18 +215,23 @@
         </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-     
           <li>
-            <a href="/medEvalutions/index">
+            <a href="/medEvalutions">
               <i class="now-ui-icons location_map-big"></i>
               <p>Med Evalution Reports</p>
-          
+              </a>
+          </li>
+          <li>
+            <a href="http://localhost:8000/finalEvalutions">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Final Evalution Reports</p>
+          </a>
           </li>
           <li>
             <a href="http://localhost:8000/finalreports">
               <i class="now-ui-icons location_map-big"></i>
               <p> Final Reports</p>
-      
+              </a>
           </li>
            
        

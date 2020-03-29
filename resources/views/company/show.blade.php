@@ -11,24 +11,24 @@
 </head>
 
 <body>
+    
 
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                        <img src="{{ asset('storage/'.$company->companyform->img) }}" alt="">
+                           <a href="https://placeholder.com"> <img src="https://via.placeholder.com/100x70">  </a> 
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
-                      
                                     <h5>
-                                      {{$company->companyform->name}} 
+                                       Aramco
                                     </h5>
                                     <h6>
-                                    {{$company->companyform->city}} 
+                                        Web Developer and Designer
                                     </h6>
                              
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -38,13 +38,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Berif Description</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="value-tab" data-toggle="tab" href="#value" role="tab" aria-controls="profile" aria-selected="false"> Our value </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="jon=bs-tab" data-toggle="tab" href="#Jobs" role="tab" aria-controls="profile" aria-selected="false"> Jobes </a>
-                                </li>
-                                
+                            </ul>
                         </div>
                     </div>
                     
@@ -52,17 +46,20 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
-                        <i class="fa fa-phone"></i>{{$company->companyform->phone}} </p>
-                      <p class="user-email"><i class="fa fa-envelope"></i> {{$company->companyform->contact}} </p>
-                              
-                    </div>
+                        <i class="fa fa-phone"></i>Phone number </p>
+                      <p class="user-email"><i class="fa fa-envelope"></i> Email</p>
+                 
+                        
+                        </div>
                     </div>
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p>   {{$company->companyform->history}} </p>
+                                                <p>Starting with just a small group of 
+                                                    intrepid explorers, our history goes back more than 80 years to the 
+                                                    sands of the Saudi desert.</p>
                                             </div>
                                           
                                         </div>
@@ -70,37 +67,53 @@
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p>    {{$company->companyform->description}}   </p>
+                                                <label>Experience</label>
                                             </div>
-                                   
-                            
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="value" role="tabpanel" aria-labelledby="profile-tab">
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p>    {{$company->companyform->create}}   </p>
+                                                <label>Hourly Rate</label>
                                             </div>
-                                   
-                            
-                        </div>
-                    </div>
-                   
-                
-                    <div class="tab-pane fade" id="Jobs" role="tabpanel" aria-labelledby="jobs-tab">
+                                            <div class="col-md-6">
+                                                <p>10$/hr</p>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                         
-                                                <h5> is empty </h5>
-                                                <p>  is empty   </p>
+                                                <label>Total Projects</label>
                                             </div>
-                                     
-                            
+                                            <div class="col-md-6">
+                                                <p>230</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>English Level</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Availability</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>6 months</p>
+                                            </div>
+                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Bio</label><br/>
+                                        <p>Your detail description</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-               
-                            
                 </div>
             </form>           
         </div>

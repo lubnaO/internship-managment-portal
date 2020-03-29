@@ -30,7 +30,7 @@ height:50px;
   <div class="form-group">
     <label for="name">Company Name</label>
     <input type="text"  name ="name" class= "form-control"> 
-    <input type="hidden" value="{{Auth::user()->company->id}}" name="c_id" />
+    <input type="hidden" value="{{Auth::user()->company->id}}" name="c_id" >
 
   </div>
 
