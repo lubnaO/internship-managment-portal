@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 mt-5">
             <div class="card">
-                <div class="card-header font-size-20  px-5 text-white">{{ __('Register') }}</div>
+                <div class="card-header font-size-20  px-5 text-white">Student registration</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -25,7 +25,7 @@
                             </div>
                         </div>
 
-                        <!-- <div class="form-group row">
+                        <div class="form-group row">
                             <label for="Last Name" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
 
                            <div class="col-md-6">
@@ -37,14 +37,22 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>-->
+                        </div>
+                        <div class="form-group row">
+                            <label for="Last Name" class="col-md-4 col-form-label text-md-right">Major</label>
+
+                           <div class="col-md-6">
+                                <input  type="text" class="form-control" name="lastName" value="{{ old('major') }}" required  autofocus>
+
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                <input type="hidden" value="c" name="user_type"/>
+                                <input type="hidden" value="s" name="user_type"/>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">

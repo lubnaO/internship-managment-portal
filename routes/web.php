@@ -60,6 +60,9 @@ Route::get('/dashboardtwo', function () {
 Route::get('/request', function () {
   return view('request');
 });
+Route::get('/studentregister', function () {
+  return view('student');
+});
 
 
 

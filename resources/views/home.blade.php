@@ -247,6 +247,12 @@
               <p>Students grades</p>
             </a>
           </li>
+          <li>
+            <a href="http://localhost:8000/studentregister">
+              <i class="fas fa-graduation-cap"></i>
+              <p>Student registration</p>
+            </a>
+          </li>
          
           </li>
         </ul>
