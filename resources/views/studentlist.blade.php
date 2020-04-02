@@ -28,7 +28,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   <div class="card-body">
 
 
-
+<!-- fali or pass from u-->
   <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
     
   <thead>

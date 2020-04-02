@@ -89,6 +89,12 @@
               <p>My Requests</p>
             </a>
           </li>
+          <li>
+          <a href="http://localhost:8000/status">
+              <i class="now-ui-icons education_atom "></i>
+              <p>Registration response </p>
+            </a>
+          </li>
 
           <li>
             <a href="http://localhost:8000/garde">
