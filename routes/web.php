@@ -63,7 +63,9 @@ Route::get('/request', function () {
 Route::get('/studentregister', function () {
   return view('student');
 });
-
+Route::get('/uni', function () {
+  return view('uni');
+});
 
 
 Route::resource('/Announcaments','AnnouncamentsController');

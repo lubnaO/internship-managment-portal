@@ -216,7 +216,8 @@
           
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          SEU
+        {{Auth::user()->UniversitySupervisor->firstName}} 
+
         </a>
         </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
