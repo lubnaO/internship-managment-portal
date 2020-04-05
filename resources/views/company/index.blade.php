@@ -11,15 +11,13 @@
 </head>
 
 <body>
-    
 
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                        @foreach ($profiles as $profile)
-                        <img src="{{ asset('storage/'.$profile->img) }}" alt="">
+                        <img src="{{ asset('storage/'.$company->companyform->img) }}" alt="">
 
                         </div>
                     </div>
@@ -27,11 +25,21 @@
                         <div class="profile-head">
                       
                                     <h5>
-                                      {{$profile->name}} 
+                                      {{$company->companyform->name}} 
                                     </h5>
                                     <h6>
-                                    {{$profile->city}} 
+                                    {{$company->companyform->city}} 
                                     </h6>
+                                    
+                                    @foreach ( $company->announcaments as $annouancment )
+
+                                    
+                                    {{ $announcament->city }} 
+                                    
+                                    
+                                    @endforeach
+
+                                   
                              
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -54,8 +62,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
-                        <i class="fa fa-phone"></i>{{$profile->phone}} </p>
-                      <p class="user-email"><i class="fa fa-envelope"></i> {{$profile->contact}} </p>
+                      <p class="user-email"><i class="fa fa-envelope"></i> {{$company->companyform->contact}} </p>
                               
                     </div>
                     </div>
@@ -64,7 +71,7 @@
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p>   {{$profile->history}} </p>
+                                                <p>   {{$company->companyform->history}} </p>
                                             </div>
                                           
                                         </div>
@@ -72,7 +79,7 @@
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p>    {{$profile->description}}   </p>
+                                                <p>    {{$company->companyform->description}}   </p>
                                             </div>
                                    
                             
@@ -82,13 +89,13 @@
                     <div class="tab-pane fade" id="value" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <p>    {{$profile->create}}   </p>
+                                                <p>    {{$company->companyform->create}}   </p>
                                             </div>
                                    
                             
                         </div>
                     </div>
-                    @endforeach
+                   
                 
                     <div class="tab-pane fade" id="Jobs" role="tabpanel" aria-labelledby="jobs-tab">
                                         <div class="row">

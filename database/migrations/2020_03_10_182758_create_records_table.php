@@ -20,7 +20,6 @@ class CreateRecordsTable extends Migration
             $table->string('announ_id');
             $table->foreign('announ_id')->references('id')->on('announcaments');
             $table->string('massege');
-
             $table->timestamps();
         });
     }

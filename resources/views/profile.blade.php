@@ -30,6 +30,15 @@
                                     <h6>
                                     {{$company->companyform->city}} 
                                     </h6>
+                                    
+                                    @foreach ( $company->announcaments as $annouancment )
+
+                                    
+                                    <p>{{ $annouancment->city }} </p>
+                                    
+                                    
+
+                                    @endforeach
                              
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -104,6 +113,8 @@
                 </div>
             </form>           
         </div>
+        
+
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="{{ asset('js/app.js') }}"></script>
