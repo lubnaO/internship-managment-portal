@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-<<<<<<< HEAD
 
 
 <div class ="container">
@@ -42,10 +41,6 @@
 
 </div>
 
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 5cbf7f89c60844420c27772797494f9fe3e2719f
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,50 +236,3 @@
 </div>
 </body>
 </html>
-<<<<<<< HEAD
->>>>>>> f0ab39d7d5ce019d0483a8ca82225fce2f51d3d9
-=======
-=======
-
-<div class ="container">
-<div class="jumbotron">
-
-<div class="card">
-  <h5 class="card-header"> Student Report</h5>
-  <div class="card-body">
-  
-    <table class="table table-striped table-hover table-bordered px-3">
-  <thead>
-    <tr>
-      <th scope="col">Trainee Name</th>
-      <td scope="row"><p>{{ $finalEvalution->TraineeName }}  </p></td>
-      
-    </tr>
-  </thead>
-  <tbody>
-
-  
-    <tr>
-    <th scope="col"> Trainee ID</th>
-
-    <td scope="row"><p>{{ $finalEvalution->TraineeID }}</p></td>
-    
-
-      
-    </tr>
-    
-
-  </tbody>
-
-</table>
-  </div>
-</div>
-
-</div>
-
-</div>
-
->>>>>>> e8c1bdb27cf5f81128a851c3b1f0c197d914c630
->>>>>>> 5cbf7f89c60844420c27772797494f9fe3e2719f
-
-@endsection

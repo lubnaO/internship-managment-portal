@@ -30,6 +30,8 @@ height:50px;
   <div class="form-group">
     <label for="name">Company Name</label>
     <input type="text"  name ="name" class= "form-control"> 
+    <input type="hidden" value="{{Auth::user()->company->id}}" name="c_id" >
+
   </div>
 
   <div class="form-group">
@@ -56,12 +58,16 @@ height:50px;
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Berif Description</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+
   </div>
 
 
   <div class="form-group">
     <label for="exampleFormControlInput1">Value</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" name="create">
+
+  </div>
+
   </div> 
 
 

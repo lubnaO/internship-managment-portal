@@ -29,7 +29,16 @@
 }
 
 
+.background{
+background-image: url('/images/impback2.jpg');
+height: 950px;
+/* Center and scale the image nicely */
+background-position: center ;
+background-repeat: no-repeat;
+background-size: cover;
+width:100%;
 
+}
 
 </Style>
 <!doctype html>
@@ -54,6 +63,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+<div class="background ">
+<img id="logo" src="'/images/impback1.jpg'" width="30" height="30" class="d-inline-block align-top " alt="">
+
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">

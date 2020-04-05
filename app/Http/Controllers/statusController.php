@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\finalReport;
+use App\status;
 
-
-class finalReportController extends Controller
+class statusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,16 @@ class finalReportController extends Controller
      */
     public function index()
     {
-        return view ('finalreports.index')->with ('finalreports', finalReport::all());
+        return view('status.index')->with('status',status::all());
+
     }
+
+    public function studentlist()
+    {
+        return view('studentlist')->with('status',status::all());
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +32,7 @@ class finalReportController extends Controller
      */
     public function create()
     {
-        return view('finalreports.create');
+        //
     }
 
     /**
@@ -36,13 +43,8 @@ class finalReportController extends Controller
      */
     public function store(Request $request)
     {
-       
+        status::create($request->all());
 
-            finalReport::create($request->all());
-            return redirect( route('home'));
-
-          /*auth()->TraineeName()->notify(new Reply($request)); */  
-        
     }
 
     /**
@@ -51,11 +53,9 @@ class finalReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($finalReport)
+    public function show($id)
     {
-        return view('finalreports.show')->with('finalReport',finalReport::find($finalReport));
-       
-
+        //
     }
 
     /**
@@ -91,6 +91,4 @@ class finalReportController extends Controller
     {
         //
     }
-
 }
-

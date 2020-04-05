@@ -1,5 +1,3 @@
-
-
 @extends('layout')
 
 @section('content')
@@ -53,10 +51,10 @@
 
 <!-- Signature pad form made with Boostrap components -->
 
-
+<form method ="POST" enctype="multipart/form-data" class="ansform"></form>
+@csrf
 <div class="container">
-
-    <div class="row justify-content-center">
+ <div class="row justify-content-center">
         <div class="col-md-12 mt-5">
             <div class="card">
                 <div class="card-header font-size-15   text-white"> Contract </div>
@@ -66,18 +64,6 @@
 authenticity solely lies on me. In case of any fallacious information, college hold the right to
 cancel the training registration.: </p>
                              
-<div class="form=group col-5">
-
-<label> Student Name:  </label>
-  
-  <input  type="text" class="form-control" name="SupervisorName" >
-
-   </div> 
-  
-<div class="form=group col-5">
-<label > Student ID:  </label>
-  <input type="text" class="form-control" name="StudentID" >
-        </div>
 
     <div class="form=group col-5">
     <label > Student Signature: </label>
@@ -87,20 +73,19 @@ cancel the training registration.: </p>
               <div class="wrapper">
                 <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
               </div>
+
+            
+              <button  class="button1" id="save">Save</button>
+              <button class="button1" id="clear">Clear</button>
               <div class="form=group col-12">
                <h7 class="font-weight-bold"> Note: </h7> 
                <p> Without receiving of filled registration form, the college will assume the training not to have initiated.</p> 
                 </div> 
-
-              <br>
-              <button  class="button1" id="save">Save</button>
-              <button class="button1" id="clear">Clear</button>
-
             </div>
             </form> 
         </div>
-        </html> 
-        @endsection
+      
+        
 
 <!-- Link to js file in folder app and CDN used for the signature pad :  Jquery, ajax, signature pad -->
       <script src="{{ url('js/app.js') }} " charset="utf-8"></script>
@@ -136,7 +121,7 @@ cancel the training registration.: </p>
                saveButton.addEventListener('click', function (event) {
 
                $.ajax({
-                  url: "{{ url('storage/images') }}",
+                  url: "{{route('TrainingRegistrations.store')}}",
                   method: 'post',
                   data: {
                      signature: signaturePad.toDataURL('image/png'),
@@ -157,3 +142,7 @@ cancel the training registration.: </p>
     </body>
 
 </html>
+
+           
+        
+        @endsection

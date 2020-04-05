@@ -1,6 +1,26 @@
 @extends('layout')
 
 @section('content')
+<html>
+
+<head>
+
+<link href="css/datatables.min.css" rel="stylesheet">
+<!-- MDBootstrap Datatables  -->
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<style>table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}</style>
+</head>
             
 <div class="container pt-5">
 <div class="jumbotorn">
@@ -9,7 +29,7 @@
   <div class="card-body">
     <h5 class="card-title ">Available annouancment</h5>
     
-    <table class="table table-striped table-hover table-bordered">
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
     
   <thead>
     <tr>
@@ -26,7 +46,9 @@
   @foreach ($announcaments as $annouancment)
 
     <tr>
-    <th scope="row"><a href="{{$annouancment->Company['id']}}">{{$annouancment->Company['name']}}  </a></th>
+    
+    <th scope="row"><a href="/profiles/{{$annouancment->Company_id}}">{{$annouancment->Company['name']}}  </a></th>
+    
       <th scope="row"><p>{{ $annouancment->title }}  </p></th>
       <td>{{ $annouancment->description}} </td>
       <td>{{ $annouancment->city}}</td>
@@ -70,9 +92,21 @@
     </div>
     
   </div>
-  <p>/p>
+  
 </div>
-
+<script>
+// Basic example
+// Basic example
+// Basic example
+$(document).ready(function () {
+$('#dtBasicExample').DataTable({
+"searching": true // false to disable search (or any other option)
+});
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
+<!-- MDBootstrap Datatables  -->
+</html>
 @endsection
 
 

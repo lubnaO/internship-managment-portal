@@ -25,7 +25,7 @@ class CreateTrainingRegistrationsTable extends Migration
             $table->date('TraineDate');
             $table->string('SupervisorName');
             $table->string('SupervisorJob');
-           
+         
             $table->timestamps();
         });
     }
@@ -38,5 +38,6 @@ class CreateTrainingRegistrationsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('training_registrations');
+        
     }
 }

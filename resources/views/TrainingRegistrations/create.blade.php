@@ -80,13 +80,10 @@ height:50px;
 
 
             <div class="stepwizard">
-            <div id="myAlert" class="alert alert-success collapse">
- <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Success!</strong> report successfully.
-  </div>
+      
         <div class="stepwizard-row setup-panel">
         <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-1" type="button" class=" btn btn-primary btn-circle" disabled="disabled">1</a>
+                <a href="#step-1" type="button" class=" btn btn-primary btn-circle active" disabled="disabled">1</a>
                 <p><small>Student Information</small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
@@ -119,8 +116,8 @@ height:50px;
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-3">Major</label>
-                    <input maxlength="100" name="SMajor " type="text" required="required" class="form-control" placeholder="e.g Accounting" />
+                    <label class="control-label col-3">Majorrr</label>
+                    <input maxlength="100" name="SMajor" type="text" required="required" class="form-control" placeholder="e.g Accounting" />
                 </div>
 
             
@@ -141,7 +138,7 @@ height:50px;
                 </div>
                 <div class="form-group">
                     <label class="control-label col-3">Supervisor Name </label>
-                    <input maxlength="200" name="SupervisorName " type="text" required="required" class="form-control" placeholder="Supervisor name" />
+                    <input maxlength="200" name="SupervisorName" type="text" required="required" class="form-control" placeholder="Supervisor name" />
                 </div>
 
                 <div class="form-group">
@@ -175,6 +172,7 @@ height:50px;
 		<div class="form=group ">
         <label class="control-label col-3" > Trainee Responsibilities:    </label>
 		<textarea class="form-control" rows="5" id="respon" name="TraineeTaske" placeholder="Trainee Responsibilities"></textarea>
+        <input type="hidden" value="{{Auth::user()->student->id}}" name="s_id"/>
 
         </div>
 
@@ -228,15 +226,9 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script>   
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#btnsubmit').click(function(){
-           $('#myAlert').show('fade');
-    }); 
-});
-
-</script>
+@include('sweetalert::alert')
 </body>
+
 </html>
            
         

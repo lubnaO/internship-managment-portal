@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\finalReport;
+use App\garde;
 
-
-class finalReportController extends Controller
+class gradeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,8 @@ class finalReportController extends Controller
      */
     public function index()
     {
-        return view ('finalreports.index')->with ('finalreports', finalReport::all());
+        return view('garde.index')->with('gardes',garde::all());
+
     }
 
     /**
@@ -25,7 +25,7 @@ class finalReportController extends Controller
      */
     public function create()
     {
-        return view('finalreports.create');
+        //
     }
 
     /**
@@ -36,13 +36,8 @@ class finalReportController extends Controller
      */
     public function store(Request $request)
     {
-       
+        garde::create($request->all());
 
-            finalReport::create($request->all());
-            return redirect( route('home'));
-
-          /*auth()->TraineeName()->notify(new Reply($request)); */  
-        
     }
 
     /**
@@ -51,11 +46,9 @@ class finalReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($finalReport)
+    public function show($id)
     {
-        return view('finalreports.show')->with('finalReport',finalReport::find($finalReport));
-       
-
+        //
     }
 
     /**
@@ -91,6 +84,4 @@ class finalReportController extends Controller
     {
         //
     }
-
 }
-

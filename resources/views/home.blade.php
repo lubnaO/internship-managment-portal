@@ -93,7 +93,7 @@
           </li>
 
           <li>
-            <a href="./tables.html">
+            <a href="http://localhost:8000/garde">
               <i class="now-ui-icons location_map-big"></i>
               <p>grade</p>
             </a>
@@ -108,7 +108,7 @@
           </li>
 
           <li>
-            <a href="TrainingRegistrations/create">
+            <a href="/TrainingRegistrations/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>registeration Form</p>
             </a>
@@ -159,7 +159,7 @@
             </a>
           </li>
           <li>
-            <a href="http://localhost:8000/Announcaments/show">
+            <a href="http://localhost:8000/request">
               <i class="now-ui-icons location_map-big"></i>
               <p>Requests</p>
             </a>
@@ -217,30 +217,16 @@
         </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-        <li>
-        <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
-            </a>
-          </li>
-          </li>
           <li>
-            <a href="./tables.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications </p>
-            </a>
-          </li>
-        <li>
-          <a href="./icons.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Final reports</p>
-            </a>
+            <a href="/medEvalutions">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Med Evalution Reports</p>
+              </a>
           </li>
 
         
 
-          <li>
-<<<<<<< HEAD
+
 
             <a href="./map.html">
               <i class="now-ui-icons design_bullet-list-67"></i>
@@ -250,28 +236,36 @@
               <i class="now-ui-icons location_map-big"></i>
               <p>Reports</p>
 
-=======
+
             <a href="/finalreports/index">
               <i class="now-ui-icons location_map-big"></i>
               
               <p>Final reports </p>
->>>>>>> c22a5658935b47e1528ae0cf5a2bcba14f70b76f
+
             </a>
+
+            <a href="http://localhost:8000/finalEvalutions">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Final Evalution Reports</p>
+          </a>
+
           </li>
           <li>
-            <a href="./notifications.html">
+            <a href="http://localhost:8000/finalreports">
+              <i class="now-ui-icons location_map-big"></i>
+              <p> Final Reports</p>
+              </a>
+          </li>
+           
+       
+          <li>
+            <a href="http://localhost:8000/tregis">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p> Student final reports </p>
+              <p> Registration  </p>
             </a>
           </li>
           <li>
-            <a href="./user.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p> Registration forms </p>
-            </a>
-          </li>
-          <li>
-            <a href="./typography.html">
+            <a href="http://localhost:8000/studentlist">
               <i class="fas fa-graduation-cap"></i>
               <p>Students grades</p>
             </a>
@@ -422,6 +416,7 @@
 
     });
   </script>
+  @include('sweetalert::alert')
 </body>
 
 </html>

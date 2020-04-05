@@ -31,27 +31,24 @@
   
 }
 <<<<<<< HEAD
-=======
-
->>>>>>> c22a5658935b47e1528ae0cf5a2bcba14f70b76f
 . text-right ml-auto {
   background-color:#193870
 }
+
+
+
+
 
   .site-section   , p {
     
    color: #fff; 
    text-align: center; }
 
- .h2 {
+ h2 {
     color: #f77b2e;
     text-align: center; 
 
    }
-   .color{
-    color: #ff8b00
-   }
-
     </style> 
     
   </head>
@@ -88,7 +85,8 @@
             
 
             <div class="float-right">
-          <a href="\register" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
+
+            <a href="http://localhost:8000/register" class="text-white"><span class="mr-2 text-white icon-twitter"></span> <span class="d-none d-md-inline-block">Sign up </span></a>
             <span class="mx-md-2 d-inline-block"></span>
             <a href="/login" class="text-white"><span class="mr-2 text-white icon-instagram"></span> <span class="d-none d-md-inline-block">Login</span></a>
 
@@ -141,25 +139,21 @@
 
       
 
-      <div class="site-section-cover overlay img-bg-section" style="background-image:url('images/back5.jpg');" >
-      
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back3.jpg'); " >
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back4.jpg'); " >
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12 col-lg-7">
               <h1 data-aos="fade-up" data-aos-delay="">Welcome to IMP</h1>  
               <p class="mb-5" data-aos="fade-up" data-aos-delay="100">We have helped many students and companies in summer training issues .... What are you waiting for? Register with us</p>
-
-              <p data-aos="fade-up" data-aos-delay="200"><a href="\register" class="btn btn-outline-white border-w-2 btn-md">Sign up</a></p>
-
-             
-
+              <p data-aos="fade-up" data-aos-delay="200"><a href="http://localhost:8000/register" class="btn btn-outline-white border-w-2 btn-md">Sign up</a></p>
             </div>
           </div>
         </div>
 
       </div>
 
-    
+      <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back2.jpg'); " >
 
       <div class="site-section-cover overlay img-bg-section" style="background-image: url('images/back5.jpg'); " >
         <div class="container">
@@ -177,35 +171,30 @@
 
     </div>
 
-  < <h2> Most visited announcement </h2> 
+    <h2> Most visited announcement </h2> 
     
-    <div class="site-section">
+    <!--<div class="site-section">
       <div class="block__73694 mb-2" id="announcments-section">
-      
         <div class="container">
           <div class="row d-flex no-gutters align-items-stretch">
 
-            <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/img_2.jpg');" data-aos="fade-right" data-aos-delay="">
+            <div class="col-12 col-lg-6 block__73422" style="background-image: url('images/internship.jpg');" data-aos="fade-right" data-aos-delay="">
             </div>
 
+            
+           
             <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
           
              <h3 class="mb-3 text-black"> Company A  </h3>
-              <p class="mb-3 text-black"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Aliquam assumenda eum blanditiis perferendis. </p> 
-   
-            <div class="col-lg-5 ml-auto p-lg-5 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="">
-            @foreach ($announcaments as $annouancment)
-
-             <h3 class="mb-3 text-black"> {{$annouancment->Company['name']}}  </h3>
-              <p> {{ $annouancment->description}} </p>             
+              
     
 
           </div>
-          @endforeach
         </div>      
       </div>
-     
+
 
       <div class="block__73694">
         <div class="container">
@@ -216,29 +205,19 @@
 
             
 
-<<<<<<< HEAD
             <div class="col-lg-5 mr-auto p-lg-5 mt-4 mt-lg-0 order-lg-1" data-aos="fade-right" data-aos-delay="">
               <h2 class="mb-3 text-black">Company B </h2>
-              <p class="mb-3 text-black"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda 
-              eum blanditiis perferendis. </p> 
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis. </p> 
              
             </div>
-<<<<<<< HEAD
-=======
-            
->>>>>>> 7364c9db9566026106601993683a974f08b8e168
            
-          </div> 
-=======
-         </div> -->
->>>>>>> c22a5658935b47e1528ae0cf5a2bcba14f70b76f
+          </div> --> 
           <p><a href="/Announcaments" class="btn btn-primary btn-block"> more </a></p>
         </div>      
       </div>
-      
+    
 
-
-    <div class="site-section bg-light">
+    <!--<div class="site-section bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
@@ -298,7 +277,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div> -->
 
 
     <div class="site-section bg-dark" id="about-section">
@@ -390,7 +369,7 @@
     </div> 
 
 
-  <section class="site-section bg-light" id="pricing-section">
+  <!--  <section class="site-section bg-light" id="pricing-section">
       <div class="container">
         <div class="row mb-5 justify-content-center text-center">
           <div class="col-md-7">
@@ -460,9 +439,9 @@
               </p>
             </div>
           </div>
-        </div> 
+        </div> -->
         
-        <div class="row site-section " id="faq-section">
+        <div class="row site-section" id="faq-section">
           <div class="col-12 text-center" data-aos="fade">
             <h2 class="section-title text-primary">Frequently Ask Questions</h2>
           </div>
@@ -471,8 +450,8 @@
           <div class="col-lg-6">
             
             <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-black h4 mb-4 color">Who we are?</h3>
-            <p>Our website help university student to research about their training in the last semester</p>
+            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
             </div>
             
             <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
@@ -502,14 +481,22 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
             </div>
 
-  
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
+            </div>
+            
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     
-    <div class="site-section" id="press-section">
+    <!--<div class="site-section" id="press-section">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-5 mb-lg-0">
@@ -654,7 +641,7 @@
 
         </div>
       </div>
-    </div> 
+    </div> -->
 
 
     <div class="site-section bg-light" id="contact-section">

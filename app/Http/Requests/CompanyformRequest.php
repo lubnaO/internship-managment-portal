@@ -32,6 +32,7 @@ class CompanyformRequest extends FormRequest
             'phone'=>'required:company_forms',
             'create'=>'required:company_forms',
             'img'=>'required:company_forms',
+            'c_id'=>'required:company_forms',
         ];
     }
 }

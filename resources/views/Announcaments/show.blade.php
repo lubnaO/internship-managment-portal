@@ -1,26 +1,47 @@
-
-
-
-
-
-
-    @extends('layout')
+@extends('layout')
 
 @section('content')
+<html>
+
+<head>
+
+<link href="css/datatables.min.css" rel="stylesheet">
+<!-- MDBootstrap Datatables  -->
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<style>table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}</style>
+</head>
             
 <div class="container pt-5">
-<div class="jumbotorn">
 <div class="card">
   <h5 class="card-header pl-3 text-white">Requests</h5>
-  @foreach (Auth::user()->company->announcaments as $annu)
-  @foreach ($annu->applicants as $apply)
-  <div class="card-body">
-    <h5 class="card-title "></h5>
-    
-    <table class="table table-striped table-hover table-bordered">
-    
-    <tbody>
+
+  <div class="card-body"></div>
+
   
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+
+    <thead>
+ 
+    <tr>
+    <th scope="col">Student info</th>
+      <th scope="col">action</th>
+     
+    </tr>
+  </thead>
+    <tbody>
+    @foreach (Auth::user()->company->announcaments as $annu)
+  @foreach ($annu->applicants as $apply)
     <tr>
     <td >
       <h5>Student Name:</h5>
@@ -114,13 +135,25 @@
 
   </tbody>
 </table>
-<p></p>
-    </div>
+</div>
     </div>
     
   </div>
- 
+  
 </div>
+<script>
+// Basic example
+// Basic example
+// Basic example
+$(document).ready(function () {
+$('#dtBasicExample').DataTable({
+"searching": true // false to disable search (or any other option)
+});
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
+<!-- MDBootstrap Datatables  -->
+</html>
 
 @endsection
 

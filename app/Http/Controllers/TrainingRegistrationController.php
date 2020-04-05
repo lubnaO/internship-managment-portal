@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\TrainingRegistration;
 //use App\Http\Requests\trainingRequest;
-use RealRashid\SweetAlert\Facades\Alert;
+Use Alert;
 
 class TrainingRegistrationController extends Controller
 {
@@ -16,8 +16,13 @@ class TrainingRegistrationController extends Controller
      */
     public function index()
     {
-      
+     
         return view ('TrainingRegistrations.index');
+
+    }
+    public function indo()
+    {
+        return view ('tregis')->with('tregis',TrainingRegistration::all());;
 
     }
 
@@ -31,7 +36,6 @@ class TrainingRegistrationController extends Controller
     
     {   
         
-        Alert::success('success!',' report sent successfully');
       
         return view ('TrainingRegistrations.create');
     }
@@ -44,13 +48,14 @@ class TrainingRegistrationController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
-        "StudentName"=>"required:training_registrations"
 
-         ]);   
+        
+
          
          TrainingRegistration::create($request->all());
-         return redirect (route('home'));
+         
+        
+        return redirect( route('home'))->with('success', 'Report send Successfully!');
         }
 
    
@@ -63,7 +68,8 @@ class TrainingRegistrationController extends Controller
      */
     public function show($id)
     {
-        return view ('TrainingRegistrations.show');
+        return view ('TrainingRegistrations.show')->with('tregis',TrainingRegistration::find($id));
+
 
     }
 

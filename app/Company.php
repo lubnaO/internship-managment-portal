@@ -22,4 +22,7 @@ class Company extends Model
     {
         return $this->hasMany('App\Student');
     }
+    public function companyform()
+    {
+        return $this->hasOne('App\CompanyForm','c_id');}
 }

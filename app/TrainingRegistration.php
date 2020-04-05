@@ -6,6 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class TrainingRegistration extends Model
 {
-   protected $fillable = ['StudentName','StudentID','SMajor','TrainingOrganization','SupervisorName','SupervisorJob','SupervisorInfo','TraineHoure','TraineDate','TraineeTaske'];
+
+ protected $fillable = ['id','StudentName','StudentID','SMajor','TrainingOrganization','SupervisorInfo','TraineeTaske','TraineDate','TraineHoure','SupervisorName','SupervisorJob','s_id','signature'];
+    
+ public function Student()
+ {
+     return $this->belongsTo('App\Student','s_id');
+ }
+ 
+
 }
+
 
