@@ -67,8 +67,8 @@
           
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-        Student Profile 
-        </a>
+        {{Auth::user()->student->firstName}} 
+
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
@@ -145,7 +145,7 @@
           
         </a>
         <a href="" class="simple-text logo-normal">
-          Company Profile
+        {{Auth::user()->company->name}} 
 
         </a>
       </div>
