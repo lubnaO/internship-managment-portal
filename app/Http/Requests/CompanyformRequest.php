@@ -24,12 +24,11 @@ class CompanyformRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required:company_forms',
+            
             'city'=>'required:company_forms',
             'description'=>'required:company_forms',
             'contact'=>'required:company_forms',
             'history'=>'required:company_forms',
-            'phone'=>'required:company_forms',
             'create'=>'required:company_forms',
             'img'=>'required:company_forms',
             'c_id'=>'required:company_forms',

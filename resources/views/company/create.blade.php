@@ -17,19 +17,17 @@ height:50px;
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
-<div id="myAlert" class="alert alert-success collapse">
- <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Success!</strong> profile created successfully.
-  </div>
+
   <div class="card-header pl-3 text-white">Create Your Profile in 
   Our Website</div>
   <div class="card-body">
 
-  <form action = "{{route ('company.store')}}"  method ="POST" enctype="multipart/form-data">
-  @csrf
-  <div >
+  <form action ="{{route('company.store')}}"  method="POST" enctype="multipart/form-data">
+         @csrf
+
+    <div >
     
-    <input type="hidden" value="{{Auth::user()->company->id}}" name="c_id" >
+    <input type="hidden" value="{{Auth::user()->company->id}}" name="c_id">
 
   </div>
 
@@ -40,17 +38,14 @@ height:50px;
 
   <div class="form-group">
     <label for="exampleFormControlInput1">Profile image</label>
-    <input type="file" class="form-control" id="exampleFormControlInput1" name ="img">
+    <input type="file" class="form-control" id="exampleFormControlInput1" name="img">
   </div> 
  
   
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="contact">
-  </div>
+  
   <div class="form-group">
     <label for="exampleFormControlInput1">Phone</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="phone">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="contact">
   </div>
 
 
@@ -75,7 +70,7 @@ height:50px;
 
   <div class="form-group">
     <label for="exampleFormControlInput1">Out history</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name ="history">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="history">
   </div>
 
   

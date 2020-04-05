@@ -31,14 +31,7 @@
                                     {{$company->companyform->city}} 
                                     </h6>
                                     
-                                    @foreach ( $company->announcaments as $annouancment )
-
-                                    
-                                    <p>{{ $annouancment->city }} </p>
-                                    
-                                    
-
-                                    @endforeach
+                                   
                              
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -101,8 +94,14 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                          
-                                                <h5> is empty </h5>
-                                                <p>  is empty   </p>
+                                            @foreach ( $company->announcaments as $annouancment )
+
+                                    
+<p>{{ $annouancment->city }} </p>
+
+
+
+@endforeach
                                             </div>
                                      
                             
