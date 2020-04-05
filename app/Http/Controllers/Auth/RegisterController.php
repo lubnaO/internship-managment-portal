@@ -69,7 +69,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'user_type' => "s"
+            'user_type' => $data['user_type']
         ]);
 
 
@@ -83,7 +83,7 @@ class RegisterController extends Controller
             'id_user' =>  $user->id,
         ]); 
 
-      /* $company = company::create([
+      $company = company::create([
             'name' =>$data['name'],
             'address' => "test",
             'email' => $data['email'],
@@ -97,10 +97,14 @@ class RegisterController extends Controller
             'lastName' => "test",
             'email' => $data['email'],
             'id_user' =>  $user->id,
+<<<<<<< HEAD
 
         ]);*/
 
 
+=======
+        ]);
+>>>>>>> da8e9b5985fb7d2ccc8ec5f3e196f6b12ed477b1
         return  $user;
     }
 }

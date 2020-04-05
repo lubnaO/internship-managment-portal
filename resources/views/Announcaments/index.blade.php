@@ -27,7 +27,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 <div class="card">
   <h5 class="card-header pl-3 text-white">Annoancment</h5>
   <div class="card-body">
-    <h5 class="card-title ">Available annouancment</h5>
+    <h5 class="card-title ">Available job</h5>
     
     <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
     

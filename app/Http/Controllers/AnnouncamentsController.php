@@ -20,7 +20,7 @@ class AnnouncamentsController extends Controller
      */
     public function index()
     {
-        return view('Announcaments.index')->with('announcaments',Announcament::all(),CompanyForm::all());
+        return view('Announcaments.index')->with('announcaments',Announcament::all());
 
         
        

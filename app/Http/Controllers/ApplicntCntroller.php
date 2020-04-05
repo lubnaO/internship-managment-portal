@@ -45,7 +45,7 @@ class ApplicntCntroller extends Controller
 ]);*/
 
         Applicant::create($request->all());
-        return redirect (route('applicnt.index'));
+        return redirect (route('home'));
 
 
 

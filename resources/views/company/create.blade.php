@@ -27,9 +27,8 @@ height:50px;
 
   <form action = "{{route ('company.store')}}"  method ="POST" enctype="multipart/form-data">
   @csrf
-  <div class="form-group">
-    <label for="name">Company Name</label>
-    <input type="text"  name ="name" class= "form-control"> 
+  <div >
+    
     <input type="hidden" value="{{Auth::user()->company->id}}" name="c_id" >
 
   </div>

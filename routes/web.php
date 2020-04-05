@@ -80,7 +80,12 @@ Route::get('/dashboardtwo', function () {
 Route::get('/request', function () {
   return view('request');
 });
-
+Route::get('/studentregister', function () {
+  return view('student');
+});
+Route::get('/uni', function () {
+  return view('uni');
+});
 
 
 Route::resource('/Announcaments','AnnouncamentsController');
@@ -143,9 +148,12 @@ Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
 Route::get('/finalreports/{finalReport}','finalReportController@show');
 
 
-//Route::get('/', function () {
-   // return view('indexhome');
-//});
+Route::resource('/student','studentController');
+Route::post('/student/{id}','studentController@update');
+Route::post('/student/{id}/edit','studentController@edit');
+
+
+
 
 
 //Route::get('/', function () {

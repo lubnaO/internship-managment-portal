@@ -15,10 +15,10 @@ class CreateCVSTable extends Migration
     {
         Schema::create('c_v_s', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Name');
+           
             $table->string('address');
             $table->date('date');
-            $table->string('email');
+            
             $table->string('formal');
             $table->string('courses');
             $table->string('skills');

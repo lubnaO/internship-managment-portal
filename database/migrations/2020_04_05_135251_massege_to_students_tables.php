@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ProjectIdToStudentsTables extends Migration
+class MassegeToStudentsTables extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,8 @@ class ProjectIdToStudentsTables extends Migration
     public function up()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->integer('project_id');
-     
-        $table->foreign('project_id')->references('id')->on('projects');
+            $table->string('massege');
+
         });
     }
 

@@ -26,7 +26,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 <div class ="container">
 <div class="jumbotron">
-
+<!-- accept or riect from u to s  -->
 <div class="card">
   <h5 class="card-header text-white">Training Registrations </h5>
   <div class="card-body">

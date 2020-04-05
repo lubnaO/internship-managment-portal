@@ -20,14 +20,12 @@
 
  <table class="table">
     <tbody>
-    @foreach (Auth::user()->student->garde as $sec1)
     <tr>
     <td>
-    <h4>FINAL GRADE</h4><p><em>{{ $sec1->massege }}</em></p>
+    <h4>FINAL GRADE</h4><p><em>{{ Auth::user()->student->massege }}</em></p>
   
     </td>
     </tr>
-    @endforeach
 
   </thead>
   <tbody>

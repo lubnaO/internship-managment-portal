@@ -91,6 +91,12 @@
               <p>My Requests</p>
             </a>
           </li>
+          <li>
+          <a href="http://localhost:8000/status">
+              <i class="now-ui-icons education_atom "></i>
+              <p>Registration response </p>
+            </a>
+          </li>
 
           <li>
             <a href="http://localhost:8000/garde">
@@ -212,7 +218,8 @@
           
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          SEU
+        {{Auth::user()->UniversitySupervisor->firstName}} 
+
         </a>
         </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -268,6 +275,12 @@
             <a href="http://localhost:8000/studentlist">
               <i class="fas fa-graduation-cap"></i>
               <p>Students grades</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://localhost:8000/studentregister">
+              <i class="fas fa-graduation-cap"></i>
+              <p>Student registration</p>
             </a>
           </li>
          

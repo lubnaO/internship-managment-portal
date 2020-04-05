@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCregistersTable extends Migration
+class StudentIdToCVSTables extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateCregistersTable extends Migration
      */
     public function up()
     {
-        Schema::create('cregisters', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('c_v_s', function (Blueprint $table) {
+            $table->string('student_id');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');
+
+
         });
     }
 
@@ -26,6 +28,8 @@ class CreateCregistersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cregisters');
+        Schema::table('c_v_s', function (Blueprint $table) {
+            //
+        });
     }
 }

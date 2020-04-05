@@ -51,7 +51,7 @@ table.dataTable thead .sorting_desc_disabled:before {
       <h5> address:</h5>
       <p> {{ $apply->student->cv->address }}</p>
       <h5> Email:</h5>
-      <p>{{ $apply->student->cv->email }}</p>
+      <p>{{ $apply->student->email }}</p>
       <h5>Birthday   </h5>
       <p>{{ $apply->student->cv->date }}</p>
       <h5> nationality</h5>
