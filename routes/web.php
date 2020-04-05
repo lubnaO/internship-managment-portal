@@ -118,9 +118,12 @@ Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
 Route::get('/finalreports/{finalReport}','finalReportController@show');
 
 
-//Route::get('/', function () {
-   // return view('indexhome');
-//});
+Route::resource('/student','studentController');
+Route::post('/student/{id}','studentController@update');
+Route::post('/student/{id}/edit','studentController@edit');
+
+
+
 
 
 //Route::get('/', function () {

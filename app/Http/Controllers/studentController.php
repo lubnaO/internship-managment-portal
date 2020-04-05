@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
 
-class gradeController extends Controller
+class studentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class gradeController extends Controller
      */
     public function index()
     {
-        return view('garde.index')->with('student', Student::all());
-
+        //
     }
 
     /**
@@ -36,8 +35,7 @@ class gradeController extends Controller
      */
     public function store(Request $request)
     {
-        garde::create($request->all());
-
+        Student::create($request->all());
     }
 
     /**
@@ -59,7 +57,8 @@ class gradeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $id = Student::find($id);
+        return view('student.edit')->with('id', $id);
     }
 
     /**
@@ -71,7 +70,13 @@ class gradeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'massege' => 'required'
+        ]);
+        $id = Student::find($id);
+        $id->massege = $request->get('massege');
+        $id->save();
+        return redirect(route('home'));
     }
 
     /**

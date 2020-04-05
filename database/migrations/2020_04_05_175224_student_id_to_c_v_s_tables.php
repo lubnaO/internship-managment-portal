@@ -14,9 +14,10 @@ class StudentIdToCVSTables extends Migration
     public function up()
     {
         Schema::table('c_v_s', function (Blueprint $table) {
-            
             $table->string('student_id');
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');
+
+
         });
     }
 

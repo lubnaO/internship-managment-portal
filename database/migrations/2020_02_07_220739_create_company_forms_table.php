@@ -15,7 +15,6 @@ class CreateCompanyFormsTable extends Migration
     {
         Schema::create('company_forms', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
             $table->string('city');
             $table->string('description');
             $table->string('contact');

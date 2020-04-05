@@ -25,7 +25,7 @@
                         <div class="profile-head">
                       
                                     <h5>
-                                      {{$company->companyform->name}} 
+                                      {{$company->name}} 
                                     </h5>
                                     <h6>
                                     {{$company->companyform->city}} 
