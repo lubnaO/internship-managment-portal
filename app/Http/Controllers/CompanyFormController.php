@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Company;
 use App\Announcament;
+use App\CompanyForm;
 use App\Http\Requests\CompanyformRequest;
 
 
@@ -41,19 +42,18 @@ class CompanyFormController extends Controller
     public function store(CompanyformRequest $request)
     {
         CompanyForm::create([
-            'name'=>$request->name,
+            
             'city'=>$request->city,
             'description'=>$request->description,
             'contact'=>$request->contact, 
             'history'=>$request->history,
-            'phone'=>$request->phone, 
+             
             'create'=>$request->create, 
             'c_id'=>$request->c_id,
             'img'=>$request->img->store('images','public')]);
          
-            session()->flash('success', 'post created successfully');
        
-         return redirect (route('company.index'));
+         return redirect (route('home'));
        
     }
 
