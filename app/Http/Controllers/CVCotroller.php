@@ -37,11 +37,7 @@ class CVCotroller extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-
-    "Name"=>"required|:c_v_s"
-     
-]);
+       
 
 $request->validate([
 
@@ -55,11 +51,7 @@ $request->validate([
      
 ]);
 
-$request->validate([
 
-    "email"=>"required|:c_v_s"
-     
-]);
 
 $request->validate([
 

@@ -9,7 +9,7 @@ class CV extends Model
 
 {   
 
-    protected $fillable = ['id','Name','address','date', 'email', 'formal','courses','skills','student_id','nationality'];
+    protected $fillable = ['id','address','date', 'formal','courses','skills','student_id','nationality'];
 
    public function student()
     {

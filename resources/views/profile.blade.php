@@ -97,11 +97,11 @@
                                             @foreach ( $company->announcaments as $annouancment )
 
                                     
-<p>{{ $annouancment->city }} </p>
+                                      <p>{{ $annouancment->city }} </p>
 
 
 
-@endforeach
+                                            @endforeach
                                             </div>
                                      
                             
