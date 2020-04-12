@@ -104,11 +104,7 @@ height:50px;
             <div class="panel-heading">
                 
             </div>
-            <div class="panel-body">
-                <div class="form-group">
-                    <label class="control-label"> Name</label>
-                    <input maxlength="100"  name="Name" type="text" required="required" class="form-control" placeholder="Your name"/>
-                </div>
+            
                 <div class="form-group">
                     <label class="control-label">Nationality</label>
                     <input maxlength="100" name ="nationality" type="text" required="required" class="form-control" placeholder="e.g Saudi"/>
@@ -124,11 +120,7 @@ height:50px;
                     <input maxlength="100" name="date" type="date" required="required" class="form-control" />
                 </div>
 
-            
-                <div class="form-group">
-                    <label class="control-label">Email</label>
-                    <input maxlength="100" name="email" type="text" required="required" class="form-control" placeholder="example@example.com" />
-                </div>
+         
               
 
                 <button class="btn btn-primary nextBtn float-right" type="button">Next</button>

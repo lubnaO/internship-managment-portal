@@ -11,6 +11,7 @@
   @foreach (Auth::user()->student->records as $sec1)
     <tr>
     <td>
+    <b>job name:</b> <p><em>{{ $sec1->Announcament->title }}</em></p>
     <b>Applay status:</b><p><em>{{ $sec1->massege }}</em></p>
     <b>The tasks assigned to the student:</b> <p><em>{{ $sec1->tasks }}</em></p>
   
