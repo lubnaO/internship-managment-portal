@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <input type="hidden" value="c" name="user_type"/>
 
                         <div class="form-group row">
                             <label for="First Name" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
@@ -23,6 +24,7 @@
                                     </span>
                                 @enderror
                             </div>
+
                         </div>
 
                         <!-- <div class="form-group row">
@@ -44,7 +46,6 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                <input type="hidden" value="c" name="user_type"/>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">

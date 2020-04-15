@@ -65,6 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -73,6 +74,8 @@ class RegisterController extends Controller
         ]);
 
 
+    # code...
+    if ($user->user_type == 's') {
        $studet = Student::create([
             'firstName' =>$data['name'],
             'lastName' => "test",
@@ -81,7 +84,7 @@ class RegisterController extends Controller
             'major' => "major1",
             'id_user' =>  $user->id,
         ]);
-
+    } elseif ($user->user_type == 'c') {
       $company = company::create([
             'name' =>$data['name'],
             'address' => "test",
@@ -90,13 +93,13 @@ class RegisterController extends Controller
             'description' => "major1",
             'id_user' =>  $user->id,
         ]); 
-
+      } else {
       $UniversitySupervisor= UniversitySupervisor::create([
             'firstName' =>$data['name'],
             'lastName' => "test",
             'email' => $data['email'],
             'id_user' =>  $user->id,
-        ]);
+        ]);}
         return  $user;
     }
 }
