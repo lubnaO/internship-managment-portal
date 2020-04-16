@@ -34,6 +34,7 @@ class trainingRequest extends FormRequest
             'TraineDate'=>'required:training_registrations',
             'SupervisorName'=>'required:training_registrations',
             'SupervisorJob'=>'required:training_registrations',
+            
 
 
 

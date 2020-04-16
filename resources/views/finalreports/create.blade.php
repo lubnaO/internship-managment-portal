@@ -77,10 +77,7 @@
 
 <div class="container">
     <div class="stepwizard">
-    <div id="myAlert" class="alert alert-success collapse">
- <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Success!</strong> report sent successfully.
-  </div>
+
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -204,10 +201,10 @@
                     <input maxlength="200" type="text" required="required" class="form-control" name="OrganizationEmail" />
                 </div>
 
-                <div class="form-group">
+               <!-- <div class="form-group">
                     <label class="control-label">Signature</label>
                     <input maxlength="200" type="text" required="required" class="form-control" name="OrganizationSignature" />
-                </div>
+                </div>--> 
 
                 <div class="form-group">
                     <label class="control-label"> date</label>

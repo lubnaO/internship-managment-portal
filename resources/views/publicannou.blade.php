@@ -39,7 +39,6 @@ table.dataTable thead .sorting_desc_disabled:before {
       <th scope="col">City</th>
       <th scope="col">Start</th>
       <th scope="col">End</th>
-      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -55,39 +54,11 @@ table.dataTable thead .sorting_desc_disabled:before {
       <td>{{ $annouancment->A_start}}</td>
       <td>{{ $annouancment->A_end}}</td>
       <td>
-      <form action="{{ route('applicnt.store') }}" class="container" method="POST" >
-       @csrf
-  <input type="hidden" value="{{Auth::user()->student->id}}" name="stu_id"/>
-      <input type="hidden" value="{{ $annouancment->id }}" name="annou_id"/>
-      <button type="submit" class="btn btn-primary top-bar px-3">APPLY </button>
-      </form> 
-      </td>
-    </tr>
-   <!-- <tr>
-      <th scope="row">{{ $annouancment->title}}</th>                                           
-      <td>{{ $annouancment->description}}</td>
-      <td>{{ $annouancment->city}}</td>
-      <td>{{ $annouancment->A_start}}</td>
-      <td>{{ $annouancment->A_end}}</td>
-      <td>
-      <button class="btn btn-primary top-bar px-3">APPLY </button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">{{ $annouancment->title}}</th>
-      <td>{{ $annouancment->description}}</td>
-      <td>{{ $annouancment->city}}</td>
-      <td>{{ $annouancment->A_start}}</td>
-      <td>{{ $annouancment->A_end}}</td>
-      <td>
-      <button class="btn btn-primary top-bar px-3">APPLY </button>
-      </td>
-    </tr>-->
-        @endforeach
+      @endforeach
 
-  </tbody>
+      </tbody>
 </table>
-<p></p>
+
     </div>
     </div>
     
@@ -108,5 +79,4 @@ $('.dataTables_length').addClass('bs-select');
 <!-- MDBootstrap Datatables  -->
 </html>
 @endsection
-
 

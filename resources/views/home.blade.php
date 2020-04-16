@@ -42,33 +42,36 @@
   .logo {
   background-color: #193870
 }
-.sidebar-wrapper{
-  background-color: #193870
-}
+
 .myDIV {
   data-color: #6495ED; /* Blue text color */
 }
+.sidebar{
+  background-color: #fff
 
+}
   </Style>
 
 </head>
 
 <body class="">
+
+
   <div class="wrapper">
   
     <div class="sidebar" >
     
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-    -->
+      
     @if (Auth::user()->user_type == 's')
     <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
           
         </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+    
+        <a href="" class="simple-text logo-normal">
         {{Auth::user()->student->firstName}} 
 
+        </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
@@ -119,24 +122,13 @@
               <p>registeration Form</p>
             </a>
           </li>
-          <li>
-            <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          <li class="active-pro">
-            <a href="./upgrade.html">
-              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
+        
+         
           </li>
         </ul>
       </div>
     </div>
-
-                  
+       
                   @endif
 
                   @if (Auth::user()->user_type == 'c')
@@ -170,18 +162,7 @@
               <p>Requests</p>
             </a>
           </li>
-          <li>
-            <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications</p>
-            </a>
-          </li>
-        <!--  <li>
-            <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
-            </a>
-          </li>-->
+         
           <li>
             <a href="http://localhost:8000/medEvalutions/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
@@ -189,7 +170,7 @@
             </a>
           </li>
           <li>
-            <a href="http://localhost:8000/finalreports/create">
+            <a href="/finalEvalutions/create">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Final Evaloution</p>
             </a>
@@ -230,33 +211,14 @@
               <p>Med Evalution Reports</p>
               </a>
           </li>
-
-        
-
-
-
-            <a href="./map.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Midterm reports</p>
-
+            <li>
             <a href="/finalEvalutions/index">
               <i class="now-ui-icons location_map-big"></i>
-              <p>Reports</p>
-
-
-            <a href="/finalreports/index">
-              <i class="now-ui-icons location_map-big"></i>
-              
-              <p>Final reports </p>
-
-            </a>
-
-            <a href="http://localhost:8000/finalEvalutions">
-              <i class="now-ui-icons location_map-big"></i>
               <p>Final Evalution Reports</p>
-          </a>
+              </a>
+             </li>
 
-          </li>
+          
           <li>
             <a href="http://localhost:8000/finalreports">
               <i class="now-ui-icons location_map-big"></i>
@@ -296,109 +258,13 @@
       <!-- End Navbar -->
 
        
-      </div>
-      <div class="content">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">Global Sales</h5>
-                <h4 class="card-title">Shipped Products</h4>
-                <div class="dropdown">
-                  <button type="button" class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret" data-toggle="dropdown">
-                    <i class="now-ui-icons loader_gear"></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <a class="dropdown-item text-danger" href="#">Remove Data</a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="lineChartExample"></canvas>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">2018 Sales</h5>
-                <h4 class="card-title">All products</h4>
-                <div class="dropdown">
-                  <button type="button" class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret" data-toggle="dropdown">
-                    <i class="now-ui-icons loader_gear"></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <a class="dropdown-item text-danger" href="#">Remove Data</a>
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="lineChartExampleWithNumbersAndGrid"></canvas>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">Email Statistics</h5>
-                <h4 class="card-title">24 Hours Performance</h4>
-              </div>
-              <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="barChartSimpleGradientsNumbers"></canvas>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="stats">
-                  <i class="now-ui-icons ui-2_time-alarm"></i> Last 7 days
-                </div>
-              </div>
+      
+          
             </div>
           </div>
         </div>
        
-      
-      <footer class="footer">
-        <div class=" container-fluid ">
-          <nav>
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="http://presentation.creative-tim.com">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </nav>
+            
           <div class="copyright" id="copyright">
             &copy; <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
@@ -429,7 +295,7 @@
 
     });
   </script>
-  @include('sweetalert::alert')
+ 
 </body>
 
 </html>

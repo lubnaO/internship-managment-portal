@@ -45,7 +45,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     <tr>
     <td >
       <h5>Student Name:</h5>
-      <p>{{ $apply->student->firstName }} </p>
+     <p>{{ $apply->student->firstName }} </p> 
       <h5 scope="col">Annoancment name: </h5>
       <p >{{$annu->title}}</th>
       <h5> address:</h5>

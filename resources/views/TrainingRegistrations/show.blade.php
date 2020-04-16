@@ -78,7 +78,11 @@
   <dt class="col-sm-3">Supervisor Job</dt>
   <h5 class=" ">{{$tregis->SupervisorJob}}</h5>
 </dl>
+<!--<dl class="row">
+  <dt class="col-sm-3">Student signature</dt>
+  <img src="{{ asset('storage/'.$tregis->signatre) }}" alt="">
 
+</dl>-->
 
 
         

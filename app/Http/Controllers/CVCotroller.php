@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CV;
+Use Alert;
 
 class CVCotroller extends Controller
 {
@@ -82,7 +83,7 @@ $request->validate([
         CV::create($request->all());
 
 
-        return redirect (route('home'));
+        return redirect( route('home'))->with('success', 'CV created Successfully!');
     }
 
     /**

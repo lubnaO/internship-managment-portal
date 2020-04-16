@@ -1,3 +1,9 @@
+@extends('layout')
+
+@section('content')
+
+
+
 <html>
 <head>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -94,14 +100,34 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                          
-                                            @foreach ( $company->announcaments as $annouancment )
+                                            <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+    
+      <th scope="col">Job Name</th>
+      <th scope="col">Job Descripion</th>
+      <th scope="col">City</th>
+      <th scope="col">Start</th>
+      <th scope="col">End</th>
+      
+    </tr>
+  </thead>
 
-                                    
-                                      <p>{{ $annouancment->city }} </p>
-
-
-
-                                            @endforeach
+  <tbody>
+  @foreach ( $company->announcaments as $annouancment )
+<tr>
+    <td scope="row"><p>{{ $annouancment->title }}  </p></td>
+    <td scope="row"><p>{{ $annouancment->description }}  </p></td>
+      <td><p>{{ $annouancment->A_start }}  </p></td>
+      <td><p>{{ $annouancment->A_end }}  </p></td>
+      <td><p>{{ $annouancment->city }}  </p></td>
+     
+                                            
+       @endforeach
+      </div>
+                                     
+      </tbody>
+</table>
                                             </div>
                                      
                             
@@ -119,3 +145,4 @@
         <script src="{{ asset('js/app.js') }}"></script>
         </body>
         </html>
+        @endsection

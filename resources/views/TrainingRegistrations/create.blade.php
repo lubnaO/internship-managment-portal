@@ -8,13 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Training Registration </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
 
 <style>
 /*@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');*/
+.signature-pad {
 
+background-color: #F5F5F5; 
+}
 .stepwizard-step p {
     margin-top: 0px;
     color:#666;
@@ -74,6 +80,27 @@ height:50px;
 .btn-primary{
   background-color: #f26427
 }
+.button1 {
+  background-color: #193870; /* Dark blue */ 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.container{
+
+}
+.button1:hover {
+  background-color: #FF8C00; /* Orange */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
 </style>
 </head>
 <body>
@@ -105,7 +132,7 @@ height:50px;
           
             <div class="panel-body">
                 <div class="form-group ">
-                <form role="form"  action="{{route('TrainingRegistrations.store')}}" method="POST">
+                <form role="form" enctype="multipart/form-data" action="{{route('TrainingRegistrations.store')}}" method="POST">
                    @csrf
                     <label class="control-label col-3">Student Name</label>
                     <input maxlength="100"  name="StudentName" type="text" required="required" class="form-control"  placeholder="Your name"/>
@@ -116,7 +143,7 @@ height:50px;
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-3">Majorrr</label>
+                    <label class="control-label col-3">Major</label>
                     <input maxlength="100" name="SMajor" type="text" required="required" class="form-control" placeholder="e.g Accounting" />
                 </div>
 
@@ -176,12 +203,33 @@ height:50px;
 
         </div>
 
-                <button class="btn btn-primary float-right" type="submit" id="btnsubmit">Submit!</button>
+        <button class="btn btn-primary nextBtn float-right" type="submit">Submit</button>
             </div>
+          
+            
         </div>
+         
+       
     </form>
 </div>
     
+
+
+
+
+
+
+
+<script src="{{ url('js/app.js') }} " charset="utf-8"></script>
+      <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+               integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+               crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+
 <script>
 $(document).ready(function () {
 
@@ -226,7 +274,7 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script>   
-@include('sweetalert::alert')
+
 </body>
 
 </html>

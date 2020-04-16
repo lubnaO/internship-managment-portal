@@ -72,7 +72,11 @@ height:50px;
 
 }
 .btn-primary{
-  background-color: #f26427
+  background-color: #193870
+}
+
+.btn-primary:hover {
+  background-color: #FF8C00; /* Orange */
 }
 </style>
 </head>
@@ -80,16 +84,12 @@ height:50px;
 <form  action="{{ route('CV.store')}}" method ="POST"> 
 @csrf
 <div class="container" >
-<div id="myAlert" class="alert alert-success collapse">
- <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Success!</strong> Your CV is created.
-  </div>
- 
+
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel">
-            <div class="stepwizard-step col-xs-3"> 
-                <a href="#step-1" type="button" class="btn-primary btn-circle">1</a>
-                <p><small> Personal Information</small></p>
+        <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-1" type="button" class=" btn btn-primary btn-circle" disabled="disabled">1</a>
+                <p><small> Personal information </small></p>
             </div>
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-2" type="button" class=" btn btn-primary btn-circle" disabled="disabled">2</a>
@@ -118,6 +118,11 @@ height:50px;
                 <div class="form-group">
                     <label class="control-label">Brith date</label>
                     <input maxlength="100" name="date" type="date" required="required" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">E-mail</label>
+                    <input maxlength="100" name="email" type="text" required="required" class="form-control" placeholder="example@example.com" />
                 </div>
 
          

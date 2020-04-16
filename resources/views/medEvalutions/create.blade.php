@@ -68,10 +68,7 @@
 
 <div class="container">
     <div class="stepwizard">
-    <div id="myAlert" class="alert alert-success collapse">
- <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Success!</strong> report sent successfully.
-  </div>
+  
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
@@ -97,7 +94,7 @@
                 </div>
                 <form role="form" action="{{ route('medEvalutions.store') }}" class="container" method="POST">
     @csrf
-                <div class="panel-body">
+                <div class="panel-body col-5">
                 <div class="form-group">
                     <label class="control-label"> Student Name </label>
                     <input type="text" placeholder="Student Name" name="StudentName" maxlength="100"  type="text" required="required" class="form-control"required>
@@ -150,32 +147,32 @@
                <div class="panel-body">
                
                     <div class="form-group">
-                    <label for="exampleFormControlTextarea1" class="control-label">Accomplished Tasks</label>
+                    <label for="exampleFormControlTextarea1" class="control-label col-5">Accomplished Tasks</label>
                     <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Accomplished Tasks " name="AccomplishedTasks" required> </textarea > 
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Skills Acquired</label>
+                    <label class="control-label col-5">Skills Acquired</label>
                     <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Skills Acquired" name="SkillsAcquired" required> </textarea> 
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Knowledge Used</label>
+                    <label class="control-label col-5">Knowledge Used</label>
                     <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Knowledge Used " name="KnowledgeUsed" required> </textarea> 
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Key Meetings</label>
+                    <label class="control-label col-5">Key Meetings</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Key Meetings" name="KeyMeetings" required> </textarea> 
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Issues with Trainee</label>
+                    <label class="control-label col-5">Issues with Trainee</label>
                     <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Issues with Trainee" name="Issues" required> </textarea> 
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label">Supervisor Feedback</label>
-                    <textarea class="form-control"  id="exampleFormControlTextarea1" rows="3" placeholder="Supervisor Feedback" name="Feedback" required> </textarea> 
+                    <label class="control-label col-5">Supervisor Feedback</label>
+                    <textarea class="form-control "  id="exampleFormControlTextarea1" rows="3" placeholder="Supervisor Feedback" name="Feedback" required> </textarea> 
                 </div>
 
           
@@ -229,14 +226,7 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script> 
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#btnsubmit').click(function(){
-           $('#myAlert').show('fade');
-    }); 
-});
-
-</script>  
+  
 </body>
 </html>
 @endsection

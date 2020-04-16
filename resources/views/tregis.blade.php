@@ -20,8 +20,19 @@ table.dataTable thead .sorting_desc:after,
 table.dataTable thead .sorting_desc:before,
 table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
-  bottom: .5em;
-}</style>
+  bottom: .5em; 
+}
+
+
+.btn-primary{
+  background-color: #193870
+}
+
+.btn-primary:hover {
+  background-color: #FF8C00; /* Orange */
+}
+
+</style>
 </head>
 
 <div class ="container">

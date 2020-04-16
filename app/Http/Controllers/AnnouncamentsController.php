@@ -9,7 +9,7 @@ use App\User;
 use App\Applicant;
 use App\CompanyForm;
 use App\Http\Requests\announcamentsRequest;
-
+Use Alert;
 
 class AnnouncamentsController extends Controller
 {
@@ -47,16 +47,10 @@ class AnnouncamentsController extends Controller
     
 
 
-/**$request->validate([
-
-    "city"=>"required|:announcaments"
-     
-]);**/
-
         Announcament::create($request->all());
+       
 
-
-        return redirect (route('home'));
+        return redirect( route('home'))->with('success', 'Post created Successfully!');
 
         
     }
@@ -84,6 +78,7 @@ class AnnouncamentsController extends Controller
       
 
     }
+    
     
 
 

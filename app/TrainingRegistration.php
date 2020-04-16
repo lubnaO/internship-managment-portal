@@ -13,7 +13,10 @@ class TrainingRegistration extends Model
  {
      return $this->belongsTo('App\Student','s_id');
  }
- 
+ public function Signature()
+    {
+        return $this->hasOne('App\Signature','T_id');
+    }
 
 }
 

@@ -18,7 +18,8 @@
     .card-header{
         background-color: #193870; 
     }
-    .button1 {
+    
+    .button2 {
   background-color: #193870; /* Dark blue */ 
   border: none;
   color: white;
@@ -32,7 +33,7 @@
   border-radius: 8px;
 }
 
-.button1:hover {
+.button2:hover {
   background-color: #FF8C00; /* Orange */
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -75,8 +76,8 @@ cancel the training registration.: </p>
               </div>
 
             
-              <button  class="button1" id="save">Save</button>
-              <button class="button1" id="clear">Clear</button>
+              <button  class="button2" id="save">Save</button>
+              <button class="button2" id="clear">Clear</button>
               <div class="form=group col-12">
                <h7 class="font-weight-bold"> Note: </h7> 
                <p> Without receiving of filled registration form, the college will assume the training not to have initiated.</p> 
@@ -121,7 +122,7 @@ cancel the training registration.: </p>
                saveButton.addEventListener('click', function (event) {
 
                $.ajax({
-                  url: "{{route('TrainingRegistrations.store')}}",
+                  url: "{{route('Signature.store')}}",
                   method: 'post',
                   data: {
                      signature: signaturePad.toDataURL('image/png'),

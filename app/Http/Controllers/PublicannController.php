@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\finalReport;
-use Alert;
-
-class finalReportController extends Controller
+use App\Announcament;
+use App\Http\Requests\announcamentsRequest;
+class PublicannController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,8 @@ class finalReportController extends Controller
      */
     public function index()
     {
-        return view ('finalreports.index')->with ('finalreports', finalReport::all());
+        return view('publicannou')->with('announcaments',Announcament::all());
+
     }
 
     /**
@@ -25,7 +25,7 @@ class finalReportController extends Controller
      */
     public function create()
     {
-        return view('finalreports.create');
+        //
     }
 
     /**
@@ -34,15 +34,9 @@ class finalReportController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(announcamentsRequest $request)
     {
-       
-
-            finalReport::create($request->all());
-            return view ('home')->with('success','Post Created Successfully!');
-
-          /*auth()->TraineeName()->notify(new Reply($request)); */  
-        
+        Announcament::create($request->all());
     }
 
     /**
@@ -51,11 +45,9 @@ class finalReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($finalReport)
+    public function show($id)
     {
-        return view('finalreports.show')->with('finalReport',finalReport::find($finalReport));
-       
-
+        //
     }
 
     /**
@@ -91,6 +83,4 @@ class finalReportController extends Controller
     {
         //
     }
-
 }
-

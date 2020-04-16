@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\finalEvalution;
-
+use Alert; 
 class finalEvalutionController extends Controller
 {
     /**
@@ -40,7 +40,7 @@ class finalEvalutionController extends Controller
     public function store(Request $request)
     {
         finalEvalution::create($request->all());
-            return redirect( route('home'));
+        return view ('home')->with('success','Post Created Successfully!');
     }
 
     

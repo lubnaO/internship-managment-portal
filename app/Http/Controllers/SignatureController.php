@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\finalReport;
-use Alert;
+use App\Signature;
+use Alert; 
 
-class finalReportController extends Controller
+class SignatureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class finalReportController extends Controller
      */
     public function index()
     {
-        return view ('finalreports.index')->with ('finalreports', finalReport::all());
+        //
     }
 
     /**
@@ -25,7 +25,7 @@ class finalReportController extends Controller
      */
     public function create()
     {
-        return view('finalreports.create');
+        return view ('Signature.create');
     }
 
     /**
@@ -36,13 +36,8 @@ class finalReportController extends Controller
      */
     public function store(Request $request)
     {
-       
-
-            finalReport::create($request->all());
-            return view ('home')->with('success','Post Created Successfully!');
-
-          /*auth()->TraineeName()->notify(new Reply($request)); */  
-        
+        Signature::create($request->all());
+        return redirect( route('home'))->with('success', 'Submission completed Successfully!');
     }
 
     /**
@@ -51,11 +46,9 @@ class finalReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($finalReport)
+    public function show($id)
     {
-        return view('finalreports.show')->with('finalReport',finalReport::find($finalReport));
-       
-
+        //
     }
 
     /**
@@ -91,6 +84,4 @@ class finalReportController extends Controller
     {
         //
     }
-
 }
-

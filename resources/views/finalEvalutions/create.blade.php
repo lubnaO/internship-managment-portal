@@ -71,10 +71,6 @@
 
 <div class="container">
 <div class="stepwizard">
-<div id="myAlert" class="alert alert-success collapse">
- <a href="#" class="close" data-dismiss="alert">&times;</a>
-    <strong>Success!</strong> report sent successfully.
-  </div>
 
         <div class="stepwizard-row setup-panel">
             <div class="stepwizard-step col-xs-3"> 
@@ -108,9 +104,9 @@
       
             <div class="panel-body">
                 <div class="form-group">
-                    <label class="control-label"> Name</label>
+                  <!--  <label class="control-label"> Name</label>
                     <input maxlength="100"  name="TraineeName" type="text" required="required" class="form-control"  />
-                </div>
+                </div>-->
                 <div class="form-group">
                     <label class="control-label">ID</label>
                     <input maxlength="100" name ="TraineeID" type="text" required="required" class="form-control"  />
@@ -197,10 +193,10 @@
                     <input maxlength="200" type="text" required="required" class="form-control" name="OrganizationEmail" />
                 </div>
 
-                <div class="form-group">
+               <!-- <div class="form-group">
                     <label class="control-label">Signature</label>
                     <input maxlength="200" type="text" required="required" class="form-control" name="OrganizationSignature" />
-                </div>
+                </div>--> 
 
                 <div class="form-group">
                     <label class="control-label"> date</label>
@@ -290,15 +286,14 @@
   </div>
     
  
-<<<<<<< HEAD
+
 
 
                 <button class="btn btn-primary pull-right" type="submit"id="btnsubmit">Submit!</button>
-=======
-  
+
   <button class ="btn btn-primary pull-right"  type="submit">Submit!</button>
    
->>>>>>> 07d52bb2eb26baec0139d6cad330bdb8f3f5d9ab
+
             </div>
             
         </div>
@@ -349,14 +344,7 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script>   
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#btnsubmit').click(function(){
-           $('#myAlert').show('fade');
-    }); 
-});
 
-</script>
 </body>
 </html>
 @endsection

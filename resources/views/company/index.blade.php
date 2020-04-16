@@ -37,7 +37,7 @@
                                     {{ $announcament->city }} 
                                     
                                     
-                                    @endforeach
+                                
 
                                    
                              
@@ -105,7 +105,7 @@
                                                 <p>  is empty   </p>
                                             </div>
                                      
-                            
+                                            @endforeach
                         </div>
                     </div>
                

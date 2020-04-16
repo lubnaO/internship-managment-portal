@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TrainingRegistration;
-//use App\Http\Requests\trainingRequest;
+use App\Http\Requests\trainingRequest;
 Use Alert;
 
 class TrainingRegistrationController extends Controller
@@ -47,15 +47,14 @@ class TrainingRegistrationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-
-        
+    {  
 
          
+        
          TrainingRegistration::create($request->all());
          
+         return redirect( route('Signature.create'));
         
-        return redirect( route('home'))->with('success', 'Report send Successfully!');
         }
 
    

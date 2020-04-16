@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Announcament;
 use App\Student;
 use App\Applicant;
+Use Alert;
 
 class ApplicntCntroller extends Controller
 {
@@ -45,7 +46,7 @@ class ApplicntCntroller extends Controller
 ]);*/
 
         Applicant::create($request->all());
-        return redirect (route('home'));
+        return redirect( route('home'))->with('success', 'Submission completed Successfully!');
 
 
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\record;
-
+Use Alert;
 class recordController extends Controller
 {
     /**
@@ -43,7 +43,7 @@ class recordController extends Controller
         ]);
         
                 record::create($request->all());
-                return redirect (route('record.create'));
+                return redirect( route('home'))->with('success', 'Submission completed Successfully!');
     }
 
     /**

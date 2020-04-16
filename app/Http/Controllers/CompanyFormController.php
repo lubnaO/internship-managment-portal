@@ -7,7 +7,7 @@ use App\Company;
 use App\Announcament;
 use App\CompanyForm;
 use App\Http\Requests\CompanyformRequest;
-
+Use Alert;
 
 class CompanyFormController extends Controller
 {
@@ -29,7 +29,7 @@ class CompanyFormController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {  
         return view('company.create');
     }
 
@@ -47,13 +47,14 @@ class CompanyFormController extends Controller
             'description'=>$request->description,
             'contact'=>$request->contact, 
             'history'=>$request->history,
-             
+            'phone'=>$request->phone,
             'create'=>$request->create, 
             'c_id'=>$request->c_id,
             'img'=>$request->img->store('images','public')]);
          
        
-         return redirect (route('home'));
+        
+            return redirect( route('home'))->with('success', 'Profile created Successfully!');
        
     }
 

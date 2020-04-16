@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layout')
 @section('content')
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
-  <h5 class="card-header pl-3 text-black">My Requests</h5>
+  <h5 class="card-header pl-3 text-white">My Requests</h5>
   <div class="card-body">
     <h5 class="card-title "></h5>
     <table class="table">
@@ -24,4 +24,6 @@
 </table>
  
   @endforeach
+  
+
   @endsection

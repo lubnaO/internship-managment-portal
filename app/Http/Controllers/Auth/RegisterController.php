@@ -74,37 +74,31 @@ class RegisterController extends Controller
 
 
 
-      $studet = Student::create([
-       'firstName' =>$data['name'],
-            'lastName' => "test",
-            'email' => $data['email'],
-            'phone' => "0534156987",
-            'major' => "major1",
-            'id_user' =>  $user->id,
-        ]); 
-
-      $company = company::create([
-            'name' =>$data['name'],
-            'address' => "test",
-            'email' => $data['email'],
-            'phone' => "0534156987",
-            'description' => "major1",
-            'id_user' =>  $user->id,
-        ]); */ 
-
-      /* $UniversitySupervisor= UniversitySupervisor::create([
-            'firstName' =>$data['name'],
-            'lastName' => "test",
-            'email' => $data['email'],
-            'id_user' =>  $user->id,
-<<<<<<< HEAD
-
-        ]);*/
-
-
-=======
-        ]);
->>>>>>> da8e9b5985fb7d2ccc8ec5f3e196f6b12ed477b1
-        return  $user;
-    }
-}
+        if ($user->user_type == 's') {
+            $studet = Student::create([
+                 'firstName' =>$data['name'],
+                 'lastName' => "test",
+                 'email' => $data['email'],
+                 'phone' => "0534156987",
+                 'major' => "major1",
+                 'id_user' =>  $user->id,
+             ]);
+         } elseif ($user->user_type == 'c') {
+           $company = company::create([
+                 'name' =>$data['name'],
+                 'address' => "test",
+                 'email' => $data['email'],
+                 'phone' => "0534156987",
+                 'description' => "major1",
+                 'id_user' =>  $user->id,
+             ]); 
+           } else {
+           $UniversitySupervisor= UniversitySupervisor::create([
+                 'firstName' =>$data['name'],
+                 'lastName' => "test",
+                 'email' => $data['email'],
+                 'id_user' =>  $user->id,
+             ]);}
+             return  $user;
+         }
+     }

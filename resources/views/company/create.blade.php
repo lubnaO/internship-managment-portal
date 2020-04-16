@@ -10,7 +10,12 @@ height:50px;
 
 }
 .btn-primary{
-  background-color: #f26427
+  background-color: #193870; /* Dark blue */ 
+  float: right;
+}
+.btn-primary:hover{
+  background-color: #FF8C00; /* Orange */
+  color: white;
 }
 </style>
 
@@ -37,15 +42,18 @@ height:50px;
   </div>
 
   <div class="form-group">
-    <label for="exampleFormControlInput1">Profile image</label>
+    <label for="exampleFormControlInput1"> Image</label>
     <input type="file" class="form-control" id="exampleFormControlInput1" name="img">
   </div> 
  
   
-  
+  <div class="form-group">
+    <label for="exampleFormControlInput1">E-mail</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="contact">
+  </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Phone</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="contact">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="phone">
   </div>
 
 
@@ -62,11 +70,7 @@ height:50px;
 
   </div>
 
-  </div> 
-
-
-
-
+  
 
   <div class="form-group">
     <label for="exampleFormControlInput1">Out history</label>
@@ -84,14 +88,7 @@ height:50px;
   </div>
 </div>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    $('#btnsubmit').click(function(){
-           $('#myAlert').show('fade');
-    }); 
-});
 
-</script>
 
 
 

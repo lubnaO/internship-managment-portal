@@ -86,10 +86,13 @@ Route::get('/studentregister', function () {
 Route::get('/uni', function () {
   return view('uni');
 });
-
+Route::get('/publicannou', function () {
+  return view('publicannou');
+});
 
 Route::resource('/Announcaments','AnnouncamentsController');
 Route::resource('/record','recordController');
+Route::resource('/Signature','SignatureController');
 
 Route::resource('/CV','CVCotroller');
 
