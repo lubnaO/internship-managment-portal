@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
-
+use Alert; 
 class gradeController extends Controller
 {
     /**
@@ -37,6 +37,8 @@ class gradeController extends Controller
     public function store(Request $request)
     {
         garde::create($request->all());
+
+        return redirect( route('home'))->with('success', 'Submission completed Successfully!');
 
     }
 

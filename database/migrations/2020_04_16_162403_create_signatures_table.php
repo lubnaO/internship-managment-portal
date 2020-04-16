@@ -13,12 +13,11 @@ class CreateSignaturesTable extends Migration
      */
     public function up()
     {
-        Schema::create('signatures',function (Blueprint $table) {
+        Schema::create('signatures', function (Blueprint $table) {
             $table->bigIncrements('id');
-           
-            $table->string('T_id');
-            $table->foreign('T_id')->references('id')->on('training_registrations');
-            $table->binary('Signature');
+            $table->binary('signature');
+            $table->binary('t_id');
+            $table->foreign('t_id')->references('id')->on('training_registrations')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

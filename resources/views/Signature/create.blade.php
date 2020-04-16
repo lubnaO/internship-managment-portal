@@ -76,7 +76,7 @@ cancel the training registration.: </p>
               </div>
 
             
-              <button  class="button2" id="save">Save</button>
+              <button  class="button2" id="save" type="submit">Save</button>
               <button class="button2" id="clear">Clear</button>
               <div class="form=group col-12">
                <h7 class="font-weight-bold"> Note: </h7> 

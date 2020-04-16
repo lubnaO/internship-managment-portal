@@ -55,7 +55,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   @foreach ($status as $sec1)
   <td><p><em>{{ $sec1->student->firstName }}</em></p></td>
   <td><p><em>{{ $sec1->massege }}</em></p></td>
-  <td scope="row"><a href ="/student/{{$sec1->stu_id}}/edit" class="btn btn-success"class="btn btn-success">Show Report</td>
+  <td scope="row"><a href ="/student/{{$sec1->stu_id}}/edit" class="btn btn-success"class="btn btn-success">Insert grade</td>
 
            @endforeach
 

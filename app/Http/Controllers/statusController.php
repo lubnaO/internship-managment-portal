@@ -45,6 +45,8 @@ class statusController extends Controller
     {
         status::create($request->all());
 
+        return redirect( route('home'))->with('success', 'Submission completed Successfully!');
+
     }
 
     /**

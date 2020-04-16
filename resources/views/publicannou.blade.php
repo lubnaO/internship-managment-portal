@@ -21,7 +21,9 @@ table.dataTable thead .sorting_desc_disabled:before {
   bottom: .5em;
 }</style>
 </head>
-            
+<div class="alert alert-danger">
+    <strong>Attention!</strong> You must be register as student to apply.
+  </div>
 <div class="container pt-5">
 <div class="jumbotorn">
 <div class="card">
