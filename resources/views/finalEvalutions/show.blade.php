@@ -138,10 +138,10 @@
   <h5 class=" ">{{$finalEvalution->OrganizationEmail}}</h5>
 </dl>
 
-<dl class="row">
+<!--<dl class="row">
   <dt class="col-sm-3">Organization Signature</dt>
   <h5 class=" ">{{$finalEvalution->OrganizationSignature}}</h5>
-</dl>
+</dl>--> 
 
 <dl class="row">
   <dt class="col-sm-3">Signature Date</dt>

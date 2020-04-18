@@ -80,7 +80,7 @@ height:50px;
 .btn-primary{
   background-color: #f26427
 }
-.button1 {
+.button2 {
   background-color: #193870; /* Dark blue */ 
   border: none;
   color: white;
@@ -93,10 +93,8 @@ height:50px;
   cursor: pointer;
   border-radius: 8px;
 }
-.container{
 
-}
-.button1:hover {
+.button2:hover {
   background-color: #FF8C00; /* Orange */
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -120,6 +118,10 @@ height:50px;
             <div class="stepwizard-step col-xs-3"> 
                 <a href="#step-3" type="button" class="btn btn-primary btn-circle" disabled="disabled">3</a>
                 <p><small>Training Information</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-4" type="button" class="btn btn-primary btn-circle" disabled="disabled">4</a>
+                <p><small>Contract</small></p>
             </div>
            
         </div>
@@ -202,11 +204,46 @@ height:50px;
         <input type="hidden" value="{{Auth::user()->student->id}}" name="s_id"/>
 
         </div>
+          
+        <button class="btn btn-primary nextBtn float-right" type="button">Next</button>
+            </div> 
+            </div> 
+        <div class="panel panel-primary setup-content" id="step-4">
+            <div class="panel-heading">
+                
+            </div>
+            <div class="panel-body">
+            <div class="container">
+ <div class="row justify-content-center">
+        <div class="col-md-12 mt-5">
+            <div class="card">
+            <div class="col-5 "> <h6 class="font-weight-bold"> <u> By the Student: </u> </h6> </div> 
 
-        <button class="btn btn-primary nextBtn float-right" type="submit">Submit</button>
+<div class="col-12"> <p> I hereby state that all information provided above is correct and the responsibility of its
+authenticity solely lies on me. In case of any fallacious information, college hold the right to
+cancel the training registration.: </p>
+                             
+
+    <div class="form=group col-5">
+    <label > Student Signature: </label>
+
+            <div class="alert alert-success" style="display:none"></div>
+
+              <div class="wrapper">
+                <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
+              </div>
+             
+              <div class="form=group col-12">
+               <h7 class="font-weight-bold"> Note: </h7> 
+               <p> Without receiving of filled registration form, the college will assume the training not to have initiated.</p> 
+                </div> 
+        
+                <button class="btn btn-primary pull-right" type="submit" id="btnsubmit">Submit!</button>
             </div>
           
-            
+            </div> 
+            </div>
+            </div> 
         </div>
          
        
@@ -274,6 +311,20 @@ allNextBtn.click(function () {
 $('div.setup-panel div a.btn-success').trigger('click');
 });
 </script>   
+<script>
+         $(function(){
+
+           
+               var canvas = document.getElementById('signature-pad');
+
+               var signaturePad = new SignaturePad(canvas, {
+               });
+            
+           
+            });
+
+      </script>
+
 
 </body>
 

@@ -32,13 +32,13 @@ table.dataTable thead .sorting_desc_disabled:before {
   <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
   <thead>
     <tr>
-<<<<<<< HEAD
+
       <th scope="col">Trainee Name</th>
       <th scope="col">Action</th>
       </tr>
   </thead>
   
-=======
+
       <th class="th-sm col">Trainee Name
       </th>
       <th class="th-sm col">Action
@@ -48,26 +48,23 @@ table.dataTable thead .sorting_desc_disabled:before {
   </thead>
   <tbody>
   @foreach ($finalreports as $finalReport)
->>>>>>> 7364c9db9566026106601993683a974f08b8e168
+
     <tr>
   
       <td>{{ $finalReport->TraineeName }}</td>
       <td scope="row"><a href ="/finalreports/{{$finalReport->id}}" class="btn btn-success"class="btn btn-success">Show Report</td>
       
     </tr>
-<<<<<<< HEAD
+
   @endforeach
   </thead>
   <tbody>
 
   
   </tbody>
-=======
-    
-    @endforeach
-  </tbody>
 
->>>>>>> 7364c9db9566026106601993683a974f08b8e168
+    
+   
 </table>
 
 

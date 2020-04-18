@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\finalReport;
-use Alert;
-
+Use Alert;
 class finalReportController extends Controller
 {
     /**
@@ -39,8 +38,7 @@ class finalReportController extends Controller
        
 
             finalReport::create($request->all());
-            return view ('home')->with('success','Post Created Successfully!');
-
+            return redirect( route('home'))->with('success', 'Submission completed Successfully!');
           /*auth()->TraineeName()->notify(new Reply($request)); */  
         
     }

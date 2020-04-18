@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\TrainingRegistration;
 use App\Http\Requests\trainingRequest;
 Use Alert;
-
 class TrainingRegistrationController extends Controller
 {
     /**
@@ -48,13 +47,16 @@ class TrainingRegistrationController extends Controller
      */
     public function store(Request $request)
     {  
+        
 
          
         
          TrainingRegistration::create($request->all());
          
-         return redirect( route('Signature.create'));
-        
+         //return redirect( route('Signature.create'));
+         return redirect( route('home'))->with('success', 'Submission completed Successfully!');
+
+
         }
 
    

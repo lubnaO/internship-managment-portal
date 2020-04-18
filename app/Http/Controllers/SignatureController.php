@@ -35,7 +35,23 @@ class SignatureController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
+
     {
+         // We create a variable to define the name of the file
+             // Here it's the date and the extension signature.png
+             $filename = date('mdYHis') . "-signature.png";
+             // We store the signature file name in DB
+             $signature = new Signature();
+             $signature->signature = $filename;
+             $signature->save();
+             // We decode the image and store it in public folder
+             $data_uri = $request->signature;
+             $encoded_image = explode(",", $data_uri)[0];
+             $decoded_image = base64_decode($encoded_image);
+             file_put_contents($filename, $decoded_image);
+           
+            
         Signature::create($request->all());
         return redirect( route('home'))->with('success', 'Submission completed Successfully!');
     }

@@ -52,7 +52,7 @@
 
 <!-- Signature pad form made with Boostrap components -->
 
-<form method ="POST" enctype="multipart/form-data" class="ansform"></form>
+<form method ="POST" enctype="multipart/form-data" action="{{route('TrainingRegistrations.store')}}" class="ansform"></form>
 @csrf
 <div class="container">
  <div class="row justify-content-center">
@@ -76,7 +76,7 @@ cancel the training registration.: </p>
               </div>
 
             
-              <button  class="button2" id="save" type="submit">Save</button>
+              <button  class="button2" id="save" type="submit">Sbumit</button>
               <button class="button2" id="clear">Clear</button>
               <div class="form=group col-12">
                <h7 class="font-weight-bold"> Note: </h7> 
@@ -122,8 +122,8 @@ cancel the training registration.: </p>
                saveButton.addEventListener('click', function (event) {
 
                $.ajax({
-                  url: "{{route('Signature.store')}}",
-                  method: 'post',
+                  url: "{{)}}",
+                  method: '',
                   data: {
                      signature: signaturePad.toDataURL('image/png'),
                   },

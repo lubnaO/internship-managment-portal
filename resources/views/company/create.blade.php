@@ -4,10 +4,8 @@
 
 <style>
 body{
-
 background-image: url("/images/back10.jpg");
 height:50px;
-
 }
 .btn-primary{
   background-color: #193870; /* Dark blue */ 

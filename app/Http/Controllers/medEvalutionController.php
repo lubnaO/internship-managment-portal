@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\medEvalution;
-use RealRashid\SweetAlert\Facades\Alert;
+Use Alert;
 class medEvalutionController extends Controller
 {
     /**
@@ -36,8 +36,6 @@ class medEvalutionController extends Controller
     public function store(Request $request)
     {
 
-        medEvalution::create($request->all());
-            return redirect( route('home'));
 
         $request->validate([
 
@@ -82,8 +80,7 @@ class medEvalutionController extends Controller
                                                         
       
         medEvalution::create($request->all());
-        return view ('home')->with('success','Post Created Successfully!');
-
+        return redirect( route('home'))->with('success', 'Submission completed Successfully!');
     }
 
     /**

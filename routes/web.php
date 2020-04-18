@@ -51,7 +51,7 @@ Route::get('finalreports/index','finalReportController@index');
 
 
 Route::get('finalEvalutions/index','finalEvalutionController@index');
-Route::get('finalEvalutions/{id}','finalEvalutionController@show');
+
 Route::get('finalEvalutions/index','finalEvalutionController@index');
 
 
@@ -136,24 +136,24 @@ Route::get('/studentlist', 'statusController@studentlist');
 Route::get('/studentlist', 'statusController@studentlist');
 Route::resource('/garde','gradeController');
 
-Route::get('TrainingRegistrations/{id}','TrainingRegistrationController@show');
 
 
+
+
+Route::resource('/student','studentController');
+Route::post('/student/{id}','studentController@update');
+Route::post('/student/{id}/edit','studentController@edit');
 
 
  
 Route::get('finalEvalutions/{id}','finalEvalutionController@show');
 
 
-
+Route::get('TrainingRegistrations/{id}','TrainingRegistrationController@show');
 Route::get('/finalEvalutions/{finalEvalution}','finalEvalutionController@show');
-
+Route::get('finalEvalutions/{id}','finalEvalutionController@show');
 Route::get('/finalreports/{finalReport}','finalReportController@show');
 
-
-Route::resource('/student','studentController');
-Route::post('/student/{id}','studentController@update');
-Route::post('/student/{id}/edit','studentController@edit');
 
 
 

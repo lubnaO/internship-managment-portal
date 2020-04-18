@@ -47,7 +47,7 @@ table.dataTable thead .sorting_desc_disabled:before {
     <td> <a href ="/medEvalutions/{{$medEvalution->id}}" class="btn btn-success">Show Report</td> 
     </tr>
  
-    @endforeach
+    @endforeach 
   
   </tbody>
   

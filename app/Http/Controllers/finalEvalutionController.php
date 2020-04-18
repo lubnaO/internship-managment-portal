@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\finalEvalution;
-use Alert; 
+Use Alert;
 class finalEvalutionController extends Controller
 {
     /**
@@ -40,11 +40,10 @@ class finalEvalutionController extends Controller
     public function store(Request $request)
     {
         finalEvalution::create($request->all());
-        return view ('home')->with('success','Post Created Successfully!');
-    }
+        return redirect( route('home'))->with('success', 'Submission completed Successfully!');
 
     
-
+    }
     /**
      * Display the specified resource.
      *
@@ -54,7 +53,7 @@ class finalEvalutionController extends Controller
     public function show($id)
     {
 
-;
+    
     
 
 

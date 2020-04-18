@@ -3,6 +3,8 @@
 <html lang="en">
   <head>
     <title>IMP &mdash; Intern Management Portal  </title>
+     <!-- add icon link -->
+     <link rel = "icon" href ="/images/logo2.png"   type = "image/x-icon"> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

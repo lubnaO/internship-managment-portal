@@ -104,9 +104,9 @@
       
             <div class="panel-body">
                 <div class="form-group">
-                  <!--  <label class="control-label"> Name</label>
+                   <label class="control-label"> Name</label>
                     <input maxlength="100"  name="TraineeName" type="text" required="required" class="form-control"  />
-                </div>-->
+                </div>
                 <div class="form-group">
                     <label class="control-label">ID</label>
                     <input maxlength="100" name ="TraineeID" type="text" required="required" class="form-control"  />
@@ -291,7 +291,6 @@
 
                 <button class="btn btn-primary pull-right" type="submit"id="btnsubmit">Submit!</button>
 
-  <button class ="btn btn-primary pull-right"  type="submit">Submit!</button>
    
 
             </div>
