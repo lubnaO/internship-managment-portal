@@ -19,7 +19,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Internship Managment Portal : It is portal for student university to show available opperunity for student to apply at internship with company.
+Internship Managment Portal : It is website portal for student university to show available opperunity for student to apply at internship with company.
 
 ![Homepage](https://user-images.githubusercontent.com/60160412/101539438-98c46580-39af-11eb-947c-d1710456e1fe.png)
 ![dashboard](https://user-images.githubusercontent.com/60160412/101539459-9e21b000-39af-11eb-9f2b-571e35b05b89.png)
